@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in - LinkTree</title>
-    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Sign-in/Css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
             <header class="header">
 
                 <h1 class="header__title">
-                    LearnTree
+                    LearnTree.
                 </h1>
 
             </header>
@@ -34,26 +34,36 @@
                     <h2 class="main__text">
                         Sign in
                     </h2>
-                    <div class="main__sign-in-line"></div>
-                    <p class="main__paragraph">
+                    <!-- <div class="main__sign-in-line"></div> -->
+                    <!-- <p class="main__paragraph">
                         Please login to continue to your account
-                    </p>
+                    </p> -->
+
 
                     <form class="form">
 
-                        <input type="email" name="email" class="form__input" placeholder="Enter your email address"
-                            required>
-
-                        <div class="form__container-password">
-                            <input type="password" name="password" class="form__input" placeholder="Enter your password"
-                                required>
-                            <label class="form__container-password-label">
-                                <input type="checkbox" class="from__container-password-checkbox">
-                            </label>
+                        <div class="form__container-input">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input"
+                                placeholder="Enter your email address" required>
                         </div>
 
+                        <div class="form__container-input">
+
+                            <label for="password" class="form__label">Password</label>
+                            <input type="password" id="password" name="password" class="form__input"
+                                placeholder="Enter your password" required>
+
+                            <label class="form__container-password-label">
+                                <input type="checkbox" class="form__container-password-checkbox">
+                            </label>
+
+                        </div>
+
+
+
                         <div class="form__forgot-password">
-                            <a href="#" class="form__link">Forgot password</a>
+                            <a href="#" class="form__link">Forgot password ?</a>
                         </div>
 
                         <button type="submit" class="form__button">Sign in</button>
@@ -85,7 +95,7 @@
             </div>
 
             <div class="container__image">
-                <img src="./Assets/main-hero.svg" class="column__image" alt="">
+                <img src="./Sign-in/Assets/main-hero.svg" class="column__image" alt="">
             </div>
 
         </div>
