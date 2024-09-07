@@ -17,19 +17,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .container {
     background-color: white;
     width: min(1200px, 100%);
-    margin: 3rem 2rem;
+    margin: 3rem 1rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.089);
     display: grid;
     grid-template-columns: 35% auto;
     gap: 2rem;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     height: min(750px, 100%);
+    z-index: 1;
 }
+
+
 
 .container,
 .container__column-right {
@@ -40,8 +44,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: static;
 }
+
+.container__column-right {
+    background-color: #19A7CE;
+    padding: 0 2.5rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+
+.container__column-right::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    right: 0;
+    left: 15px;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(226, 240, 253);
+    border-radius: 20px;
+}
+
 
 .header {
     display: flex;
@@ -106,7 +131,7 @@ body {
     display: none;
 }
 
-.form__container-input {
+.form__container-password {
     position: relative;
 }
 
@@ -121,9 +146,10 @@ body {
     cursor: pointer;
     transition: .2s ease;
 
-    right: 0;
+    right: 10px;
     top: 50%;
-    margin-right: 7px;
+    transform: translateY(-50%);
+
 }
 
 .form:has(.form__container-password-checkbox:checked) {
@@ -144,6 +170,7 @@ body {
 .form__input:focus {
     box-shadow: 0 0 0 1px #146c94;
 }
+
 
 .form__forgot-password {
     text-align: end;
@@ -166,18 +193,21 @@ body {
     margin-top: 1rem;
     width: 70%;
     place-self: center;
-    color: white;
-    background-color: #146c94;
-    border: none;
+    color: black;
+    background-color: white;
     border-radius: 16px;
     cursor: pointer;
     font-size: 1em;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.288);
     position: relative;
+    font-weight: 600;
+    transition: .3s ease;
 }
 
 .form__button:hover {
-    border-bottom: 1px solid black;
-    border-bottom-width: 3px;
+    color: white;
+    background-color: #19A7CE;
 }
 
 .container__question {
@@ -198,15 +228,9 @@ body {
     text-decoration: underline;
 }
 
-.container__column-right {
-    background-color: #19A7CE;
-    padding: 5rem 2.5rem;
-    position: relative;
-}
-
 .container__column-right-information {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.1rem;
 }
 
 .container__paragraph {
@@ -229,6 +253,7 @@ body {
 .column__image {
     position: absolute;
     bottom: 0;
+    left: 50px;
     height: auto;
     width: 100%;
 }
