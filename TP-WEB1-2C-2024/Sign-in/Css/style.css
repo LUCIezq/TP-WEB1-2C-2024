@@ -179,12 +179,11 @@ body {
 .form__link {
     text-decoration: none;
     font-size: .85em;
-    color: rgba(0, 0, 0, 0.568);
+   color: #146c94;
 }
 
 .form__link:hover {
     text-decoration: underline;
-    color: black;
 }
 
 .form__button {
@@ -219,12 +218,10 @@ body {
 
 .container__link {
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.568);
-    text-decoration: underline;
+    color: #146c94;
 }
 
 .container__link:hover {
-    color: black;
     text-decoration: underline;
 }
 

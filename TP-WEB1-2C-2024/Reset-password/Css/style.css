@@ -14,30 +14,27 @@
 body {
     height: 100vh;
     font-family: 'Roboto';
-    background-color: #f0ffff;
+    background-color: #e7ffff;
     display: grid;
-
 }
 
 .container {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 0 auto;
+    display: grid;
+    place-self: center;
+    grid-template-columns: auto auto;
+    background-color: white;
+    border-radius: 16px;
 }
 
 .container__left {
     background-color: #134B70;
     display: flex;
     padding: 2rem;
-    height: min(100%, 700px);
-    width: min(100%, 400px);
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-between;
     border-radius: 16px;
     gap: 2rem;
+    margin: .4rem;
 }
 
 .container__left-title {
@@ -54,7 +51,7 @@ body {
 }
 
 .container__left-elements {
-    margin-top: 5rem;
+    margin: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -91,12 +88,14 @@ body {
 }
 
 .container__right {
-    display: flex;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
     width: min(300px, 100%);
     gap: 1.2rem;
-    flex-direction: column
 }
+
+
 
 .container__right-image {
     background-color: #80808018;
@@ -129,22 +128,26 @@ body {
     border-radius: 7px;
     border: 1px solid #80808067;
     outline: none;
-    background-color: #f0ffff;
+    background-color: white    ;
+}
+
+.container__right-input:focus {
+    border: 1px solid #19A7CE;
 }
 
 .container__right-button {
-    padding: .9rem;
     cursor: pointer;
     border-radius: 7px;
     border: none;
     background-color: #134B70;
     color: white;
+    padding: .9rem;
     transition: .2s ease;
     font-weight: 500
 }
 
 .container__right-button:hover {
-    transform: scale(1.02);
+    background-color: #134b70ef;
 }
 
 .container__back {
@@ -190,7 +193,8 @@ body {
     font-weight: 500;
 }
 
-
-.container__right-fourth-view {
+.container__right--second-view,
+.container__right--third-view,
+.container__right--fourth-view {
     display: none;
 }
