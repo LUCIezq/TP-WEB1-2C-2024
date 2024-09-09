@@ -64,8 +64,8 @@ body {
 
 }
 
-.container__left-element-description{
-    display:flex;
+.container__left-element-description {
+    display: flex;
     flex-direction: column;
     gap: .3rem;
 }
