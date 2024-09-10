@@ -179,12 +179,13 @@ body {
 .form__link {
     text-decoration: none;
     font-size: .85em;
-   color: #146c94;
+    color: #146c94;
 }
 
 .form__link:hover {
     text-decoration: underline;
 }
+
 
 .form__button {
     display: grid;
@@ -254,6 +255,8 @@ body {
     height: auto;
     width: 100%;
 }
+
+
 
 @media screen and (width <=930px) {
     .column__image {
