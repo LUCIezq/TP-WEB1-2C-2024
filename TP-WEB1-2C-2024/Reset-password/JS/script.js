@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll(".container__right-input--second-view");
 
+
 // CAMBIO DE INPUT AUTOMATICO -ADELANTE
 console.log(inputs.length);
 
@@ -30,12 +31,7 @@ updateButton.addEventListener("click", cambiarTexto);
 const cards = document.querySelectorAll('.container__left-element');
 const buttons = document.querySelectorAll('.container__right-button');
 
-
 let index = 0;
-
-const form = document.querySelectorAll('.container__right-information');
-
-
 
 cards.forEach(card => {
 
