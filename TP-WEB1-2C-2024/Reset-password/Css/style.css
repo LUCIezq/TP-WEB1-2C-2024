@@ -5,6 +5,7 @@
     list-style: none;
 }
 
+
 :root {
     --second-color-ocean: #134B70;
     --first-color-sky-blue: #19A7CE;
@@ -22,10 +23,11 @@ body {
 
 .container {
     display: flex;
-    width: min(900px, 100%);
     place-self: center;
+    width: min(900px, 100%);
     background-color: white;
     border-radius: 40px;
+    gap: 1rem;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.068);
 }
 
@@ -53,7 +55,8 @@ body {
     font-weight: 500;
     font-size: 1em;
 }
-.container__left-element-information{
+
+.container__left-element-information {
     font-size: .9em;
 }
 
@@ -78,7 +81,6 @@ body {
 
 .container__left-element::before {
     content: url(../Assets/check_circle_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.svg);
-
 }
 
 .container__left-element-description {
@@ -90,20 +92,24 @@ body {
 
 .container__right {
     display: grid;
-    place-self: center;
     text-align: center;
-    width: min(300px,100%);
-    margin: 0 auto;
-}
-
-.container__right-element {
-    display: none;
+    margin: 3rem 0;
+    overflow-y: hidden;
+    place-self: center;
+    height: 400px;
+    scroll-behavior: smooth;
+    margin-top: 9.5rem;
     gap: 1rem;
 }
 
-.container__right-element--visible {
-    display: grid;
-
+.container__right-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: min(100%, 300px);
+    place-self: center;
+    gap: 1rem;
+    height: 400px;
 }
 
 .container__right-image {
@@ -139,6 +145,29 @@ body {
     border: 1px solid #80808067;
     outline: none;
     background-color: white;
+    transition: .5s ease;
+}
+
+.container__right-input--second-view {
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    background-color: #f0ffff;
+    outline: none;
+    font-size: 1.9em;
+    transition: .5s ease;
+}
+
+.container__right-input--second-view:focus {
+    box-shadow: 0px 0px 0px 1px var(--first-color-sky-blue);
+}
+
+.container__column-right-input-elements {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .container__right-input:focus {
@@ -174,34 +203,13 @@ body {
 .container__back-link a {
     text-decoration: none;
     color: white;
+    font-size: .9em;
 }
 
 .container__back-link img {
     background-color: white;
     border-radius: 50%;
     padding: .3rem;
-}
-
-.container__column-right-input-elements {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-}
-
-.container__column-right-input-element {
-    width: 50px;
-    text-align: center;
-    height: 50px;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.144);
-    background-color: #f0ffff;
-    outline: none;
-    font-size: 1.9em;
-}
-
-.container__column-right-input-element:focus {
-    border: 2px solid var(--first-color-sky-blue);
 }
 
 .container__right-paragraph-email {
