@@ -13,9 +13,55 @@
     list-style-type: none;
     text-decoration: none;
     justify-content: center;
-    gap: 5rem;
+    background-color: #8b8b8b;
+    gap: 6rem;
+    height: 25px;
+    align-items: center;
 }
 .header__nav__list__item{
     text-decoration: none;
     list-style-type: none;
+    color: white;
+    font-weight: 600;
+}
+.header__button{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.header__button-logIn{
+    text-decoration: none;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    padding: 7px;
+    color: #000000;
+}
+.header__button-logIn:hover{
+    background-color: rgb(35, 146, 180);
+    padding: 9px;
+    color: #000000;
+    transition:ease-in-out .5s ;
+}
+.header__button-register{
+    text-decoration: none;
+    background-color: rgb(43, 42, 42);
+    border-radius: 25px;
+    padding: 7px;
+    color: #ffffff;
+}
+.header__button-register:hover{
+    background-color: rgb(247, 157, 157);
+    padding: 9px;
+    color: #ffffff;
+    transition:ease-in-out .5s ;
+}
+
+.container__header__buscador{
+    box-shadow: 0px 2px 6px rgb(0, 0, 0);
+    background: #f7f6f6;
+    border-radius: 57px 57px 57px;
+    font-family: "Carme";
+    font-size: 20px;
+    border: #000000;
+    padding: 0 15px;
 }
