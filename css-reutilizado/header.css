@@ -1,0 +1,21 @@
+.header{
+    height: 70px;
+    background-color: rgb(190, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.header__nav__list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: center;
+    gap: 5rem;
+}
+.header__nav__list__item{
+    text-decoration: none;
+    list-style-type: none;
+}
