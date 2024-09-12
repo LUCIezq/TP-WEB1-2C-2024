@@ -1,6 +1,6 @@
 .header{
     height: 70px;
-    background-color: #bcedf8;
+    background-color: #98c2cc;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -15,7 +15,7 @@ h1{
     list-style-type: none;
     text-decoration: none;
     justify-content: center;
-    background-color: #4da4b8;
+    background-color: #000d0f9d;
     gap: 6rem;
     height: 25px;
     align-items: center;
