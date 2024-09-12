@@ -1,10 +1,9 @@
-.header{
+.header__principal{
     height: 70px;
     background-color: #98c2cc;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
 h1{
     cursor: default;
