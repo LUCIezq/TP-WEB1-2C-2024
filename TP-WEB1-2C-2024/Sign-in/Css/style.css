@@ -13,11 +13,10 @@ body {
     width: 100%;
     font-family: 'Lato';
     height: 100vh;
-    background-color: #F6F1F1;
+    background-color: #e7ffff;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .container {
@@ -32,8 +31,6 @@ body {
     height: min(750px, 100%);
     z-index: 1;
 }
-
-
 
 .container,
 .container__column-right {

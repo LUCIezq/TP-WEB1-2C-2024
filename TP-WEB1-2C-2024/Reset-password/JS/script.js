@@ -35,12 +35,13 @@ let index = 0;
 
 cards.forEach(card => {
 
+
   buttons[index].addEventListener('click', e => {
 
     card.classList.add('container__left-element--active');
 
   })
-
+  
   index++;
 });
 
