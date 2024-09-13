@@ -97,9 +97,9 @@ body {
     overflow-y: hidden;
     place-self: center;
     height: 400px;
-    scroll-behavior: smooth;
     margin-top: 9.5rem;
     gap: 1rem;
+    scroll-behavior: smooth;
 }
 
 .container__right-element {
