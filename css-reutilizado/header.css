@@ -59,22 +59,22 @@ body {
 .header__center-container-input {
     /*Functions*/
     position: relative;
-    overflow: hidden;
     border-right: none;
 }
 
 .header__center-input {
     /*Styles*/
     border: 1px solid #00000042;
-    border-right: none;
     padding: .7rem 1rem;
-    border-radius: .3rem 0rem 0rem .3rem;
+    border-radius: .3rem;
     font-size: .9rem;
     transition: .4s ease;
+    padding-left: 2.5rem;
+
 
 
     /*Functions*/
-    width: 50%;
+    width: 70%;
     outline: none;
 }
 
@@ -83,20 +83,21 @@ body {
     width: 80%;
 }
 
-.header__center-icon {
-    /*Functions*/
+.header__center-container-icon {
     position: absolute;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.header__center-icon {
+    /*Functions*/
     cursor: pointer;
+    display: grid;
+    place-content: center;
 
     /*Styles*/
-    background-color: #ffffff;
-    border: 1px solid #00000042;
     border-left: none;
-    height: max-content;
-    padding: .7rem;
-    border-radius: 0 .3rem .3rem 0;
 }
 
 .header__right {
