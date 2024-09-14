@@ -10,6 +10,13 @@
     --translate-nav: translate(-100%);
 }
 
+body {
+    /*Functions*/
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .header,
 .header__right,
 .header__right-buttons,
@@ -161,7 +168,7 @@
 .nav__elements {
     /*Functions*/
     justify-content: center;
-    gap: 4rem;
+    gap: 6%;
 
     /*Styles*/
     background-color: black;
