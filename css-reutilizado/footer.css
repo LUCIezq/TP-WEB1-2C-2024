@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: rgb(43, 42, 42);
+  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+}
+
+footer .section__principal {
+  padding: 1% 20%;
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+
+footer .footer__article {
+  width: 30%;
+  height: auto;
+}
+
+footer .section__secundaria {
+  padding: 0.5em 0;
+  text-align: center;
+  background-color: rgb(43, 42, 42);
+  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+}
+
+footer .section__principal__container,
+footer h1,
+footer .footer__titulo__article,
+footer .section__secundaria,
+footer a {
+  color: white;
+  opacity: 95%;
+}
+
+footer .section__secundaria,
+footer p .footer__descripcion,
+footer li,
+footer .footer__titulo__article {
+  font-family: monospace;
+}
+
+footer p .footer__descripcion,
+footer li {
+  font-style: italic;
+}
+
+footer .footer__titulo__article,
+footer li {
+  font-weight: bold;
+}
+
+footer .footer__titulo__article {
+  margin-bottom: 0.9em;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+footer h1 {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+footer li {
+  margin: 5px 0;
+  font-size: 1em;
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  margin-left: 10px;
+  font-size: large;
+  font-style: oblique;
+  font-weight: bold;
+  color: black;
+}
