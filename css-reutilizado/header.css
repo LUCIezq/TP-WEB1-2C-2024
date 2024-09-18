@@ -308,7 +308,7 @@ body {
 
 .lesson {
     /*Styles*/
-    border-radius: 70px 70px 0px 0px;
+    border-radius: 70px;
     border: 1px solid #00000028;
     padding: 3rem 0;
 
@@ -450,6 +450,7 @@ body {
 }
 
 
+
 .lesson__item-information-bottom {
     /*Functions*/
     display: flex;
@@ -506,7 +507,7 @@ body {
 .lesson__more {
     width: 100%;
     display: grid;
-    margin: 2rem 0;
+    margin: 1rem 0;
     place-content: center;
 }
 
@@ -519,7 +520,9 @@ body {
     border-radius: 12px;
     font-size: 1rem;
     font-weight: 500;
+    cursor: not-allowed;
 
     /*Functions*/
     margin: 0 auto;
 }
+

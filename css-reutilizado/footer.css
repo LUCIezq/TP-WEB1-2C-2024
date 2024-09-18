@@ -6,7 +6,7 @@
 
 .footer {
   background-color: rgb(43, 42, 42);
-  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+  /* box-shadow: 0px 2px 6px rgb(2, 2, 2); */
 }
 
 footer .section__principal {
