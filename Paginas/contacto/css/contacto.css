@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    height: auto;
+}
+h1{
+    margin: 2% 3.5%;
+    text-decoration: underline;
+}
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+.contacto__parte-izquierda{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.contacto__parte-izquierda input:first-child{
+    margin-top: 0;
+    padding: 10px;
+}
+.contacto__parte-izquierda input{
+    margin-top: 2%;
+    padding: 10px;
+}
+.contacto__parte-izquierda textarea{
+    margin-top: 2%;
+    padding: 10px;
+    resize: none;
+}
+.contacto__parte-izquierda__mensaje{
+}
+.contacto__parte-izquierda input:last-child{
+    background-color: #7ad5ffd0;
+}
+.contacto__parte-izquierda input:last-child:hover{
+    background-color: #7ad5ff85;
+    transition: ease .3s;
+}
+.contacto__parte-derecha{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    border-style: solid;
+    justify-content: center;
+    gap: 15px;
+    background-color: #d6f2ffc0;
+}
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+h2{
+    text-align: center;
+    margin: 2% 0;
+    text-decoration: underline;
+}
+.ubicacion__maps{
+    
+}
