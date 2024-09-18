@@ -49,6 +49,7 @@ h1{
     width: 45%;
     text-align: center;
     border-style: solid;
+    border-radius: 10px;
     justify-content: center;
     gap: 15px;
     background-color: #d6f2ffc0;
