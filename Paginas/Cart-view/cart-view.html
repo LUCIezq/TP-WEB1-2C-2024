@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css-reutilizado/header.css">
+    <link rel="stylesheet" href="./Css/cart-view.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header__left">
+
+            <a href="/index.html" class="header__left-link">
+                LearnTree.
+            </a>
+
+        </div>
+
+        <div class="header__center">
+
+            <div class="header__center-container-input">
+
+                <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+
+                <div class="header__center-container-icon">
+                    <a href="#" class="header__center-container-link">
+                        <img src="../Inicio/Assets/search.svg" class="header__center-icon" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="header__right">
+
+            <div class="header__right-buttons">
+
+                <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
+                <a class="header__right-button-register button" href="#">Registrarse</a>
+
+            </div>
+
+            <div class="header__right-cart">
+
+                <a href="./cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
+                        class="header__right-icon-cart" alt="Carrito"></a>
+
+                <div class="header__right-cart-count-container">
+                    <span class="header__right-cart-count">0</span>
+                </div>
+
+            </div>
+
+            <label class="header__right-label">
+                <input type="checkbox" class="header__right-checkbox">
+            </label>
+
+        </div>
+
+    </header>
+
+    <nav class="nav">
+
+        <ul class="nav__elements">
+
+            <li class="nav__element">
+                <a class="nav__link" href="./index.html">Inicio</a>
+            </li>
+
+            <li class="nav__element">
+                <a class="nav__link" href="../Curso-empresa/curso-empresa.html">Empresa</a>
+            </li>
+
+            <li class="nav__element">
+                <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
+            </li>
+
+            <li class="nav__element">
+                <a class="nav__link" href="">Cursos</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <div class="cart__container">
+
+            <div class="cart__container-information">
+                <span class="cart__container-title">
+                    Carrito
+                </span>
+
+                <p class="cart__container-count">
+                    0 cursos en la cesta
+                </p>
+            </div>
+
+            <div class="cart__container-elements">
+
+                <div class="cart__container-no-elements">
+
+                    <img src="./Assets/Search Engine 1.svg" alt="">
+
+                    <p class="cart__container-no-elements-information">
+                        Tu cesta está vacía. ¡Sigue comprando para encontrar un curso!
+                    </p>
+
+                    <a href="/index.html" class="cart__container-no-elements-link">Seguir comprando</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
