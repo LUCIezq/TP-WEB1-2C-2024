@@ -1,0 +1,240 @@
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.section__gifcard {
+  display: flex;
+  padding: 6% 15%;
+  justify-content: center;
+  gap: 2em;
+}
+
+.article__gifcard_container {
+  width: 100%;
+  align-content: start;
+}
+
+.giftcard__tarjeta {
+  background-color: cadetblue;
+  align-content: center;
+  text-align: center;
+  height: 55%;
+  position: relative;
+  color: white;
+  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+}
+
+.tarjeta__destinatario {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.tarjeta__precio {
+  width: 30%;
+  height: 15%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  align-content: center;
+  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+}
+
+.giftcard__personalizacion-titulo {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-family: "Poppins";
+}
+
+.giftcard__personalizacion-subtitulo {
+  color: rgb(95, 158, 160);
+  font-weight: bolder;
+  font-style: italic;
+  font-family: "Poppins";
+}
+
+.nombre__input {
+  margin: 1em 0;
+  height: 2em;
+  width: 70%;
+  border: 1px solid #00000042;
+  border-radius: 0.3em;
+  padding: 0.2em 0.5em;
+}
+
+.circulo {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  box-shadow: 0px 2px 6px rgb(2, 2, 2);
+}
+
+.circulo__input {
+  margin: 0.5em 0;
+  display: block;
+  text-align: center;
+}
+
+.monto {
+  display: flex;
+  margin: 0.5em 0;
+  align-content: center;
+}
+
+.monto__titulo {
+  text-align: center;
+  align-content: center;
+}
+
+.monto__input {
+  margin: 0 1em;
+  height: 2em;
+  width: 45%;
+  border: 1px solid #00000042;
+  border-radius: 0.3em;
+  padding: 0.2em 0.5em;
+}
+
+.ubicacion__cuadrado {
+  width: 2em;
+  height: 1.5em;
+  position: relative;
+  border: 1px solid #00000042;
+}
+
+.ubicacion__cuadrado-abajoderecha {
+  position: absolute;
+  width: 0.7em;
+  height: 0.5em;
+  background-color: #00000042;
+  right: 0;
+  bottom: 0;
+}
+
+.ubicacion__cuadrado-arribaizquierda {
+  position: absolute;
+  width: 0.7em;
+  height: 0.5em;
+  background-color: #00000042;
+  left: 0;
+  top: 0;
+}
+
+.ubicacion__cuadrado-arribaderecha {
+  position: absolute;
+  width: 0.7em;
+  height: 0.5em;
+  background-color: #00000042;
+  right: 0;
+  top: 0;
+}
+
+.fondo__cuadrado {
+  width: 2em;
+  height: 1.5em;
+}
+
+.giftcard__button {
+  height: 3em;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgb(95, 158, 160);
+  padding: 0.2em 0.5em;
+  background-color: var(--secondary-color);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.color,
+.tamanio,
+.ubicacion,
+.fondo {
+  display: flex;
+  margin: 0.5em 0;
+}
+
+.color__container,
+.tamanio__container,
+.ubicacion__container,
+.fondo__container {
+  display: block;
+  margin: 0 0.5em;
+}
+
+.ubicacion__titulo,
+.fondo__titulo {
+  margin: 0.5em 0 0.5 0;
+}
+
+.giftcard__button:hover {
+  background-color: rgb(95, 158, 160);
+}
+
+.circulo-rojo {
+  background-color: red;
+  opacity: 80%;
+}
+
+.circulo-azul {
+  background-color: blue;
+  opacity: 80%;
+}
+
+.circulo-negro {
+  background-color: black;
+  opacity: 80%;
+}
+
+.circulo-amarillo {
+  background-color: gold;
+  opacity: 80%;
+}
+
+.circulo-verde {
+  background-color: green;
+  opacity: 80%;
+}
+
+.tamanio-20 {
+  font-size: 0.6em;
+}
+
+.tamanio-28 {
+  font-size: 0.7em;
+}
+
+.tamanio-32 {
+  font-size: 0.8em;
+}
+
+.tamanio-48 {
+  font-size: 0.9em;
+}
+
+.tamanio-60 {
+  font-size: 1em;
+}
+
+.fondo__cuadrado-celeste {
+  background-color: aqua;
+  opacity: 80%;
+}
+
+.fondo__cuadrado-lila {
+  background-color: blueviolet;
+  opacity: 80%;
+}
+
+.fondo__cuadrado-chocolate {
+  background-color: chocolate;
+  opacity: 80%;
+}
+
+.fondo__cuadrado-cyan {
+  background-color: darkcyan;
+  opacity: 80%;
+}
