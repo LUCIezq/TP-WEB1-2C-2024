@@ -18,11 +18,6 @@ html {
     --white: #ffffff;
 }
 
-body {
-    /*Functions*/
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
 
 .header,
 .header__right,
@@ -37,11 +32,18 @@ body {
     /*Styles*/
     background-color: #ffffff;
     padding: .8rem 1.2rem;
+    border-bottom: 1px solid #00000033;
 
     /*Functions*/
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
+}
+
+.header__left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .header__left-link {
@@ -58,10 +60,6 @@ body {
     cursor: pointer;
 }
 
-.header__center {
-    /*Functions*/
-    width: 100%;
-}
 
 .header__center-container-input {
     /*Functions*/
@@ -71,22 +69,17 @@ body {
 
 .header__center-input {
     /*Styles*/
-    border: 1px solid #00000042;
-    padding: .7rem 1rem;
+    border: 1px solid #00000033;
+    padding: .6rem 1rem;
     border-radius: .3rem;
     font-size: .9rem;
     transition: .4s ease;
     padding-left: 2.5rem;
 
     /*Functions*/
-    width: 70%;
     outline: none;
 }
 
-.header__center-input:focus {
-    /*Functions*/
-    width: 80%;
-}
 
 .header__center-container-icon {
     position: absolute;
@@ -108,13 +101,11 @@ body {
 .header__right {
     /*Functions*/
     gap: 2rem;
-    justify-content: flex-end;
 }
 
 .header__right-buttons {
     /*Functions*/
     gap: .5rem;
-    width: max-content;
 }
 
 .button {
@@ -123,11 +114,11 @@ body {
 
     /*Styles*/
     text-decoration: none;
-    padding: 1rem;
+    padding: .7rem;
     transition: .4s ease;
-    border-radius: .7rem;
-    font-size: .9em;
-    font-weight: 600;
+    border-radius: .5rem;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 .header__right-button-login:hover {
@@ -187,10 +178,15 @@ body {
 .nav__elements {
     /*Functions*/
     justify-content: center;
-    gap: 4rem;
+    align-items: center;
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
 
     /*Styles*/
-    border: 1px solid #00000010;
+    padding: .4rem 2rem;
+    border-radius: 7px;
 }
 
 .nav__element {
@@ -202,9 +198,10 @@ body {
     /*Styles*/
     text-decoration: none;
     font-weight: 600;
-    transition: .3s ease;
+    transition: .2s ease;
     padding: .3rem .7rem;
     color: var(--black);
+    border-radius: 7px;
 
     /*Functions*/
     display: inline-block;
