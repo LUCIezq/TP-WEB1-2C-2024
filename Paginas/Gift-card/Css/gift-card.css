@@ -238,3 +238,12 @@ main {
   background-color: darkcyan;
   opacity: 80%;
 }
+
+.giftcard__button a{
+  text-decoration: none;
+  color: white;
+}
+
+.checkout__container-input--row{
+  background-color: red;
+}
