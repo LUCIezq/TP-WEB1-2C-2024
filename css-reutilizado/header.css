@@ -569,3 +569,46 @@ html {
     width: fit-content;
     margin: 0 auto;
 }
+
+.carrousel {
+    width: 100%;
+    overflow: hidden;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+}
+
+.carrousel:after {
+    background-image: url(/Paginas/Inicio/Assets/arrow-left.svg);
+    margin-left: 2rem;
+}
+
+.carrousel:after,
+.carrousel::before {
+    position: absolute;
+    content: '';
+    width: 65px;
+    height: 65px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carrousel:before {
+    background-image: url(/Paginas/Inicio/Assets/arrow-right.svg);
+    right: 0;
+    margin-right: 2rem;
+}
+
+.carrousel__elements {
+    display: flex;
+    list-style: none;
+}
+
+.carrousel__elements img {
+    height: 100%;
+}
