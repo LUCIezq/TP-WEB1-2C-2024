@@ -743,7 +743,7 @@ body {
     .header:has(.header__right-checkbox:checked) {
 
         .nav {
-            width: 50%;
+            width: 100%;
         }
 
         .header__right-label {
@@ -831,13 +831,14 @@ body {
         width: fit-content;
     }
 
-    .steps__question,
-    .lesson__question {
+    .steps__question {
         font-size: 2.5rem;
     }
 
     .lesson__question {
         line-height: 1.7;
+        font-size: 2rem;
+
     }
 
     .steps__question {
@@ -845,13 +846,21 @@ body {
 
     }
 
-    .lesson__container-title {
-        font-size: 1.2rem;
+    .lesson {
+        gap: 2rem;
     }
 
-    .steps__paragraph,
-    .lesson__answer {
+    .lesson__container-title {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .steps__paragraph {
         font-size: 1.23rem;
+    }
+
+    .lesson__answer {
+        font-size: 1rem;
     }
 
     .steps__container {
@@ -888,6 +897,15 @@ body {
             padding: .7rem .4rem;
         }
 
+    }
+
+    .lesson__items {
+        padding: .5rem;
+    }
+
+    .lesson__more p {
+        padding: .7rem;
+        font-size: .8rem;
     }
 
 }
