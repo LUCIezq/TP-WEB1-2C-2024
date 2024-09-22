@@ -18,6 +18,10 @@ html {
     --white: #ffffff;
 }
 
+body {
+    padding-top: 4rem;
+}
+
 
 .header,
 .header__right,
@@ -38,13 +42,20 @@ html {
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0;
 }
 
 .header__left {
     display: flex;
     gap: 1rem;
     align-items: center;
+    flex-grow: 1;
 }
+
+
 
 .header__left-link {
     /*Styles*/
@@ -142,37 +153,30 @@ html {
 
 .header__right-cart {
     /*Functions*/
-    position: relative;
-    width: 40px;
+    display: flex;
+    gap: .1rem;
 }
 
 .header__right-icon-cart {
     /*Functions*/
-    width: 28px;
+    width: 30px;
     display: grid;
 }
 
-.header__right-cart-count-container {
-    /*Functions*/
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
 .header__right-cart-count {
-    /*Functions*/
-    display: grid;
-    place-content: center;
-
     /*Styles*/
     color: #000000;
     border-radius: 50%;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .nav {
     height: auto;
     margin: 0;
+    display: flex;
+    width: 100%;
 }
 
 .nav__elements {
@@ -185,7 +189,6 @@ html {
     gap: 1rem;
 
     /*Styles*/
-    padding: .4rem 2rem;
     border-radius: 7px;
 }
 
@@ -215,6 +218,17 @@ html {
 
 .header__right-label {
     /*Functions*/
+    background-image: url(../Paginas/Inicio/Assets/list.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.header__right-checkbox {
     display: none;
 }
 
@@ -572,20 +586,16 @@ html {
 
 .carrousel {
     width: 100%;
-    overflow: hidden;
-    width: min(1200px, 100%);
-    margin: 0 auto;
-    position: relative;
-    border-radius: 12px;
 }
 
-.carrousel:after {
+.carrousel__element:after {
     background-image: url(/Paginas/Inicio/Assets/arrow-left.svg);
     margin-left: 2rem;
+    left: 0;
 }
 
-.carrousel:after,
-.carrousel::before {
+.carrousel__element:after,
+.carrousel__element::before {
     position: absolute;
     content: '';
     width: 65px;
@@ -598,17 +608,132 @@ html {
     cursor: pointer;
 }
 
-.carrousel:before {
+.carrousel__element:before {
     background-image: url(/Paginas/Inicio/Assets/arrow-right.svg);
-    right: 0;
     margin-right: 2rem;
+    right: 0;
 }
 
 .carrousel__elements {
     display: flex;
     list-style: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+}
+
+.carrousel__element {
+    position: relative;
 }
 
 .carrousel__elements img {
-    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media screen and (width <=1170px) {
+
+
+    .header {
+        padding: 1rem;
+        border-bottom: none;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav {
+        position: fixed;
+        background-color: #000000;
+        flex-direction: column;
+        align-items: flex-start;
+        inset: 0;
+        width: 0;
+        overflow: hidden;
+        padding-top: 5rem;
+        transition: .3s ease;
+    }
+
+    .nav__elements {
+        border-radius: 0px;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__right-buttons {
+        flex-direction: column;
+        place-self: center;
+        margin-top: 2rem;
+    }
+
+    .nav__link {
+        color: var(--white);
+        font-size: 2rem;
+        padding: 0;
+        border-radius: 0px;
+        font-weight: 500;
+        padding: 0 1rem;
+    }
+
+    .nav__link:hover {
+        text-decoration: underline;
+    }
+
+    .button {
+        color: var(--white);
+        background-color: transparent;
+        font-size: 1.5rem;
+        border: 1px solid var(--white);
+        padding: 1rem;
+        border-radius: 12px;
+        font-weight: 200;
+    }
+
+    .header__right-button-login {
+        border: none;
+    }
+
+    .header__right-button-register:hover {
+        background-color: black;
+    }
+
+    .header__right-label {
+        display: block;
+        order: 1;
+        transition: .2s ease;
+        z-index: 2;
+    }
+
+    .header__left {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header__center-container-input {
+        order: 3;
+        width: min(450px, 100%);
+    }
+
+    .header__center-input {
+        width: 100%;
+    }
+
+    .header__right {
+        order: 4;
+    }
+
+    .header:has(.header__right-checkbox:checked) {
+
+        .nav {
+            width: 300px;
+        }
+
+        .header__right-label {
+            background-image: url(../Paginas/Inicio/Assets/x-lg.svg);
+        }
+    }
+
 }
