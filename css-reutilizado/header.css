@@ -36,7 +36,7 @@ body {
     /*Styles*/
     background-color: #ffffff;
     padding: .8rem 1.2rem;
-    border-bottom: 1px solid #00000033;
+    border-bottom: 1px solid #000000;
 
     /*Functions*/
     justify-content: space-between;
@@ -560,7 +560,7 @@ body {
 }
 
 .logos__slide img {
-    height: 65px;
+    height: 55px;
     transition: .3s ease;
     padding: .4rem;
     border-radius: 10px;
@@ -648,7 +648,6 @@ body {
 
     .header {
         padding: 1rem;
-        border-bottom: none;
         justify-content: space-between;
         gap: 2rem;
     }
@@ -798,9 +797,13 @@ body {
         font-size: 1rem;
     }
 
-    .lesson__more img{
+    .lesson__more img {
         margin: 0 auto;
         width: 200px;
+    }
+
+    .logos__slide {
+        padding: 0 1rem;
     }
 
 
@@ -911,6 +914,10 @@ body {
     .lesson__more p {
         padding: .7rem;
         font-size: .8rem;
+    }
+
+    .logos__title {
+        font-size: .9rem;
     }
 
 }
