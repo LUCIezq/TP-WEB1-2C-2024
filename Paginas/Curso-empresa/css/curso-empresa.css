@@ -9,6 +9,7 @@ body {
 
 main {
     height: auto;
+    margin-bottom: 3rem;
 }
 
 .curso-empresa__titulo {
@@ -92,4 +93,48 @@ main {
     transition: .3s ease;
     background-color: #7ad5ff71;
     color: rgb(0, 0, 0);
+}
+
+@media screen and (width <=400px) {
+
+    .curso-empresa__titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .curso-empresa__agregar-persona {
+        align-items: center;
+        margin: 2rem 1rem;
+    }
+
+    .curso-empresa__parte-inferior-final p {
+        padding: 3px;
+        font-size: 1.2rem;
+    }
+
+    .curso-empresa__parte-inferior-final {
+        display: flex;
+        gap: 1rem;
+        text-align: center;
+        justify-content: space-around;
+
+        padding: 1rem 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .curso-empresa__parte-inferior-final p {
+        place-self: center;
+    }
+
+    .curso-empresa__parte-inferior-final button {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
+
+
+
 }

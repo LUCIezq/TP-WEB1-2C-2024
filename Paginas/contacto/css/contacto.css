@@ -6,6 +6,8 @@
 main {
     height: auto;
     margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 h1 {
@@ -15,14 +17,12 @@ h1 {
 
 .contacto {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .contacto__parte-izquierda {
-    width: 45%;
     display: flex;
     flex-direction: column;
 }
@@ -61,13 +61,13 @@ h1 {
 .contacto__parte-derecha {
     display: flex;
     flex-direction: column;
-    width: 45%;
     text-align: center;
     border-style: solid;
     border-radius: 10px;
     justify-content: center;
     gap: 15px;
     border: 1px solid black;
+    padding: 1rem 2rem;
 }
 
 .ubicacion {
@@ -82,3 +82,11 @@ h2 {
 }
 
 .ubicacion__maps {}
+
+@media screen and (width <= 735px) {
+    
+    .contacto__parte-izquierda{
+        width: 100%;
+        margin: 0 2rem;
+    }
+}
