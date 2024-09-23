@@ -157,7 +157,7 @@ body {
 
 .header__right-button-register {
     /*Styles*/
-    background-color: var(--secondary-color);
+    background-color: black;
     color: white;
 }
 
