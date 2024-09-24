@@ -1,4 +1,5 @@
-*{
+/*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,6 +8,9 @@
 .footer {
   background-color: rgb(43, 42, 42);
   box-shadow: 0px 2px 6px rgb(2, 2, 2);
+  border-radius: 70px 70px 0px 0px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 footer .section__principal {
@@ -81,4 +85,77 @@ footer a:hover {
   font-style: oblique;
   font-weight: bold;
   color: black;
+} */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #000000;
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: center;
+  border-radius: 70px 70px 0px 0px;
+}
+
+.footer__title {
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+  padding: .5rem 4rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 3rem;
+}
+
+.footer__paragraph,
+.footer__container {
+  text-align: center;
+}
+
+.footer__flex {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.footer__elements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+}
+
+.footer__element {
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.footer__link {
+  text-decoration: none;
+}
+
+.footer__link,
+.footer__element,
+.footer__paragraph {
+  color: #00000085;
+}
+
+.footer__elements-social {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.footer__paragraph{
+padding: 0 1rem;
 }

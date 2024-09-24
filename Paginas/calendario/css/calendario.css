@@ -1,41 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
 }
-.limpiar-links{
+
+.limpiar-links {
     text-decoration: none;
     color: black;
 }
-body{
-    background-color: #ccf3fc;
+
+body {
+    padding-top: 3rem;
 }
-main{
-    height: 600px;
-    
+
+main {
+    height: auto;
 }
-.calendario{
+
+.calendario {
     display: grid;
-    grid-template-columns: repeat(7, 13%);
-    grid-template-rows: repeat(5, 6rem);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin: 3rem 1rem;
+}
 
-}
-.calendario__item{
-    border-style: solid;
-    border-width: 1px;
+.calendario__item {
     border-color: lightgrey;
-    height: 5.5rem;
     text-align: center;
+    height: 100%;
+    padding: 2rem 0;
     font-size: 14px;
-    padding-top: 5px;
-    line-height: 1.5;
     background-color: rgba(255, 255, 255, 0.747);
-    
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    display: grid;
+    align-items: center;
 }
-.calendario__item__nuevoCurso{
+
+.calendario__item__nuevoCurso {
     background-color: lightyellow;
     text-decoration: none;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .calendario {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columnas en pantallas pequeñas */
+        grid-template-rows: repeat(7, 1fr);
+        /* Más filas para días adicionales */
+    }
 }

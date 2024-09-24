@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css-reutilizado/header.css">
+    <link rel="stylesheet" href="./Css/checkout.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header__left">
+
+            <a href="/index.html" class="header__left-link">
+                LearnTree.
+            </a>
+
+            <div class="header__center-container-input">
+
+                <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+
+                <div class="header__center-container-icon">
+                    <a href="#" class="header__center-container-link">
+                        <img src="./Paginas/Inicio/Assets/search.svg" class="header__center-icon" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav class="nav">
+
+            <ul class="nav__elements">
+
+                <li class="nav__element">
+                    <a class="nav__link" href="./index.html">Inicio</a>
+                </li>
+
+                <li class="nav__element">
+                    <a class="nav__link" href="./Paginas/Curso-empresa/curso-empresa.html">Empresa</a>
+                </li>
+
+                <li class="nav__element">
+                    <a class="nav__link" href="./Paginas/calendario/calendario.html">Calendario</a>
+                </li>
+
+                <li class="nav__element">
+                    <a class="nav__link" href="./Paginas/contacto/contacto.html">Contacto</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="header__right">
+
+            <div class="header__right-buttons">
+
+                <a class="header__right-button-login button" href="./Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
+                <a class="header__right-button-register button" href="">Registrarse</a>
+
+            </div>
+
+            <div class="header__right-cart">
+
+                <a href="./Paginas/Cart-view/cart-view.html"><img src="./Paginas/Inicio/Assets/bx-cart-add.svg"
+                        class="header__right-icon-cart" alt="Carrito"></a>
+
+                <div class="header__right-cart-count-container">
+                    <span class="header__right-cart-count">0</span>
+                </div>
+
+            </div>
+
+            <label class="header__right-label">
+                <input type="checkbox" class="header__right-checkbox">
+            </label>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="checkout__container">
+
+                <h2 class="checkout__container-title">
+                    Detalles de pago
+                </h2>
+
+                <form class="form__container">
+
+                    <div class="checkout__container-input">
+                        <label for="email" class="checkout__label">Email</label>
+                        <input type="email" id="email" name="email" class="checkout__input"
+                            placeholder="alguien@algo.com" required>
+                    </div>
+
+                    <div class="checkout__container-input">
+                        <label for="credit-card" class="checkout__label">Numero de tarjeta</label>
+                        <input type="text" id="credit-card" name="credit-card" class="checkout__input"
+                            placeholder="XXXX   XXXX    XXXX    XXXX" required>
+                    </div>
+
+                    <div class="checkout__container-input checkout__container-input--column">
+
+                        <div class="checkout__container-input">
+                            <label for="fecha-expiracion" class="checkout__label">Fecha de expiracion</label>
+                            <input type="text" id="fecha-expiracion" name="fecha-expiracion" class="checkout__input"
+                                placeholder="mm / yy" required>
+                        </div>
+
+                        <div class="checkout__container-input">
+                            <label for="cvv" class="checkout__label">CVC/CVV</label>
+                            <input type="text" id="cvv" name="cvv" class="checkout__input" placeholder="xxx" required>
+                        </div>
+
+                    </div>
+
+                    <div class="checkout__container-details">
+
+                        <div class="checkout__container-total">
+
+                            <span class="checkout__total">Monto total</span>
+                            <span class="checkout__total-amount">$0</span>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="form__container-button">Confirmar</button>
+
+                </form>
+
+            </div>
+
+            <div class="checkout__list">
+
+                <h2 class="checkout__list-title">
+                    Detalle de ordenes
+                </h2>
+
+                <div class="checkout__list-hidden">
+                    <img src="../Cart-view/Assets/Search Engine 1.svg" alt="">
+
+                    <p class="cart__container-no-elements-information">
+                        Tu cesta está vacía. ¡Sigue buscando para encontrar un curso!
+                    </p>
+
+                    <a href="/index.html" class="cart__container-no-elements-link">Buscar un curso</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

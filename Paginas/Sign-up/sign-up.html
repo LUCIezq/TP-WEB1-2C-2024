@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in - LinkTree</title>
     <link rel="stylesheet" href="../Sign-in/Css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
+    <title>Document</title>
 </head>
 
 <body>
@@ -39,7 +37,7 @@
 
                 <div class="main__sign-in">
                     <h2 class="main__text">
-                        Sign in
+                        Sign up
                     </h2>
                     <!-- <div class="main__sign-in-line"></div> -->
                     <!-- <p class="main__paragraph">
@@ -47,9 +45,14 @@
                     </p> -->
 
 
-                    <form class="form" action="/index.html">
+                    <form class="form" action="../Sign-in/sign-in.html">
 
                         <div class="form__container-input">
+                            <label for="name" class="form__label">Name</label>
+                            <input type="text" id="name" name="email" class="form__input" placeholder="Enter your name"required>
+                        </div>
+                        <div class="form__container-input">
+
                             <label for="email" class="form__label">Email</label>
                             <input type="email" id="email" name="email" class="form__input"
                                 placeholder="Enter your email address" required>
@@ -70,12 +73,7 @@
 
                         </div>
 
-
-                        <div class="form__forgot-password">
-                            <a href="../Reset-password/reset-password.html" class="form__link">Forgot password?</a>
-                        </div>
-
-                        <button type="submit" class="form__button">Sign in</button>
+                        <button type="submit" class="form__button">Sign up</button>
 
                     </form>
 
@@ -83,10 +81,8 @@
 
             </main>
 
-            <span class="container__question">Need an account? <a href="../Sign-up/sign-up.html"
-                    class="container__question container__link">Sign
-                    up
-                    here</a></span>
+            <span class="container__question">Already have an account ? <a href="../Sign-in/sign-in.html"
+                    class="container__question container__link">Sign in</a></span>
         </div>
 
         <div class="container__column-right">
@@ -104,11 +100,10 @@
             </div>
 
             <div class="container__image">
-                <img src="./Assets/main-hero.svg" class="column__image" alt="">
+                <img src="../Sign-in/Assets/main-hero.svg" class="column__image" alt="">
             </div>
 
         </div>
-
     </div>
 
 </body>

@@ -1,77 +1,140 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-main{
-    height: auto;
+
+body {
+    margin-top: 2rem;
 }
-.curso-empresa__titulo{
-    margin: 3rem;
+
+main {
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.curso-empresa__titulo {
+    margin: 3.5% 0 3.5% 3.5%;
     font-size: 15px;
 }
-.curso-empresa__titulo h1{
+
+.curso-empresa__titulo h1 {
     text-decoration: underline;
     line-height: 1.5;
 }
-.curso-empresa__inscripciones{
+
+.curso-empresa__inscripciones {
     display: flex;
     justify-content: space-evenly;
     margin-top: 15px;
     align-items: center;
-    
+
 }
-.curso-empresa__inscripciones__input{
+
+.curso-empresa__inscripciones__input {
     height: 40px;
     width: 25%;
     font-size: 16;
     padding-left: 5px;
 }
-.icono__plus{
+
+.icono__plus {
     height: 30px;
     cursor: pointer;
 }
-.icono__plus:hover{
+
+.icono__plus:hover {
     height: 35px;
     transition: ease .3s;
     cursor: pointer;
 }
-.curso-empresa__agregar-persona{
+
+.curso-empresa__agregar-persona {
     display: flex;
     align-items: baseline;
     margin: 4% 0 0 4%;
     gap: 10px;
 }
-.icono__sumar-persona{
+
+.icono__sumar-persona {
     height: 30px;
     cursor: pointer;
 }
-.icono__sumar-persona:hover{
+
+.icono__sumar-persona:hover {
     height: 35px;
     transition: ease .3s;
 }
-.curso-empresa__parte-inferior-final{
+
+.curso-empresa__parte-inferior-final {
     display: flex;
     margin: 4.5% 0 4% 4%;
     gap: 10px;
-
+    width: fit-content;
 }
-.curso-empresa__parte-inferior-final p{
+
+.curso-empresa__parte-inferior-final p {
     background-color: black;
     border-radius: 4px;
     padding: 3px;
     color: white;
     font-size: 33px;
 }
-.curso-empresa__parte-inferior-final button{
+
+.curso-empresa__parte-inferior-final button {
     border-radius: 5px;
     border-width: 1px;
-    padding: 4px;
-    background-color: #7ad5ffd0;
     cursor: pointer;
+    background-color: white;
     font-size: 20px;
+    padding: 0 .5rem;
 }
-.curso-empresa__parte-inferior-final button:hover{
+
+.curso-empresa__parte-inferior-final button:hover {
     transition: .3s ease;
     background-color: #7ad5ff71;
     color: rgb(0, 0, 0);
+}
+
+@media screen and (width <=400px) {
+
+    .curso-empresa__titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .curso-empresa__agregar-persona {
+        align-items: center;
+        margin: 2rem 1rem;
+    }
+
+    .curso-empresa__parte-inferior-final p {
+        padding: 3px;
+        font-size: 1.2rem;
+    }
+
+    .curso-empresa__parte-inferior-final {
+        display: flex;
+        gap: 1rem;
+        text-align: center;
+        justify-content: space-around;
+
+        padding: 1rem 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .curso-empresa__parte-inferior-final p {
+        place-self: center;
+    }
+
+    .curso-empresa__parte-inferior-final button {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
+
+
+
 }
