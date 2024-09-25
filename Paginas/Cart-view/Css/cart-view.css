@@ -1,3 +1,6 @@
+body{
+    background-color: aliceblue;
+}
 .cart__container {
     width: min(900px, 100%);
     border: 1px solid #00000010;
@@ -5,6 +8,7 @@
     margin-top: 5rem;
     padding: 2rem;
     border-radius: 30px;
+    background-color: #ffff;
 }
 
 .cart__container-information {
