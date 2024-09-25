@@ -20,10 +20,20 @@
               LearnTree.
           </a>
 
+      <div class="header__center-container-input">
+
+        <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
           <div class="header__center-container-input">
 
               <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
+        <label class="header__center-label">
+          <input type="checkbox" class="header__center-checkbox">
+        </label>
+
+      </div>
+
+    </div>
               <label class="header__center-label">
                   <input type="checkbox" class="header__center-checkbox">
               </label>
@@ -63,6 +73,7 @@
 
       </nav>
 
+    <div class="header__right">
       <div class="header__right">
 
           <div class="header__right-cart">
@@ -70,6 +81,9 @@
               <a href="/Paginas/Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
                       class="header__right-icon-cart" alt="Carrito"></a>
 
+        <div class="header__right-cart-count-container">
+          <span class="header__right-cart-count"></span>
+        </div>
               <div class="header__right-cart-count-container">
                   <span class="header__right-cart-count"></span>
               </div>
@@ -300,92 +314,169 @@
               />
             </div>
 
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <h2 class="lesson__item-title">
-                  Máster Completo en Java de cero a experto.
-                </h2>
+          <div class="lesson__item-container-information">
+            <div class="lesson__item-information-top">
+              <h2 class="lesson__item-title">
+                Máster Completo en Java de cero a experto.
+              </h2>
 
-                <p class="lesson__item-description">
-                  Aprende con el mejor curso Java de cero con las mejores
-                  prácticas POO, Java EE 9, CDI, JPA, EJB, JSF, Web Services,
-                  JAAS.
-                </p>
-              </div>
-
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 127hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $9500 </span>
-                  <a href="#" class="lesson__item-button"> Comprar </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lesson__item">
-            <div class="lesson__item-container-img">
-              <img
-                src="../Inicio/Assets_cursos/javascript.jpg"
-                alt="Ciberseguridad"
-              />
+              <p class="lesson__item-description">
+                Aprende con el mejor curso Java de cero con las mejores
+                prácticas POO, Java EE 9, CDI, JPA, EJB, JSF, Web Services,
+                JAAS.
+              </p>
             </div>
 
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <h2 class="lesson__item-title">
-                  JavaScript Moderno Guía Definitiva.
-                </h2>
-                <p class="lesson__item-description">
-                  Aprende el Lenguaje de Programación Web más popular paso a
-                  paso con +20 Proyectos - Incluye Proyecto MERN Full Stack.
-                </p>
-              </div>
+            <div class="lesson__item-information-bottom">
+              <span class="lesson__item-hours"> 127hs </span>
 
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 100hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $16.500 </span>
-                  <a href="#" class="lesson__item-button"> Comprar </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lesson__item">
-            <div class="lesson__item-container-img">
-              <img
-                src="../../Paginas/Inicio/Assets_cursos/python.jpg"
-                alt="Ciberseguridad"
-              />
-            </div>
-
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <h2 class="lesson__item-title">
-                  Python para Data Science & Machine Learning.
-                </h2>
-                <p class="lesson__item-description">
-                  Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn,
-                  Scikit Learn, Tensorflow y Machine Learning.
-                </p>
-              </div>
-
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 150hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $20.000 </span>
-                  <a href="#" class="lesson__item-button"> Comprar </a>
-                </div>
+              <div class="lesson__item-information-bottom-button-price">
+                <span class="lesson__item-price"> $9500 </span>
+                <a href="#" class="lesson__item-button"> Comprar </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="lesson__item">
+          <div class="lesson__item-container-img">
+            <img src="../Inicio/Assets_cursos/javascript.jpg" alt="Ciberseguridad" />
+          </div>
+
+          <div class="lesson__item-container-information">
+            <div class="lesson__item-information-top">
+              <h2 class="lesson__item-title">
+                JavaScript Moderno Guía Definitiva.
+              </h2>
+              <p class="lesson__item-description">
+                Aprende el Lenguaje de Programación Web más popular paso a
+                paso con +20 Proyectos - Incluye Proyecto MERN Full Stack.
+              </p>
+            </div>
+
+            <div class="lesson__item-information-bottom">
+              <span class="lesson__item-hours"> 100hs </span>
+
+              <div class="lesson__item-information-bottom-button-price">
+                <span class="lesson__item-price"> $16.500 </span>
+                <a href="#" class="lesson__item-button"> Comprar </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson__item">
+          <div class="lesson__item-container-img">
+            <img src="../../Paginas/Inicio/Assets_cursos/python.jpg" alt="Ciberseguridad" />
+          </div>
+
+          <div class="lesson__item-container-information">
+            <div class="lesson__item-information-top">
+              <h2 class="lesson__item-title">
+                Python para Data Science & Machine Learning.
+              </h2>
+              <p class="lesson__item-description">
+                Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn,
+                Scikit Learn, Tensorflow y Machine Learning.
+              </p>
+            </div>
+
+            <div class="lesson__item-information-bottom">
+              <span class="lesson__item-hours"> 150hs </span>
+
+              <div class="lesson__item-information-bottom-button-price">
+                <span class="lesson__item-price"> $20.000 </span>
+                <a href="#" class="lesson__item-button"> Comprar </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+
+    <span class="footer__title">
+      LearnTree.
+    </span>
+
+    <div class="footer__container">
+
+
+
+      <div class="footer__flex">
+
+        <h2>Datos del grupo</h2>
+
+        <ul class="footer__elements">
+          <li class="footer__element">
+            BROSSARD, LOUIS
+          </li>
+          <li class="footer__element">
+            CANTONI, MATIAS
+          </li>
+          <li class="footer__element">
+            CUCINELLI, EZEQUIEL
+          </li>
+          <li class="footer__element">
+            LUCI, EZEQUIEL
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer__flex">
+
+        <h2>Menu</h2>
+
+        <ul class="footer__elements">
+          <li class="footer__element">
+            <a href="./index.html" class="footer__link">Inicio</a>
+          </li>
+          <li class="footer__element">
+            <a href="/Paginas/Curso-empresa/curso-empresa.html" class="footer__link">Empresa</a>
+          </li>
+          <li>
+            <a href="/Paginas/calendario/calendario.html" class="footer__link">Calendario</a>
+          </li class="footer__element">
+          <li>
+            <a href="/Paginas/contacto/contacto.html" class="footer__link">Contacto</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer__flex ">
+
+        <h2>Redes sociales</h2>
+
+        <ul class="footer__elements footer__elements-social">
+          <li class="footer__element">
+            <a href="https://www.facebook.com/" class="footer__link"><img
+                src="/Paginas/Inicio/Assets_footer/facebook.svg" alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://www.instagram.com/" class="footer__link"><img
+                src="/Paginas/Inicio/Assets_footer/instagram.svg" alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://x.com/" class="footer__link"><img src="/Paginas/Inicio/Assets_footer/twitter-x.svg"
+                alt=""></a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <p class="footer__paragraph">
+      © Todos los derechos reservados 2024 - UNLaM
+    </p>
+
+  </footer>
+</body>
 
     <footer>
 
