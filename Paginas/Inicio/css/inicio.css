@@ -104,6 +104,7 @@ body{
     border-radius: 70px;
     border: 1px solid #00000028;
     padding: 3rem 0;
+    background-color: #ffff;
 
     /*Functions*/
     display: grid;
