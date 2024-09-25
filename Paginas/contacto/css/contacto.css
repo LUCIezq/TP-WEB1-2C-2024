@@ -25,6 +25,7 @@ h1 {
 .contacto__parte-izquierda {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .contacto__parte-izquierda input:first-child {
@@ -73,7 +74,7 @@ h1 {
 .ubicacion {
     display: flex;
     justify-content: center;
-    margin: 2% 0;
+    margin: 2rem 0;
 }
 
 h2 {
@@ -83,9 +84,9 @@ h2 {
 
 .ubicacion__maps {}
 
-@media screen and (width <= 735px) {
-    
-    .contacto__parte-izquierda{
+@media screen and (width <=735px) {
+
+    .contacto__parte-izquierda {
         width: 100%;
         margin: 0 2rem;
     }
