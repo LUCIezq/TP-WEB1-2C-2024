@@ -1,3 +1,6 @@
+body{
+    background-color: aliceblue;
+}
 .main {
     display: grid;
     gap: 1rem;
