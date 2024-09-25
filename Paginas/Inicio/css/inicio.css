@@ -184,7 +184,7 @@ body{
     /*Styles*/
     border-radius: 20px;
     background-color: #ffffff;
-    cursor: pointer;
+    cursor: default;
 
     /*Functions*/
     display: flex;
