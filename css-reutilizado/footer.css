@@ -96,6 +96,7 @@ footer {
   padding: 1rem 0;
   justify-content: center;
   border-radius: 70px 70px 0px 0px;
+  background-color: #ffff;
 }
 
 .footer__title {
