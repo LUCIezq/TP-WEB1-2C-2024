@@ -42,7 +42,7 @@ li {
   list-style: none;
 }
 
-.contenido__button {
+.contenido__button-inscribirse {
   margin-top: 0.5em;
   height: 2.25em;
   width: 40%;
@@ -55,6 +55,24 @@ li {
   transition: 0.4s ease;
   cursor: pointer;
   font-size: medium;
+}
+.contenido__button-empresa {
+  margin-top: 0.5em;
+  height: 2.25em;
+  width: 40%;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgb(248, 218, 153);
+  background-color: rgb(241, 186, 104);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  font-size: medium;
+}
+.contenido__button-empresa a {
+  text-decoration: none;
+  color: #ffff;
 }
 .contenido__button:hover {
   background-color: rgb(95, 158, 160);
