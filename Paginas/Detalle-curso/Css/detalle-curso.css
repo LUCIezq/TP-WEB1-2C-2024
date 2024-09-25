@@ -1,4 +1,3 @@
-
 main {
   margin: 0;
   padding: 0;
@@ -56,6 +55,7 @@ li {
   cursor: pointer;
   font-size: medium;
 }
+
 .contenido__button-empresa {
   margin-top: 0.5em;
   height: 2.25em;
@@ -69,13 +69,35 @@ li {
   cursor: pointer;
   font-size: medium;
 }
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.button__detalle {
+  text-decoration: none;
+  color: white;
+  padding: .5rem 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 7px;
+}
+
+.button__detalle-empresa{
+  background-color: #19a7ce;
+}
+
 .contenido__button-empresa a {
   text-decoration: none;
   color: #ffffff;
 }
+
 .contenido__button:hover {
   background-color: rgb(95, 158, 160);
 }
+
 .contenido__detalle {
   display: flex;
   justify-content: space-between;
@@ -88,6 +110,7 @@ li {
   font-family: "Poppins";
   box-shadow: 0px 2px 6px rgb(95, 158, 160);
 }
+
 .uparrow {
   width: 16px;
   height: 16px;
