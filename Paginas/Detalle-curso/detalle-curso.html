@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <link rel="stylesheet" href="./Css/detalle-curso.css" />
+    <link rel="stylesheet" href="../../css-reutilizado/header.css" />
+    <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
+  </head>
 
-  <link rel="stylesheet" href="./Css/detalle-curso.css" />
-  <link rel="stylesheet" href="/css-reutilizado/header.css" />
-  <link rel="stylesheet" href="/css-reutilizado/footer.css" />
-  <link rel="stylesheet" href="../Inicio/css/inicio.css">
-</head>
+  <body>
+    <header class="header">
 
-<body>
-  <header class="header">
+      <div class="header__left">
 
-    <div class="header__left">
-
-      <a href="/index.html" class="header__left-link">
-        LearnTree.
-      </a>
+          <a href="../../index.html" class="header__left-link">
+              LearnTree.
+          </a>
 
       <div class="header__center-container-input">
 
         <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+          <div class="header__center-container-input">
+
+              <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
         <label class="header__center-label">
           <input type="checkbox" class="header__center-checkbox">
@@ -32,180 +33,285 @@
       </div>
 
     </div>
+              <label class="header__center-label">
+                  <input type="checkbox" class="header__center-checkbox">
+              </label>
 
-    <nav class="nav">
-
-      <ul class="nav__elements">
-
-        <li class="nav__element">
-          <a class="nav__link" href="/index.html">Inicio</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="/Paginas/Curso-empresa/curso-empresa.html">Empresa</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="/Paginas/calendario/calendario.html">Calendario</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="/Paginas/contacto/contacto.html">Contacto</a>
-        </li>
-
-      </ul>
-
-      <div class="header__right-buttons">
-
-        <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
-        <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+          </div>
 
       </div>
 
-    </nav>
+      <nav class="nav">
+
+          <ul class="nav__elements">
+
+              <li class="nav__element">
+                  <a class="nav__link" href="../../index.html">Inicio</a>
+              </li>
+
+              <li class="nav__element">
+                  <a class="nav__link" href="../Curso-empresa/curso-empresa.html">Empresa</a>
+              </li>
+
+              <li class="nav__element">
+                  <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
+              </li>
+
+              <li class="nav__element">
+                  <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
+              </li>
+
+          </ul>
+
+          <div class="header__right-buttons">
+
+              <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
+              <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+
+          </div>
+
+      </nav>
 
     <div class="header__right">
+      <div class="header__right">
 
-      <div class="header__right-cart">
+          <div class="header__right-cart">
 
-        <a href="/Paginas/Cart-view/cart-view.html"><img src="/Paginas/Inicio/Assets/bx-cart-add.svg"
-            class="header__right-icon-cart" alt="Carrito"></a>
+              <a href="/Paginas/Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
+                      class="header__right-icon-cart" alt="Carrito"></a>
 
         <div class="header__right-cart-count-container">
           <span class="header__right-cart-count"></span>
         </div>
+              <div class="header__right-cart-count-container">
+                  <span class="header__right-cart-count"></span>
+              </div>
+
+          </div>
 
       </div>
 
-    </div>
+      <label class="header__right-label">
+          <input type="checkbox" class="header__right-checkbox">
+      </label>
 
-    <label class="header__right-label">
-      <input type="checkbox" class="header__right-checkbox">
-    </label>
-
-  </header>
-
-  <main class="main">
-    <section class="contenido__section">
-      <article class="contenido__container">
-        <div class="contenido__foto">
-          <img class="foto" src="../../imagenes/java-detalleCursoo.jpeg" alt="" />
-        </div>
-      </article>
-      <article class="contenido__container">
-        <div class="contenido__container__titulo">
-          <h2 class="titulo-principal">TITULO CURSO</h2>
-          <ul class="contenido__listas">
-            <li class="contenido__lista">Valor:</li>
-            <li class="contenido__lista">Tiempo de dedicacion necesario:</li>
-            <li class="contenido__lista">Descripicion del curso:</li>
-            <li class="contenido__lista">Requisitos previos:</li>
-          </ul>
-          <button class="contenido__button">Inscribirse</button>
-        </div>
-        <div class="contenido__container__detalle">
-          <h2 class="titulo-secundario">CONTENIDO DE CLASE</h2>
-          <div class="contenido__detalle">
-            <p>INTRODUCCION</p>
-            <img class="uparrow" src="../../imagenes/uparrow_arriba_5809.png" alt="icon" />
-          </div>
-          <div class="contenido__detalle__descripcion">
-            <div class="descripcion-izquierda">
-              <img class="video" src="../../imagenes/Video_icon-icons.com_71844.png" alt="video" />
-              <span class="detalle__descripcion__curso">1283-1 Taller de Mecanica...</span>
-            </div>
-            <div class="descripcion-derecha">
-              <img class="tiempo" src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
-                alt="tiempo" />
-              <span class="detalle__descripcion__curso">10min</span>
-              <img class="check" src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png" alt="check" />
-            </div>
-          </div>
-          <div class="contenido__detalle__descripcion">
-            <div class="descripcion-izquierda">
-              <img class="video" src="../../imagenes/Video_icon-icons.com_71844.png" alt="video" />
-              <span class="detalle__descripcion__curso">1283-1 Taller de Mecanica...</span>
-            </div>
-            <div class="descripcion-derecha">
-              <img class="tiempo" src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
-                alt="tiempo" />
-              <span class="detalle__descripcion__curso">10min</span>
-              <img class="check" src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png" alt="check" />
-            </div>
-          </div>
-          <div class="contenido__detalle__descripcion">
-            <div class="descripcion-izquierda">
-              <img class="video" src="../../imagenes/Video_icon-icons.com_71844.png" alt="video" />
-              <span class="detalle__descripcion__curso">1283-1 Taller de Mecanica...</span>
-            </div>
-            <div class="descripcion-derecha">
-              <img class="tiempo" src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
-                alt="tiempo" />
-              <span class="detalle__descripcion__curso">10min</span>
-              <img class="check" src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png" alt="check" />
-            </div>
-          </div>
-          <div class="contenido__detalle__descripcion">
-            <div class="descripcion-izquierda">
-              <img class="video" src="../../imagenes/Video_icon-icons.com_71844.png" alt="video" />
-              <span class="detalle__descripcion__curso">1283-1 Taller de Mecanica...</span>
-            </div>
-            <div class="descripcion-derecha">
-              <img class="tiempo" src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
-                alt="tiempo" />
-              <span class="detalle__descripcion__curso">10min</span>
-              <img class="check" src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png" alt="check" />
-            </div>
-          </div>
-          <div class="contenido__detalle">
-            <p>UNIDAD 2</p>
-            <img class="uparrow" src="../../imagenes/uparrow_arriba_5809.png" alt="icon" />
-          </div>
-          <div class="contenido__detalle">
-            <p>UNIDAD 3</p>
-            <img class="uparrow" src="../../imagenes/uparrow_arriba_5809.png" alt="icon" />
-          </div>
-        </div>
-      </article>
-    </section>
-    <section class="section__docente">
-      <h2 class="section__docente__titulo">DOCENTE</h2>
-      <div class="docente__container">
-        <article class="article__docente__imagen">
-          <div class="container__imagen">
-            <img src="../../imagenes/profesoor-removebg-preview.png" alt="profesor" class="profesor" />
+    </header>
+    <main class="main">
+      <section class="contenido__section">
+        <article class="contenido__container">
+          <div class="contenido__foto">
+            <img
+              class="foto"
+              src="../../imagenes/java-detalleCursoo.jpeg"
+              alt=""
+            />
           </div>
         </article>
-        <article class="article__docente__descripcion">
-          <div>
-            <h3 class="docente__descripcion__titulo">NOMBRE Y APELLIDO</h3>
+        <article class="contenido__container">
+          <div class="contenido__container__titulo">
+            <h2 class="titulo-principal">TITULO CURSO</h2>
+            <ul class="contenido__listas">
+              <li class="contenido__lista">Valor:</li>
+              <li class="contenido__lista">Tiempo de dedicacion necesario:</li>
+              <li class="contenido__lista">Descripicion del curso:</li>
+              <li class="contenido__lista">Requisitos previos:</li>
+            </ul>
+            <button class="contenido__button">Inscribirse</button>
+          </div>
+          <div class="contenido__container__detalle">
+            <h2 class="titulo-secundario">CONTENIDO DE CLASE</h2>
+            <div class="contenido__detalle">
+              <p>INTRODUCCION</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
+            </div>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
+              </div>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
+              </div>
+            </div>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
+              </div>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
+              </div>
+            </div>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
+              </div>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
+              </div>
+            </div>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
+              </div>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
+              </div>
+            </div>
+            <div class="contenido__detalle">
+              <p>UNIDAD 2</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
+            </div>
+            <div class="contenido__detalle">
+              <p>UNIDAD 3</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="section__docente">
+        <h2 class="section__docente__titulo">DOCENTE</h2>
+        <div class="docente__container">
+          <article class="article__docente__imagen">
+            <div class="container__imagen">
+              <img
+                src="../../imagenes/profesoor-removebg-preview.png"
+                alt="profesor"
+                class="profesor"
+              />
+            </div>
+          </article>
+          <article class="article__docente__descripcion">
             <div>
-              <img src="../../imagenes/star_77949.png" alt="estrella" class="estrella" />
-              <img src="../../imagenes/star_77949.png" alt="estrella" class="estrella" />
-              <img src="../../imagenes/star_77949.png" alt="estrella" class="estrella" />
-              <img src="../../imagenes/star_77949.png" alt="estrella" class="estrella" />
-              <img src="../../imagenes/star_77949.png" alt="estrella" class="estrella" />
+              <h3 class="docente__descripcion__titulo">NOMBRE Y APELLIDO</h3>
+              <div>
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+              </div>
+              <p class="docente__descripcion__descripcion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                sequi quod consequatur quo omnis nisi iusto reiciendis,
+                inventore mollitia voluptate eveniet debitis illo, suscipit
+                nostrum tempora culpa, optio incidunt maiores! Repellat sit
+                praesentium reprehenderit cupiditate quas deleniti labore
+                dolorum est quia consectetur ab minima laborum optio aperiam,
+                placeat nostrum sint reiciendis dolor eveniet minus perspiciatis
+                quis. Praesentium maiores veniam odit.
+              </p>
             </div>
-            <p class="docente__descripcion__descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              sequi quod consequatur quo omnis nisi iusto reiciendis,
-              inventore mollitia voluptate eveniet debitis illo, suscipit
-              nostrum tempora culpa, optio incidunt maiores! Repellat sit
-              praesentium reprehenderit cupiditate quas deleniti labore
-              dolorum est quia consectetur ab minima laborum optio aperiam,
-              placeat nostrum sint reiciendis dolor eveniet minus perspiciatis
-              quis. Praesentium maiores veniam odit.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="section__cursos">
-      <div class="lesson__items">
-        <div class="lesson__item">
-          <div class="lesson__item-container-img">
-            <img src="../Inicio/Assets_cursos/java.jpg" alt="Ciberseguridad" />
-          </div>
+          </article>
+        </div>
+      </section>
+      <section class="section__cursos">
+        <div class="lesson__items">
+          <div class="lesson__item">
+            <div class="lesson__item-container-img">
+              <img
+                src="../Inicio/Assets_cursos/java.jpg"
+                alt="Ciberseguridad"
+              />
+            </div>
 
           <div class="lesson__item-container-information">
             <div class="lesson__item-information-top">
@@ -371,4 +477,85 @@
   </footer>
 </body>
 
+    <footer>
+
+      <span class="footer__title">
+          LearnTree.
+      </span>
+  
+      <div class="footer__container">
+  
+  
+  
+          <div class="footer__flex">
+  
+              <h2>Datos del grupo</h2>
+  
+              <ul class="footer__elements">
+                  <li class="footer__element">
+                      BROSSARD, LOUIS
+                  </li>
+                  <li class="footer__element">
+                      CANTONI, MATIAS
+                  </li>
+                  <li class="footer__element">
+                      CUCINELLI, EZEQUIEL
+                  </li>
+                  <li class="footer__element">
+                      LUCI, EZEQUIEL
+                  </li>
+              </ul>
+  
+          </div>
+  
+          <div class="footer__flex">
+  
+              <h2>Menu</h2>
+  
+              <ul class="footer__elements">
+                  <li class="footer__element">
+                      <a href="../../index.html" class="footer__link">Inicio</a>
+                  </li>
+                  <li class="footer__element">
+                      <a href="../Curso-empresa/curso-empresa.html" class="footer__link">Empresa</a>
+                  </li>
+                  <li>
+                      <a href="../calendario/calendario.html" class="footer__link">Calendario</a>
+                  </li class="footer__element">
+                  <li>
+                      <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
+                  </li>
+              </ul>
+  
+          </div>
+  
+          <div class="footer__flex ">
+  
+              <h2>Redes sociales</h2>
+  
+              <ul class="footer__elements footer__elements-social">
+                  <li class="footer__element">
+                      <a href="https://www.facebook.com/" class="footer__link"><img
+                              src="../Inicio/Assets_footer/facebook.svg" alt=""></a>
+                  </li>
+                  <li class="footer__element">
+                      <a href="https://www.instagram.com/" class="footer__link"><img
+                              src="../Inicio/Assets_footer/instagram.svg" alt=""></a>
+                  </li>
+                  <li class="footer__element">
+                      <a href="https://x.com/" class="footer__link"><img
+                              src="../Inicio/Assets_footer/twitter-x.svg" alt=""></a>
+                  </li>
+              </ul>
+  
+          </div>
+  
+      </div>
+  
+      <p class="footer__paragraph">
+          © Todos los derechos reservados 2024 - UNLaM
+      </p>
+  
+    </footer>
+  </body>
 </html>
