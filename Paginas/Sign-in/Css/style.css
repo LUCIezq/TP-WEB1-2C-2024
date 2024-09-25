@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(/Fuente/Poppins-Medium.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans'
+    font-family: 'Poppins';
 }
 
 :root {
@@ -95,7 +100,7 @@ body {
     transition: .2s ease;
 }
 
-.header__information:hover{
+.header__information:hover {
     background-color: #19A7CE;
     color: white;
 }
@@ -262,7 +267,6 @@ body {
 .container__paragraph {
     width: 80%;
     font-size: 1.2em;
-    font-weight: 300;
     color: white;
 }
 
@@ -272,6 +276,7 @@ body {
 
 .container__title--modify {
     color: white;
+    font-weight: 300;
     font-style: italic;
 }
 
@@ -283,9 +288,6 @@ body {
     height: auto;
     width: 100%;
 }
-
-
-
 @media screen and (width <=930px) {
     .column__image {
         display: none;
