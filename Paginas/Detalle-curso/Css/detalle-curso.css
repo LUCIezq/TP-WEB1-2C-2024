@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 main {
   margin: 0;
   padding: 0;
@@ -192,8 +199,8 @@ main {
   flex-direction: column;
   gap: 1rem;
   margin: 2rem 0;
-  padding: 2rem;
   width: 100%;
+  padding-bottom: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -240,9 +247,9 @@ main {
 
 .dropdown__container-global {
   width: 100%;
-  border: 1px solid #00000033;
   border-radius: 3px;
-  max-width: 570px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -278,7 +285,7 @@ main {
   transition: .3s ease;
 }
 
-.dropdown:hover{
+.dropdown:hover {
   background-color: rgb(223, 226, 228);
 }
 
@@ -358,6 +365,10 @@ main {
 
   .section__docente__titulo {
     padding: 0;
+  }
+
+  .contenido__container {
+    flex-direction: column;
   }
 
 }
