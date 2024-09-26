@@ -283,6 +283,7 @@ main {
 
   --dropdown-icon: url(../Assets/arrow-down-icon.svg);
   transition: .3s ease;
+  list-style: none;
 }
 
 .dropdown:hover {
@@ -336,11 +337,6 @@ main {
   height: 20px;
 }
 
-
-
-
-
-
 @media screen and (width <=1130px) {
 
   .contenido__section {
@@ -390,7 +386,8 @@ main {
     gap: .2;
   }
 
-  .section__docente,.dropdown__curso{
+  .section__docente,
+  .dropdown__curso {
     padding: 1rem;
   }
 
