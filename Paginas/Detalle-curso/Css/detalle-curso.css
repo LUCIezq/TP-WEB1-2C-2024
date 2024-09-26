@@ -370,6 +370,7 @@ main {
 
   .contenido__container {
     flex-direction: column;
+    gap: 0;
   }
 
   .dropdown__container-global-title {
