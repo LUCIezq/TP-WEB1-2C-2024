@@ -253,6 +253,10 @@ main {
   gap: .5rem;
 }
 
+summary::marker {
+  display: none;
+}
+
 .dropdown__curso {
   padding: 1rem 0;
   display: grid;
