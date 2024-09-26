@@ -346,7 +346,7 @@ main {
   .contenido__section {
     margin: 0;
     gap: 0em;
-    padding: 1rem;
+    padding: 0;
   }
 
   .contenido__container__titulo {
