@@ -346,6 +346,7 @@ main {
   .contenido__section {
     margin: 0;
     gap: 0em;
+    padding: 1rem;
   }
 
   .contenido__container__titulo {
@@ -369,6 +370,23 @@ main {
 
   .contenido__container {
     flex-direction: column;
+  }
+
+  .dropdown__container-global-title {
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+
+  .dropdown__container-global {
+    padding: 0;
+  }
+
+  .dropdown__container-global-list {
+    font-size: .8rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .2;
   }
 
 }
