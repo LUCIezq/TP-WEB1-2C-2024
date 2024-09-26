@@ -7,7 +7,6 @@
 main {
   margin: 0;
   padding: 0;
-  background-color: white;
 }
 
 .contenido__section {
@@ -20,73 +19,49 @@ main {
 
 .contenido__container {
   display: flex;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
-}
-
-.contenido__foto {
+  border-radius: 10px;
   width: 100%;
-  max-width: 800px;
-  display: flex;
-  justify-content: flex-end;
+  overflow: hidden;
+  background-color: white;
 }
 
 .foto {
-  display: block;
-  /* width: 100%;
-  max-width: 800px; */
+  max-height: 100%;
+  display: grid;
 }
 
 .contenido__container__titulo {
   list-style: none;
-}
-
-.contenido__button-inscribirse {
-  margin-top: 0.5em;
-  height: 2.25em;
-  text-align: center;
-  box-shadow: 0px 2px 6px rgb(95, 158, 160);
-  background-color: var(--secondary-color);
-  color: white;
-  border: 0;
-  border-radius: 5px;
-  transition: 0.4s ease;
-  cursor: pointer;
-  font-size: medium;
-}
-
-.contenido__button-empresa {
-  margin-top: 0.5em;
-  height: 2.25em;
-  width: 40%;
-  text-align: center;
-  box-shadow: 0px 2px 6px rgb(185, 158, 103);
-  background-color: rgb(240, 186, 105);
-  border: 0;
-  border-radius: 5px;
-  transition: 0.4s ease;
-  cursor: pointer;
-  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 2rem;
 }
 
 .buttons {
   display: flex;
-  gap: 1rem;
-  padding-top: 1rem;
   align-items: center;
+  gap: 2rem;
+  min-height: 50px;
+  width: fit-content;
+  margin: 0 auto;
+
 }
 
 .button__detalle {
-  text-decoration: none;
-  color: white;
-  padding: .5rem 1rem;
-  background-color: var(--secondary-color);
+  color: #000000;
+  border: 1px solid #00000021;
   border-radius: 7px;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  font-weight: 600;
 }
 
-.button__detalle-empresa {
-  background-color: #19a7ce;
+.button__detalle:hover {
+  border-bottom-width: 3px;
+  border-color: black;
 }
 
 .contenido__button-empresa a {
@@ -165,15 +140,17 @@ main {
 .titulo-secundario {
   font-weight: 600;
   font-family: "Poppins";
-
 }
+
 
 .titulo-secundario {
   padding: 0.8em 0;
 }
 
 .titulo-principal {
-  padding-bottom: 0.5em;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  width: fit-content;
 }
 
 .section__docente__titulo {
@@ -183,15 +160,15 @@ main {
 .contenido__lista {
   font-size: medium;
   font-family: "Poppins";
-  margin: 0.3em 0;
+  margin: 0.7em 0;
   font-weight: 500;
-  max-width: 700px;
   list-style: none;
+  color: black;
 }
 
 .contenido__lista--bold {
-  font-weight: 800;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .section__docente {
@@ -201,14 +178,14 @@ main {
   margin: 2rem 0;
   width: 100%;
   padding-bottom: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .docente__information {
   display: flex;
   gap: .5rem;
-  align-items: center;
+  align-items: end;
 }
 
 .docente__information-name-stars {
@@ -222,10 +199,11 @@ main {
   flex-direction: column;
   gap: 1em;
   padding: 1rem;
+  margin-bottom: 3rem;
   border: 1px solid rgba(0, 0, 0, 0.274);
   border-radius: 12px;
+  background-color: white;
 }
-
 
 .profesor {
   padding: .5rem;
@@ -243,6 +221,7 @@ main {
   color: cadetblue;
   font-weight: bolder;
   font-family: "Poppins";
+
 }
 
 .dropdown__container-global {
@@ -258,7 +237,10 @@ main {
 
 .dropdown__container-global-title {
   font-size: 1.5rem;
-  text-decoration: underline;
+  background-color: white;
+  width: fit-content;
+  padding: 0 .5rem;
+  margin: .5rem 0;
 }
 
 .dropdown__container-global-list {
@@ -279,13 +261,13 @@ main {
 .dropdown {
   background-color: #f7f9fa;
   color: black;
-  border: 1px solid rgba(0, 0, 0, 0.13);
+  border: 1px solid #00000021;
 
   --dropdown-icon: url(../Assets/arrow-down-icon.svg);
   transition: .3s ease;
 }
 
-summary{
+summary {
   list-style: none;
 }
 
@@ -341,7 +323,7 @@ summary{
   height: 20px;
 }
 
-@media screen and (width <=1130px) {
+@media screen and (width <=1210px) {
 
   .contenido__section {
     margin: 0;
@@ -350,7 +332,9 @@ summary{
   }
 
   .contenido__container__titulo {
+    max-width: 700px;
     padding: 1rem;
+    margin-top: 1rem;
   }
 
   .foto {
@@ -371,15 +355,16 @@ summary{
   .contenido__container {
     flex-direction: column;
     gap: 0;
+    border-radius: 0px 0px 50px 50px;
   }
 
   .dropdown__container-global-title {
     text-align: center;
-    padding-bottom: .5rem;
+    margin: 1rem auto;
   }
 
   .dropdown__container-global {
-    padding: 0;
+    padding: 1rem;
   }
 
   .dropdown__container-global-list {
@@ -390,9 +375,38 @@ summary{
     gap: .2;
   }
 
-  .section__docente,
-  .dropdown__curso {
+  .section__docente {
     padding: 1rem;
   }
+
+}
+
+@media screen and (width <=600px) {
+
+  .contenido__lista,
+  .contenido__lista--bold {
+    font-size: .9rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+
+  .button__detalle {
+    padding: .4rem .5rem;
+  }
+
+  .dropdown__container-global-title {
+    font-size: 1.3rem;
+  }
+
+  .docente__name {
+    font-size: 1rem;
+  }
+
+  .docente__biography {
+    font-size: .9rem;
+  }
+
 
 }
