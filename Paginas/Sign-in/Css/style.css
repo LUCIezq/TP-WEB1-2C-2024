@@ -285,7 +285,6 @@ body {
     position: absolute;
     bottom: 0;
     left: 50px;
-    height: auto;
     width: 100%;
 }
 @media screen and (width <=930px) {

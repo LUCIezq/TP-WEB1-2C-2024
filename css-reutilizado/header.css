@@ -313,7 +313,6 @@ body {
     .header__left {
         order: 2;
         width: 100%;
-        justify-content: center;
     }
 
     .header__center-container-input {
@@ -382,7 +381,6 @@ body {
     .header__left {
         display: flex;
         gap: 0rem;
-        flex-grow: 0;
         justify-content: space-between;
         padding-left: .5rem;
     }

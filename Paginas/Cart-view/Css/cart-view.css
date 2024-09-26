@@ -1,14 +1,17 @@
-body{
+body {
     background-color: aliceblue;
+    display: flex;
+    place-content: center;
+
 }
+
 .cart__container {
-    width: min(900px, 100%);
     border: 1px solid #00000010;
-    margin: 0 auto;
-    margin-top: 5rem;
+    max-width: 900px;
     padding: 2rem;
     border-radius: 30px;
     background-color: #ffff;
+    margin-top: 4rem;
 }
 
 .cart__container-information {
