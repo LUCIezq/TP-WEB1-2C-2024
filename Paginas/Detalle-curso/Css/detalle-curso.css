@@ -390,4 +390,8 @@ main {
     gap: .2;
   }
 
+  .section__docente,.dropdown__curso{
+    padding: 1rem;
+  }
+
 }
