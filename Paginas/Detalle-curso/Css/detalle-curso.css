@@ -148,9 +148,10 @@ main {
 }
 
 .titulo-principal {
-  font-size: 1.6rem;
-  text-decoration: underline;
+  font-size: 1.7rem;
   width: fit-content;
+  background-color: aliceblue;
+  padding: 0 .5rem;
 }
 
 .section__docente__titulo {
@@ -199,7 +200,6 @@ main {
   flex-direction: column;
   gap: 1em;
   padding: 1rem;
-  margin-bottom: 3rem;
   border: 1px solid rgba(0, 0, 0, 0.274);
   border-radius: 12px;
   background-color: white;
@@ -335,6 +335,10 @@ summary {
     max-width: 700px;
     padding: 1rem;
     margin-top: 1rem;
+  }
+
+  .docente__container {
+    margin-bottom: 2rem;
   }
 
   .foto {
