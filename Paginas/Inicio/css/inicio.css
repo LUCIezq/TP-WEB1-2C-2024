@@ -119,6 +119,7 @@ body {
     text-align: center;
     display: grid;
     gap: 1rem;
+    padding: 2rem;
 }
 
 .lesson__question {
@@ -420,9 +421,55 @@ body {
     .logos__slide {
         padding: 0 1rem;
     }
+
+
 }
 
-@media screen and (width <=460px) {
+@media screen and (width<=595px) {
+
+    .lesson {
+        gap: 1.5rem;
+    }
+
+    .lesson__container-title {
+        font-size: 1rem;
+    }
+
+    .step__container-img {
+        display: none;
+    }
+
+    .steps__cards {
+        /*Functions*/
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(200px, 300px), 200px));
+        width: 100%;
+        justify-content: center;
+    }
+
+    .steps__question,
+    .lesson__question {
+        font-size: 2rem;
+    }
+
+    .steps__information {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .lesson__answer {
+        font-size: .9rem;
+        max-width: 500px;
+    }
+
+    .steps__paragraph {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (width <=479px) {
 
     .steps__question {
         font-size: 2.5rem;
@@ -448,6 +495,11 @@ body {
 
     .steps__paragraph {
         font-size: 1.23rem;
+    }
+
+    .steps__cards {
+        /*Functions*/
+        grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
     }
 
     .lesson__answer {
