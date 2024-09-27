@@ -8,6 +8,18 @@ body {
     margin: 2rem 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+.main__a {
+    scroll-behavior: smooth;
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    z-index: 100;
+}
+
 .steps__container {
     /*Functions*/
     width: 100%;
@@ -209,8 +221,9 @@ body {
         box-shadow: 0px 6px 0px 0px black;
     }
 
-    .lesson__item-title {
-        text-decoration: underline;
+    .lesson__item-link {
+        color: black;
+        font-weight: 600;
     }
 
     .lesson__item-container-img img {
@@ -229,7 +242,7 @@ body {
     display: grid;
     justify-content: center;
     gap: 2rem;
-    height: min(300px, 100%);
+    height: min(320px, 100%);
 }
 
 .lesson__item-information-top {
@@ -247,6 +260,14 @@ body {
     line-height: 1.2;
     text-decoration: none;
     color: black;
+}
+
+.lesson__item-link:hover {
+    text-decoration: underline;
+}
+
+.lesson__item-title:hover {
+    text-decoration: underline;
 }
 
 .lesson__item-description {
@@ -280,6 +301,15 @@ body {
     font-weight: 600;
     margin-right: 8px;
 }
+
+.lesson__item-link {
+    text-decoration: none;
+    color: #000000a9;
+    font-size: .9rem;
+    font-weight: 500;
+    width: fit-content;
+}
+
 
 .lesson__item-button {
     /*Styles*/
@@ -404,10 +434,12 @@ body {
     .carrousel__element::before {
         content: none;
     }
+
     .lesson__information {
         padding: 1rem;
     }
-    .lesson{
+
+    .lesson {
         padding: 0;
         padding-top: 1rem;
     }
