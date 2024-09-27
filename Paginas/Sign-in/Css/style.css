@@ -333,6 +333,7 @@ body {
         grid-template-columns: 1fr;
         max-width: 500px;
         position: relative;
+        height: 100dvh;
         max-height: 700px;
         padding: 1.5rem;
     }
