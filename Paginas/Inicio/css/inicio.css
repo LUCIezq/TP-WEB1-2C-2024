@@ -14,7 +14,7 @@ body {
     display: grid;
 
     /*Styles*/
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .step__container-img {
@@ -36,11 +36,11 @@ body {
     /*Styles*/
     line-height: 1;
     font-weight: 600;
-    font-size: 2.5rem;
-    padding: 0 1rem;
-    background-color: #19a7ce60;
-    color: white;
-    padding: .5rem;
+    font-size: clamp(1.5rem, 5vw, 2.6rem);
+    padding: .5rem 1rem;
+    border-radius: 12px;
+    background-color: #19a7ce;
+    color: rgb(255, 255, 255);
 }
 
 .steps__paragraph {
@@ -399,6 +399,7 @@ body {
         font-size: 2.5rem;
     }
 
+
     .carrousel__element:after,
     .carrousel__element::before {
         content: none;
@@ -460,14 +461,13 @@ body {
     }
 
 
-    .steps__question,
+
     .lesson__question {
         font-size: 1.7rem;
     }
 
     .steps__information {
         gap: 1rem;
-        padding: 1rem;
     }
 
     .lesson__answer {
@@ -478,17 +478,12 @@ body {
     .steps__paragraph {
         font-size: 1.2rem;
     }
-
 }
 
 @media screen and (width <=479px) {
 
     .lesson__question {
         line-height: 1.7;
-    }
-
-    .steps__question {
-        line-height: 1.2;
     }
 
     .lesson {
@@ -514,7 +509,7 @@ body {
     }
 
     .steps__container {
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .main {
