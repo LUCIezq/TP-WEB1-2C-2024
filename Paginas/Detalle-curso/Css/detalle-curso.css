@@ -253,10 +253,6 @@ main {
   gap: .5rem;
 }
 
-summary::marker {
-  display: none;
-}
-
 .dropdown__curso {
   padding: 1rem 0;
   display: grid;
@@ -298,10 +294,14 @@ summary {
 }
 
 .dropdown__title:after {
-  content: var(--dropdown-icon);
+  content: "";
+  background-image: var(--dropdown-icon);
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
-  width: 24px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
+  transition: background-image .2s;
 }
 
 .dropdown[open] {
