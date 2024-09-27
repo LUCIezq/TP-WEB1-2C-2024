@@ -179,7 +179,7 @@ main {
   margin: 2rem 0;
   width: 100%;
   padding-bottom: 2rem;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -241,6 +241,7 @@ main {
   width: fit-content;
   padding: 0 .5rem;
   margin: .5rem 0;
+
 }
 
 .dropdown__container-global-list {
@@ -251,11 +252,13 @@ main {
   color: #00000065;
   list-style: inside;
   gap: .5rem;
+
 }
 
 .dropdown__curso {
   padding: 1rem 0;
   display: grid;
+
 }
 
 .dropdown {
@@ -265,6 +268,7 @@ main {
 
   --dropdown-icon: url(../Assets/arrow-down-icon.svg);
   transition: .3s ease;
+
 }
 
 summary {

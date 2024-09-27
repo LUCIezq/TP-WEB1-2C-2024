@@ -8,21 +8,28 @@
     width: min(300px, 100%);
 }
 
+body {
+    min-height: 100vh;
+}
+
+
+
 .container {
-    width: min(1200px, 100%);
+    max-width: 1200px;
+    width: 100%;
     border: 1px solid #0000001c;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     padding: 2rem;
     border-radius: 12px;
     gap: 3rem;
-    place-content: center;
+    margin: 0 auto;
+    margin-top: 6rem;
+    justify-content: center;
 }
 
 .checkout__container {
     display: grid;
     gap: 1rem;
-    padding: 0 2rem;
 }
 
 .form__container {
@@ -98,10 +105,10 @@
 
 .checkout__list {
     background-color: rgba(0, 0, 0, 0.021);
-    padding: 0 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding: 0 3rem;
 }
 
 .cart__container-no-elements-information {
