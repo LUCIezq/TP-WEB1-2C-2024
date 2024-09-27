@@ -55,6 +55,7 @@ html{
     color: rgb(255, 255, 255);
 }
 
+
 .steps__paragraph {
     /*Styles*/
     font-size: 1.4rem;
@@ -320,6 +321,7 @@ html{
     transition: .3s ease;
     padding: .4rem .8rem;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .lesson__item-button:hover {

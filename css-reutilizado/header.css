@@ -35,7 +35,7 @@ body {
 .header {
     /*Styles*/
     background-color: #ffffff;
-    padding: .8rem 1.2rem;
+    padding: 1rem .3rem 1rem 1rem;
     border-bottom: 1px solid #000000;
 
     /*Functions*/
@@ -127,6 +127,9 @@ body {
     gap: .5rem;
 }
 
+
+
+
 .button {
     /*Functions*/
     text-align: center;
@@ -164,7 +167,16 @@ body {
 .header__right-cart {
     /*Functions*/
     display: flex;
-    gap: .1rem;
+    position: relative;
+    min-width: 50px;
+}
+
+.header__right-cart-count {
+    display: block;
+    text-align: center;
+    min-width: 30px;
+    position: absolute;
+    right: -3px;
 }
 
 .header__right-icon-cart {
@@ -368,6 +380,10 @@ body {
 
     .header__right-label {
         z-index: 20;
+    }
+
+    .header__right-cart-count {
+        font-size: .9rem;
     }
 
     .header__center-input {
