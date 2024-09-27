@@ -342,7 +342,9 @@ summary::-webkit-details-marker {
   .contenido__container__titulo {
     max-width: 700px;
     padding: 1rem;
+    padding-bottom: 2rem;
     margin-top: 1rem;
+    gap: .5rem;
   }
 
   .docente__container {
