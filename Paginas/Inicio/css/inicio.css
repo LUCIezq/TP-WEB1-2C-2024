@@ -14,7 +14,7 @@ body {
     display: grid;
 
     /*Styles*/
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 .step__container-img {
