@@ -38,7 +38,9 @@ body {
     font-weight: 600;
     font-size: 2.5rem;
     padding: 0 1rem;
-    background-color: #00ffff23;
+    background-color: #19a7ce60;
+    color: white;
+    padding: .5rem;
 }
 
 .steps__paragraph {
@@ -54,7 +56,6 @@ body {
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     width: min(1000px, 100%);
-
     margin: 2rem auto;
 
     /*Styles*/
@@ -72,13 +73,20 @@ body {
     background-color: var(--white);
 }
 
+.step__item--white {
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
 .step__description {
     /*Styles*/
 
     padding: .5rem;
     /*Functions*/
-    background-color: #00ffff23;
     height: 100%;
+}
+
+.step__description--white {
+    background-color: white;
 }
 
 .step__title {
@@ -121,6 +129,7 @@ body {
     gap: 1rem;
     padding: 2rem;
 }
+
 
 .lesson__question {
     /*Styles*/
@@ -192,6 +201,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 
 .lesson__item:hover {
 
@@ -412,7 +422,13 @@ body {
         padding: 0 1rem;
     }
 
+    .steps__cards {
+        grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+    }
 
+    .step__description {
+        padding: 1rem;
+    }
 }
 
 @media screen and (width<=901px) {
@@ -440,10 +456,9 @@ body {
         /*Functions*/
         display: grid;
         gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(min(200px, 300px), 200px));
-        width: 100%;
         justify-content: center;
     }
+
 
     .steps__question,
     .lesson__question {
