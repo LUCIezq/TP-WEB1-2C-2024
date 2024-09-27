@@ -276,6 +276,10 @@ summary {
   background-color: rgb(223, 226, 228);
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .dropdown__title {
   display: flex;
   color: #2d2f31;
