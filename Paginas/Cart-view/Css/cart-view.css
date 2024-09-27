@@ -2,7 +2,8 @@ body {
     background-color: aliceblue;
     display: flex;
     place-content: center;
-
+    height: 100vh;
+    width: 100%;
 }
 
 .cart__container {
@@ -12,6 +13,7 @@ body {
     border-radius: 30px;
     background-color: #ffff;
     margin-top: 4rem;
+    width: 100%;
 }
 
 .cart__container-information {
@@ -58,4 +60,33 @@ body {
 
 .cart__container-no-elements img {
     width: min(300px, 100%);
+}
+
+@media screen and (width<=570px) {
+
+    .cart__container {
+        padding: 1rem 2rem;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        height: calc(100%);
+    }
+
+    .cart__container-information {
+        margin-top: 3rem;
+    }
+
+    .cart__container-no-elements-information {
+        max-width: 400px;
+        padding-top: 2rem;
+    }
+
+
+    .cart__container img {
+        display: none;
+    }
+
 }
