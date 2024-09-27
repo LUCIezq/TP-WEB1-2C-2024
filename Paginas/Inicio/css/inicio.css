@@ -404,6 +404,13 @@ body {
     .carrousel__element::before {
         content: none;
     }
+    .lesson__information {
+        padding: 1rem;
+    }
+    .lesson{
+        padding: 0;
+        padding-top: 1rem;
+    }
 
     .carrousel__elements {
         display: flex;
