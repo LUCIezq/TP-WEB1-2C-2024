@@ -455,7 +455,7 @@ html {
     font-weight: 100;
 }
 
-.description__link:hover{
+.description__link:hover {
     background-color: #2d2f31e5;
 }
 
@@ -468,6 +468,19 @@ html {
     .carrousel__element:after,
     .carrousel__element::before {
         content: none;
+    }
+
+    .carrousel {
+        min-height: 300px;
+    }
+
+    .carrousel__elements {
+        height: 100%;
+    }
+
+    .carrousel img {
+        object-fit: cover;
+        height: 100%;
     }
 
     .lesson__information {
@@ -490,8 +503,8 @@ html {
         list-style: none;
         width: fit-content;
     }
-    
-    .carrousel__element-description{
+
+    .carrousel__element-description {
         display: none;
     }
 
