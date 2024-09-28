@@ -15,7 +15,7 @@
 
 <body>
 
-    <header class="header" >
+    <header class="header">
 
         <div class="header__left">
 
@@ -25,7 +25,16 @@
 
             <div class="header__center-container-input">
 
-                <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+                <input class="header__center-input" list="cursos" type="text" name="buscador" placeholder="Buscar">
+
+                <datalist id="cursos">
+                    <option value="JavaScript"></option>
+                    <option value="Java"></option>
+                    <option value="Html"></option>
+                    <option value="Css"></option>
+                    <option value="Python"></option>
+                    <option value="Cyberseguridad"></option>
+                </datalist>
 
                 <label class="header__center-label">
                     <input type="checkbox" class="header__center-checkbox">
@@ -95,7 +104,8 @@
             <ul class="carrousel__elements">
 
                 <li class="carrousel__element">
-                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO1.jpg" alt="">
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO1.jpg" class="carrousel__img-desktop" alt="">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO1.jpg" alt="" class="carrousel__img-mobile">
                     <div class="carrousel__element-description description">
                         <h2 class="description__title">
                             Suscríbete a los mejores cursos de LearnTree.
@@ -111,13 +121,13 @@
                 </li>
 
                 <li class=" carrousel__element">
-                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO2.jpg" alt="">
-
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO2.jpg" class="carrousel__img-desktop" alt="">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO2.jpg" alt="" class="carrousel__img-mobile">
                 </li>
 
                 <li class="carrousel__element">
-                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO3.jpg" alt="">
-
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO3.jpg" alt="" class="carrousel__img-desktop">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO3.jpg" alt="" class="carrousel__img-mobile">
                 </li>
 
             </ul>

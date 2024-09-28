@@ -88,8 +88,7 @@ html {
     background-color: var(--white);
 }
 
-.step__item--white {
-}
+.step__item--white {}
 
 .step__description {
     /*Styles*/
@@ -414,8 +413,8 @@ html {
 }
 
 .carrousel__element img {
-    width: 100vw;
     height: 100%;
+    width: 100vw;
 }
 
 .carrousel__element-description {
@@ -431,6 +430,11 @@ html {
     gap: 1rem;
     padding: 1rem;
     color: #2d2f31;
+}
+
+
+.carrousel__img-mobile{
+    display: none;
 }
 
 .description__title {
@@ -459,6 +463,7 @@ html {
 .description__link:hover {
     background-color: #2d2f31e5;
 }
+
 
 @media screen and (width <=1170px) {
 
@@ -560,7 +565,7 @@ html {
     }
 
     .lesson__question {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .steps__information {
@@ -602,6 +607,13 @@ html {
 
     .steps__paragraph {
         font-size: 1rem;
+    }
+
+    .carrousel__img-desktop{
+        display: none;
+    }
+    .carrousel__img-mobile{
+        display: block;
     }
 }
 
