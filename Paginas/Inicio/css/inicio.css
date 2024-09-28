@@ -397,13 +397,13 @@ html {
 
 .carrousel {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .carrousel__elements {
     width: 100%;
     display: flex;
-    background-color: red;
     overflow: hidden;
 }
 
@@ -415,6 +415,48 @@ html {
 .carrousel__element img {
     width: 100vw;
     height: 100%;
+}
+
+.carrousel__element-description {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 450px;
+    width: 100%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    color: #2d2f31;
+}
+
+.description__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.description__link {
+    text-decoration: none;
+    color: white;
+    background-color: #2d2f31;
+    width: fit-content;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    transition: .3s ease;
+}
+
+.description__paragraph {
+    color: rgba(0, 0, 0, 0.562);
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 100;
+}
+
+.description__link:hover{
+    background-color: #2d2f31e5;
 }
 
 @media screen and (width <=1170px) {
@@ -436,7 +478,8 @@ html {
         padding: 0;
         padding-top: 1rem;
     }
-    .carrousel{
+
+    .carrousel {
         overflow: scroll;
     }
 
@@ -446,6 +489,10 @@ html {
         margin: 0;
         list-style: none;
         width: fit-content;
+    }
+    
+    .carrousel__element-description{
+        display: none;
     }
 
     .lesson__more img {
@@ -530,16 +577,16 @@ html {
         font-weight: 600;
     }
 
-    .steps__question{
+    .steps__question {
         font-size: 1.4rem;
     }
 
-    .steps__information{
+    .steps__information {
         gap: .5rem;
         padding: .7rem;
     }
 
-    .steps__paragraph{
+    .steps__paragraph {
         font-size: 1rem;
     }
 }
