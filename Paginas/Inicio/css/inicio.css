@@ -1,14 +1,16 @@
 body {
     background-color: aliceblue;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .main {
     display: grid;
     gap: 1rem;
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -16,7 +18,7 @@ html{
     scroll-behavior: smooth;
     position: fixed;
     bottom: 3px;
-    right: 3px;
+    right: 10px;
     z-index: 100;
 }
 
@@ -32,35 +34,35 @@ html{
 .step__container-img {
     /*Styles*/
     padding: 1rem;
-    background-color: #00ffff10;
 }
 
 .steps__information {
     /*Functions*/
     display: grid;
     gap: .5rem;
+    padding: 1rem 2rem;
     text-align: center;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .steps__question {
     /*Styles*/
     line-height: 1;
-    font-weight: 600;
-    font-size: clamp(1.5rem, 5vw, 2.6rem);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
     padding: .5rem 1rem;
-    border-radius: 12px;
-    background-color: #19a7ce;
-    color: rgb(255, 255, 255);
+    color: black;
+    background-color: azure;
 }
-
 
 .steps__paragraph {
     /*Styles*/
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     font-weight: 300;
-    color: #000000c4;
+    color: rgba(0, 0, 0, 0.507);
 }
 
 .steps__cards {
@@ -87,7 +89,7 @@ html{
 }
 
 .step__item--white {
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgb(0, 0, 0);
 }
 
 .step__description {
@@ -130,9 +132,7 @@ html{
 
     /*Functions*/
     display: grid;
-    margin: 0 auto;
     gap: 3.5rem;
-    width: 95%;
 }
 
 .lesson__information {
@@ -152,10 +152,10 @@ html{
 
 .lesson__question-modify {
     /*Styles*/
-    background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--black);
     padding: .2rem 1rem;
     font-weight: 600;
+    border: 1px solid black;
     border-radius: 30px;
 }
 
@@ -243,7 +243,7 @@ html{
     display: grid;
     justify-content: center;
     gap: 2rem;
-    height: min(320px, 100%);
+    height: min(340px, 100%);
 }
 
 .lesson__item-information-top {
@@ -311,7 +311,6 @@ html{
     width: fit-content;
 }
 
-
 .lesson__item-button {
     /*Styles*/
     color: white;
@@ -324,9 +323,6 @@ html{
     cursor: pointer;
 }
 
-.lesson__item-button:hover {
-    background-color: #000000c9;
-}
 
 .lesson__item-container-img {
     width: 100%;
@@ -401,27 +397,23 @@ html{
 
 .carrousel {
     width: 100%;
-    max-height: 750px;
-    max-width: 900px;
-    display: flex;
-    margin: 2rem auto;
     overflow: hidden;
-    border-radius: 12px;
 }
 
 .carrousel__elements {
+    width: 100%;
     display: flex;
+    background-color: red;
+    overflow: hidden;
 }
 
 .carrousel__element {
     list-style: none;
-
+    width: 100%;
 }
 
-.carrousel__elements img {
-    object-fit: cover;
+.carrousel__element img {
     width: 100vw;
-    max-width: 900px;
     height: 100%;
 }
 
@@ -430,7 +422,6 @@ html{
     .lesson__question {
         font-size: 2.5rem;
     }
-
 
     .carrousel__element:after,
     .carrousel__element::before {
@@ -445,6 +436,9 @@ html{
         padding: 0;
         padding-top: 1rem;
     }
+    .carrousel{
+        overflow: scroll;
+    }
 
     .carrousel__elements {
         display: flex;
@@ -452,7 +446,6 @@ html{
         margin: 0;
         list-style: none;
         width: fit-content;
-        overflow-x: scroll;
     }
 
     .lesson__more img {
@@ -470,6 +463,10 @@ html{
 
     .step__description {
         padding: 1rem;
+    }
+
+    .main__a {
+        right: 0px;
     }
 }
 
@@ -501,8 +498,6 @@ html{
         justify-content: center;
     }
 
-
-
     .lesson__question {
         font-size: 1.7rem;
     }
@@ -516,8 +511,36 @@ html{
         max-width: 500px;
     }
 
-    .steps__paragraph {
-        font-size: 1.2rem;
+}
+
+@media screen and (width <=700px) {
+    .lesson__items {
+        /*Functions*/
+        grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 300px));
+        width: 100%;
+        gap: 2rem;
+        place-content: center;
+
+        /*Styles*/
+        padding: 0 2rem;
+    }
+
+    .lesson__item-link {
+        color: black;
+        font-weight: 600;
+    }
+
+    .steps__question{
+        font-size: 1.4rem;
+    }
+
+    .steps__information{
+        gap: .5rem;
+        padding: .7rem;
+    }
+
+    .steps__paragraph{
+        font-size: 1rem;
     }
 }
 
@@ -536,9 +559,6 @@ html{
         padding: .5rem;
     }
 
-    .steps__paragraph {
-        font-size: 1.23rem;
-    }
 
     .steps__cards {
         /*Functions*/
@@ -568,5 +588,9 @@ html{
 
     .logos__title {
         font-size: .9rem;
+    }
+
+    .lesson {
+        border-radius: 30px;
     }
 }

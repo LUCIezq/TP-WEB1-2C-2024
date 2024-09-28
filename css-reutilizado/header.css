@@ -35,7 +35,7 @@ body {
 .header {
     /*Styles*/
     background-color: #ffffff;
-    padding: 1rem .3rem 1rem 1rem;
+    padding: 1rem;
     border-bottom: 1px solid #000000;
 
     /*Functions*/
@@ -127,9 +127,6 @@ body {
     gap: .5rem;
 }
 
-
-
-
 .button {
     /*Functions*/
     text-align: center;
@@ -147,7 +144,9 @@ body {
     background-color: #00000009;
 }
 
-.header__right-button-register:hover {
+.header__right-button-register:hover,
+.nav__link:hover,
+.lesson__item-button:hover {
     box-shadow: 0px 0px 0px 1px var(--black);
     background-color: var(--white);
     color: var(--black);
@@ -167,16 +166,12 @@ body {
 .header__right-cart {
     /*Functions*/
     display: flex;
-    position: relative;
-    min-width: 50px;
+    gap: .3rem;
 }
 
 .header__right-cart-count {
     display: block;
     text-align: center;
-    min-width: 30px;
-    position: absolute;
-    right: -3px;
 }
 
 .header__right-icon-cart {
@@ -230,12 +225,6 @@ body {
     display: inline-block;
 }
 
-.nav__link:hover {
-    /*Styles*/
-    background-color: black;
-    color: white;
-}
-
 .header__right-label {
     /*Functions*/
     background-image: url(../Paginas/Inicio/Assets/list.svg);
@@ -255,9 +244,9 @@ body {
 @media screen and (width <=1170px) {
 
     .header {
-        padding: 1rem;
         justify-content: space-between;
         gap: 2rem;
+        padding: .7rem .5 .7rem .7rem;
     }
 
     .nav {
