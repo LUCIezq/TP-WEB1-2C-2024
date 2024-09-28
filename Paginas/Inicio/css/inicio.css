@@ -132,6 +132,8 @@ html {
     /*Functions*/
     display: grid;
     gap: 3.5rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .lesson__information {
