@@ -282,10 +282,6 @@ body {
         padding: 0 1rem;
     }
 
-    .nav__link:hover {
-        text-decoration: underline;
-    }
-
     .button {
         color: var(--white);
         background-color: transparent;
@@ -300,14 +296,19 @@ body {
         border: none;
     }
 
-    .header__right-button-register:hover {
-        background-color: black;
+    .header__right-button-register:hover,
+    .nav__link:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+    .nav__link:hover {
+        text-decoration: underline;
     }
 
     .header__right-label {
         display: block;
         order: 1;
-        transition: .2s ease;
         z-index: 2;
     }
 
