@@ -1,6 +1,7 @@
-body{
+body {
   background-color: aliceblue;
 }
+
 main {
   margin: 0;
   padding: 0;
@@ -140,6 +141,7 @@ main {
   cursor: pointer;
   padding: .7rem 3rem;
   place-self: center;
+  margin-top: 2rem;
 }
 
 .color,
@@ -243,9 +245,15 @@ main {
   background-color: red;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
 .nombre__input,
 .monto__input {
-  max-width: 500px;
+  max-width: 330px;
 }
 
 @media screen and (width <=770px) {
@@ -290,17 +298,24 @@ main {
   .giftcard__tarjeta {
     min-height: 300px;
     margin: 0;
-    margin-top: 4rem;
+    margin-top: 2.6rem;
     width: 100%;
   }
 
   .giftcard__personalizacion {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     width: 100%;
   }
 
   .giftcard__personalizacion-titulo,
   .monto {
     text-align: center;
+  }
+}
+
+@media screen and (width <=460px) {
+
+  .giftcard__tarjeta {
+    margin-top: 2rem;
   }
 }
