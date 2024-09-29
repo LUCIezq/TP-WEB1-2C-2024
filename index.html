@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="./css-reutilizado/footer.css" />
     <link rel="stylesheet" href="./Paginas/Inicio/css/inicio.css" />
     <link rel="stylesheet" href="./css-reutilizado/header.css" />
-    <link rel="stylesheet" href="./css-reutilizado/footer.css" />
+
 
     <title>Home</title>
 
@@ -79,12 +80,22 @@
 
             <div class="header__right-cart">
 
-                <a href="./Paginas/Cart-view/cart-view.html"><img src="./Paginas/Inicio/Assets/bx-cart-add.svg"
-                        class="header__right-icon-cart" alt="Carrito"></a>
+                <a href="./Paginas/Cart-view/cart-view.html">
+                    <label class="header__right-icon-cart-label" for="carrito">
+                    </label>
+                </a>
+
+                <input type="checkbox" class="header__right-icon-cart-checkbox" id="carrito">
+
+
 
                 <div class="header__right-cart-count-container">
                     <span class="header__right-cart-count" id="cart-count"></span>
                 </div>
+                
+                <label class="header__right-alternate-night-mode">
+                    <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
+                </label>
 
             </div>
 

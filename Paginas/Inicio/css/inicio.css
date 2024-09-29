@@ -7,7 +7,7 @@ body {
 .main {
     display: grid;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 2.6rem;
 }
 
 html {
@@ -60,8 +60,7 @@ html {
 
 .steps__paragraph {
     /*Styles*/
-    font-size: 1.15rem;
-    font-weight: 300;
+    font-size: 1.05rem;
     color: rgba(0, 0, 0, 0.507);
 }
 
@@ -88,7 +87,6 @@ html {
     background-color: var(--white);
 }
 
-.step__item--white {}
 
 .step__description {
     /*Styles*/
@@ -432,8 +430,7 @@ html {
     color: #2d2f31;
 }
 
-
-.carrousel__img-mobile{
+.carrousel__img-mobile {
     display: none;
 }
 
@@ -446,7 +443,7 @@ html {
 .description__link {
     text-decoration: none;
     color: white;
-    background-color: #2d2f31;
+    background-color: black;
     width: fit-content;
     font-weight: 500;
     padding: .5rem 1rem;
@@ -464,6 +461,122 @@ html {
     background-color: #2d2f31e5;
 }
 
+body:has(.header__right-alternate-night-mode-checkbox:checked) {
+    background-color: #000814;
+    transition: .3s ease;
+
+    .carrousel__element-description {
+        background-color: #000814;
+    }
+
+    .description__link {
+        background-color: #001D3D;
+    }
+
+    .description__link:hover {
+        background-color: #003566;
+    }
+
+    .description__paragraph {
+        color: #ffffffcb;
+    }
+
+    .steps__information {
+        background-color: #001D3D;
+    }
+
+    .steps__question {
+        background-color: transparent;
+    }
+
+    .step__item {
+        background-color: #001D3D;
+    }
+
+    .step__title,
+    .step__text {
+        color: #001D3D;
+    }
+
+    .step__description {
+        background-color: white;
+    }
+
+    .lesson {
+        background-color: #001D3D;
+    }
+
+    .lesson__question-modify {
+        border-color: white;
+    }
+
+    .lesson__item:hover {
+
+        .lesson__item-container-information {
+            box-shadow: none;
+        }
+    }
+
+    .lesson__answer,
+    .lesson__container-title,
+    .lesson__question-modify,
+    .lesson,
+    .steps__paragraph,
+    .steps__question,
+    .description__link,
+    .carrousel__element-description,
+    .lesson__item-title,
+    .lesson__item-description,
+    .lesson__item-link,
+    .logos__title,
+    .lesson__more-paragraph,
+    footer,
+    .footer__element,
+    .footer__link,
+    .footer__paragraph {
+        color: white;
+    }
+
+    .lesson__container-title {
+        border-color: white;
+    }
+
+    .lesson__item-container-information {
+        background-color: #000814;
+    }
+
+    .lesson__item-button {
+        background-color: #001D3D;
+    }
+
+    .lesson__item-button:hover {
+        color: white;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 1px white;
+    }
+
+    .lesson__more-paragraph {
+        border-color: white;
+    }
+
+    .logos__slide img {
+        background-color: white;
+    }
+
+    footer {
+        background-color: #001D3D;
+        border: none;
+    }
+
+    .footer__title {
+        background-color: #000814;
+    }
+
+    .lesson__item-container-img {
+        background-color: black;
+    }
+
+}
 
 @media screen and (width <=1170px) {
 
@@ -609,10 +722,11 @@ html {
         font-size: 1rem;
     }
 
-    .carrousel__img-desktop{
+    .carrousel__img-desktop {
         display: none;
     }
-    .carrousel__img-mobile{
+
+    .carrousel__img-mobile {
         display: block;
     }
 }
