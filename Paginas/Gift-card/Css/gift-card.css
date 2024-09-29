@@ -59,6 +59,7 @@ main {
   color: black;
   font-weight: bold;
   font-family: "Poppins";
+  text-align: center;
 }
 
 .nombre__input {
@@ -181,6 +182,12 @@ main {
   gap: .7rem;
 }
 
+.color,
+.fondo,
+.tamanio {
+  flex-wrap: wrap;
+}
+
 .ubicacion__titulo,
 .fondo__titulo {
   margin: 0.5em 0 0.5 0;
@@ -266,6 +273,7 @@ form {
     justify-content: center;
     align-items: center;
     max-width: 500px;
+    width: 100%;
   }
 
   .article__gifcard_container {
@@ -316,6 +324,12 @@ form {
 @media screen and (width <=460px) {
 
   .giftcard__tarjeta {
-    margin-top: 2rem;
+    margin-top: 1.9rem;
   }
+
+  form {
+    padding: 1rem;
+  }
+
+
 }
