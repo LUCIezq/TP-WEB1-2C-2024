@@ -781,3 +781,10 @@ body:has(.header__right-alternate-night-mode-checkbox:checked) {
         border-radius: 30px;
     }
 }
+
+@media screen and (width <=460px) {
+
+    .main{
+        margin-top: 2rem;
+    }
+}

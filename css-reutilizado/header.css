@@ -102,8 +102,8 @@ body {
 
 .header__center-label {
     background-image: url(../Paginas/Inicio/Assets/search.svg);
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,7 +260,7 @@ body {
     background-size: cover;
     width: 25px;
     height: 25px;
-    margin-left: 1rem;
+    margin-left: .5rem;
     cursor: pointer;
 }
 
@@ -337,7 +337,7 @@ body {
     .header__right-button-register {
         border: none;
     }
-    
+
 }
 
 @media screen and (width <=1170px) {
@@ -526,6 +526,12 @@ body {
             padding: .7rem .4rem;
         }
 
+    }
+
+    .header:has(.header__right-alternate-night-mode-checkbox:checked) {
+        .header__center-label {
+            background-image: url(../Paginas/Inicio/Assets/search-white.svg);
+        }
     }
 
 }
