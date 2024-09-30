@@ -171,7 +171,7 @@ body {
     align-items: center;
 }
 
-.header__right a{
+.header__right a {
     display: flex;
 }
 
@@ -338,11 +338,6 @@ body {
         background-color: #000814;
     }
 
-    .nav__link:hover {
-        text-decoration: underline;
-        box-shadow: none;
-    }
-
     .header__right-button-register {
         border: none;
     }
@@ -359,8 +354,8 @@ body {
     .header__center-label {
         background-image: url(../Paginas/Inicio/Assets/search-white.svg);
     }
-
 }
+
 
 @media screen and (width <=1170px) {
 
@@ -480,6 +475,16 @@ body {
 
     .header__left-link {
         font-size: 1rem;
+    }
+
+    .header:has(.header__right-alternate-night-mode-checkbox:checked) {
+        .nav__link:hover {
+            box-shadow: none;
+        }
+
+        .header__right-checkbox:checked {
+            --hamburguer-icon: url(../Paginas/Inicio/Assets/x-lg-white.svg);
+        }
     }
 }
 

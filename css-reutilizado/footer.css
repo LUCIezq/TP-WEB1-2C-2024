@@ -181,6 +181,8 @@ footer {
 
 @media screen and (width <=700px) {
   .footer__container {
-    gap: 2rem;
+    gap: 1rem;
   }
+
+
 }

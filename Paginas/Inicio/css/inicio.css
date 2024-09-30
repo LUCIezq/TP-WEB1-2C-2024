@@ -2,6 +2,7 @@ body {
     background-color: aliceblue;
     width: 100%;
     margin: 0 auto;
+    transition: .3s ease;
 }
 
 .main {
@@ -784,7 +785,7 @@ body:has(.header__right-alternate-night-mode-checkbox:checked) {
 
 @media screen and (width <=460px) {
 
-    .main{
+    .main {
         margin-top: 2rem;
     }
 }
