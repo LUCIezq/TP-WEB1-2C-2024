@@ -18,7 +18,6 @@
     --white: #ffffff;
 
     --icon-night-mode: url(../Paginas/Inicio/Assets/moon.svg);
-    --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
     --cart-icon: url(../Paginas/Inicio/Assets/bx-cart-add.svg);
 }
 
@@ -48,6 +47,8 @@ body {
     top: 0;
     z-index: 1;
     left: 0;
+    --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
+
 }
 
 .header__left {
@@ -305,16 +306,18 @@ body {
 
     .header__right-button-register:hover,
     .lesson__item-button:hover {
-        box-shadow: none;
-    }
-
-    .header__right-button-register:hover {
-        background-color: #003566;
+        box-shadow: 0px 0px 0px 1px var(--white);
+        background-color: transparent;
+        color: var(--white);
     }
 
     .header__right-button-login {
         /*Styles*/
         color: white;
+    }
+
+    .header__right-button-login:hover {
+        background-color: #001f5438;
     }
 
     .header__right-icon-cart-label {
@@ -323,6 +326,7 @@ body {
 
     .header__center-input {
         border-color: white;
+        color: white;
     }
 
     .header__right-label {
@@ -457,10 +461,6 @@ body {
         .nav {
             width: 100%;
         }
-
-        .header__right-label {
-            --hamburguer-icon: url(../Paginas/Inicio/Assets/x-lg.svg);
-        }
     }
 
     .header__center-label {
@@ -480,10 +480,6 @@ body {
     .header:has(.header__right-alternate-night-mode-checkbox:checked) {
         .nav__link:hover {
             box-shadow: none;
-        }
-
-        .header__right-checkbox:checked {
-            --hamburguer-icon: url(../Paginas/Inicio/Assets/x-lg-white.svg);
         }
     }
 }
