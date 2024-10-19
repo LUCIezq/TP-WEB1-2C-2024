@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="./css-reutilizado/footer.css" />
     <link rel="stylesheet" href="./Paginas/Inicio/css/inicio.css" />
     <link rel="stylesheet" href="./css-reutilizado/header.css" />
-    <link rel="stylesheet" href="./css-reutilizado/footer.css" />
+
 
     <title>Home</title>
 
@@ -19,13 +20,22 @@
 
         <div class="header__left">
 
-            <a href="/index.html" class="header__left-link">
+            <a href="./index.html" class="header__left-link">
                 LearnTree.
             </a>
 
             <div class="header__center-container-input">
 
-                <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+                <input class="header__center-input" list="cursos" type="text" name="buscador" placeholder="Buscar">
+
+                <datalist id="cursos">
+                    <option value="JavaScript"></option>
+                    <option value="Java"></option>
+                    <option value="Html"></option>
+                    <option value="Css"></option>
+                    <option value="Python"></option>
+                    <option value="Cyberseguridad"></option>
+                </datalist>
 
                 <label class="header__center-label">
                     <input type="checkbox" class="header__center-checkbox">
@@ -44,7 +54,7 @@
                 </li>
 
                 <li class="nav__element">
-                    <a class="nav__link" href="./Paginas/Curso-empresa/curso-empresa.html">Empresa</a>
+                    <a class="nav__link" href="./Paginas/Gift-card/gift-card.html">Giftcard</a>
                 </li>
 
                 <li class="nav__element">
@@ -70,12 +80,20 @@
 
             <div class="header__right-cart">
 
-                <a href="./Paginas/Cart-view/cart-view.html"><img src="./Paginas/Inicio/Assets/bx-cart-add.svg"
-                        class="header__right-icon-cart" alt="Carrito"></a>
+                <a href="./Paginas/Cart-view/cart-view.html" class="header__right-cart-link">
+                    <label class="header__right-icon-cart-label"></label>
+                </a>
+
+                <input type="checkbox" class="header__right-icon-cart-checkbox">
+
 
                 <div class="header__right-cart-count-container">
-                    <span class="header__right-cart-count"></span>
+                    <span class="header__right-cart-count" id="cart-count"></span>
                 </div>
+
+                <label class="header__right-alternate-night-mode">
+                    <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
+                </label>
 
             </div>
 
@@ -90,21 +108,39 @@
     <main class="main">
 
         <div class="carrousel">
-            <ul class="carrousel__elements">
+            <ul class="carrousel__elements" id="inicio">
 
                 <li class="carrousel__element">
-                    <a href="#"> <img src="/Paginas/Inicio/Assets_cursos_slide/IMAGE2.jpg" alt="">
-                    </a>
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO1.jpg" class="carrousel__img-desktop"
+                        alt="">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO1.jpg" alt=""
+                        class="carrousel__img-mobile">
+                    <div class="carrousel__element-description description">
+                        <h2 class="description__title">
+                            Suscríbete a los mejores cursos de LearnTree.
+                        </h2>
+
+                        <p class="description__paragraph">
+                            Con el Plan Personal, podrás acceder a más de 11 000 de nuestros cursos con valoraciones
+                            excelentes sobre tecnología, empresas y otros temas
+                        </p>
+
+                        <a href="#lesson__container" class="description__link">Inscribite</a>
+                    </div>
+                </li>
+
+                <li class=" carrousel__element">
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO2.jpg" class="carrousel__img-desktop"
+                        alt="">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO2.jpg" alt=""
+                        class="carrousel__img-mobile">
                 </li>
 
                 <li class="carrousel__element">
-                    <a href="#"> <img src="/Paginas/Inicio/Assets_cursos_slide/IMAGE3.jpg" alt="">
-                    </a>
-                </li>
-
-                <li class="carrousel__element">
-                    <a href="#"> <img src="/Paginas/Inicio/Assets_cursos_slide/IMAGE4.jpg" alt="">
-                    </a>
+                    <img src="/Paginas/Inicio/Assets_cursos_slide/FOTO-CURSO3.jpg" alt=""
+                        class="carrousel__img-desktop">
+                    <img src="./Paginas/Inicio/assets__cursos_slide-mobile/FOTO3.jpg" alt=""
+                        class="carrousel__img-mobile">
                 </li>
 
             </ul>
@@ -144,13 +180,13 @@
 
                 </div>
 
-                <div class="step__item">
+                <div class="step__item step__item--white">
 
                     <div class="step__container-img">
                         <img src="./Paginas/Inicio/Assets/Coding 8.svg" alt="">
                     </div>
 
-                    <div class="step__description">
+                    <div class="step__description step__description--white">
                         <h2 class="step__title">
                             Selecciona tu curso
                         </h2>
@@ -183,13 +219,13 @@
 
                 </div>
 
-                <div class="step__item">
+                <div class="step__item step__item--white">
 
                     <div class="step__container-img">
                         <img src="./Paginas/Inicio/Assets/Credit Card (1)-01-01.svg" alt="">
                     </div>
 
-                    <div class="step__description">
+                    <div class="step__description step__description--white">
                         <h2 class="step__title">
                             Realiza tu compra
                         </h2>
@@ -222,13 +258,13 @@
 
                 </div>
 
-                <div class="step__item">
+                <div class="step__item step__item--white">
 
                     <div class="step__container-img">
                         <img src="./Paginas/Inicio/Assets/Hero Employee.svg" alt="">
                     </div>
 
-                    <div class="step__description">
+                    <div class="step__description step__description--white">
                         <h2 class="step__title">
                             Accede al contenido
                         </h2>
@@ -249,7 +285,7 @@
 
             <div class="lesson__information">
                 <span class="lesson__question">
-                    ¿Por qué elegir <span class="lesson__question-modify">LearnTree</span>?
+                    ¿ Por qué elegir <span class="lesson__question-modify">LearnTree</span> ?
                 </span>
 
                 <p class="lesson__answer">
@@ -258,7 +294,7 @@
                 </p>
             </div>
 
-            <div class="lesson__container">
+            <div class="lesson__container" id="lesson__container">
 
                 <h2 class="lesson__container-title">
                     Cursos destacados
@@ -276,15 +312,20 @@
 
                             <div class="lesson__item-information-top">
 
-                                <h2 class="lesson__item-title">
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
                                     Curso completo de Hacking Ético y Ciberseguridad.
-                                </h2>
+                                </a>
 
                                 <p class="lesson__item-description">
                                     Aprende Hacking Ético y Ciberseguridad de manera práctica, ¡conviértete en un
                                     experto en
                                     Hacking Ético y Ciberseguridad!
                                 </p>
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
+
 
                             </div>
 
@@ -299,9 +340,10 @@
                                     <span class="lesson__item-price">
                                         $11.500
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
 
                                 </div>
 
@@ -319,13 +361,17 @@
 
                         <div class="lesson__item-container-information">
                             <div class="lesson__item-information-top">
-                                <h2 class="lesson__item-title">
-                                    Curso de Diseño Web: HTML y CSS.</h2>
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
+                                    Curso de Diseño Web: HTML y CSS. </a>
 
                                 <p class="lesson__item-description">
                                     Aprende paso a paso las técnicas para diseñar páginas web profesionales. Crea 3
                                     proyectos del mundo real.
                                 </p>
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
                             </div>
 
                             <div class="lesson__item-information-bottom">
@@ -338,9 +384,9 @@
                                     <span class="lesson__item-price">
                                         $15.500
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
                                 </div>
 
                             </div>
@@ -357,13 +403,18 @@
 
                         <div class="lesson__item-container-information">
                             <div class="lesson__item-information-top">
-                                <h2 class="lesson__item-title">
+
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
                                     Inteligencia Artificial & ChatGPT.
-                                </h2>
+                                </a>
                                 <p class="lesson__item-description">
                                     El curso completo de Inteligencia Artificial: Chat GPT, IA Generativa, LLMs, IA
                                     Prompt Engineering, Midjourney y más!
                                 </p>
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
                             </div>
 
                             <div class="lesson__item-information-bottom">
@@ -376,9 +427,9 @@
                                     <span class="lesson__item-price">
                                         $17.000
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
                                 </div>
 
                             </div>
@@ -395,14 +446,18 @@
 
                         <div class="lesson__item-container-information">
                             <div class="lesson__item-information-top">
-                                <h2 class="lesson__item-title">
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
                                     Máster Completo en Java de cero a experto.
-                                </h2>
+                                </a>
 
                                 <p class="lesson__item-description">
                                     Aprende con el mejor curso Java de cero con las mejores prácticas POO, Java EE 9,
                                     CDI, JPA, EJB, JSF, Web Services, JAAS.
                                 </p>
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
                             </div>
 
                             <div class="lesson__item-information-bottom">
@@ -415,9 +470,9 @@
                                     <span class="lesson__item-price">
                                         $9.500
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
                                 </div>
 
                             </div>
@@ -434,13 +489,18 @@
 
                         <div class="lesson__item-container-information">
                             <div class="lesson__item-information-top">
-                                <h2 class="lesson__item-title">
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
                                     JavaScript Moderno Guía Definitiva.
-                                </h2>
+                                </a>
+
                                 <p class="lesson__item-description">
                                     Aprende el Lenguaje de Programación Web más popular paso a paso con +20 Proyectos -
                                     Incluye Proyecto MERN Full Stack.
                                 </p>
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
                             </div>
 
                             <div class="lesson__item-information-bottom">
@@ -453,9 +513,9 @@
                                     <span class="lesson__item-price">
                                         $16.500
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
                                 </div>
 
                             </div>
@@ -472,13 +532,17 @@
 
                         <div class="lesson__item-container-information">
                             <div class="lesson__item-information-top">
-                                <h2 class="lesson__item-title">
+
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
                                     Python para Data Science & Machine Learning.
-                                </h2>
+                                </a>
                                 <p class="lesson__item-description">
                                     Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn, Scikit Learn,
                                     Tensorflow y Machine Learning.
                                 </p>
+                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
+                                    Ver detalle
+                                </a>
                             </div>
 
                             <div class="lesson__item-information-bottom">
@@ -491,9 +555,9 @@
                                     <span class="lesson__item-price">
                                         $20.000
                                     </span>
-                                    <a href="#" class="lesson__item-button">
+                                    <span class="lesson__item-button">
                                         Comprar
-                                    </a>
+                                    </span>
                                 </div>
 
                             </div>
@@ -505,7 +569,6 @@
                 </div>
 
                 <div class="lesson__more">
-                    <img src="./Paginas/Inicio/Assets/Market Analysis-01.svg" alt="">
 
                     <p class="lesson__more-paragraph">
                         Más cursos proximamente...
@@ -534,7 +597,6 @@
         </div>
 
     </main>
-
 
     <footer>
 
@@ -573,16 +635,16 @@
 
                 <ul class="footer__elements">
                     <li class="footer__element">
-                        <a href="./index.html" class="footer__link">Inicio</a>
+                        <a href="#inicio" class="footer__link">Inicio</a>
                     </li>
                     <li class="footer__element">
-                        <a href="./Paginas/Curso-empresa/curso-empresa.html" class="footer__link">Empresa</a>
+                        <a href="./Paginas/Gift-card/gift-card.html" class="footer__link">Giftcard</a>
                     </li>
                     <li>
-                        <a href="./Paginas/calendario/calendario.html" class="footer__link">Calendario</a>
+                        <a href="/Paginas/calendario/calendario.html" class="footer__link">Calendario</a>
                     </li class="footer__element">
                     <li>
-                        <a href="./Paginas/contacto/contacto.html" class="footer__link">Contacto</a>
+                        <a href="/Paginas/contacto/contacto.html" class="footer__link">Contacto</a>
                     </li>
                 </ul>
 
@@ -616,6 +678,8 @@
         </p>
 
     </footer>
+
+    <script src="./Paginas/Inicio/JS/inicio.js"></script>
 
 </body>
 
