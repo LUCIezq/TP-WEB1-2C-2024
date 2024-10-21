@@ -28,21 +28,21 @@ updateButton.addEventListener("click", cambiarTexto);
 
 //Cambiar clase active
 
-const cards = document.querySelectorAll('.container__left-element');
-const buttons = document.querySelectorAll('.container__right-button');
+// const cards = document.querySelectorAll('.container__left-element');
+// const buttons = document.querySelectorAll('.container__right-button');
 
-let index = 0;
+// let index = 0;
 
-cards.forEach(card => {
+// cards.forEach(card => {
 
 
-  buttons[index].addEventListener('click', e => {
+//   buttons[index].addEventListener('click', e => {
 
-    card.classList.add('container__left-element--active');
+//     card.classList.add('container__left-element--active');
 
-  })
+//   })
   
-  index++;
-});
+//   index++;
+// });
 
 

@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css-reutilizado/header.css">
     <link rel="stylesheet" href="./Css/checkout.css">
-    <title>Document</title>
+    <title>Detalle de ordenes</title>
 </head>
 
 <body>
+
 
     <header class="header">
 
         <div class="header__left">
 
-            <a href="/index.html" class="header__left-link">
+            <a href="../../index.html" class="header__left-link">
                 LearnTree.
             </a>
 
@@ -23,11 +24,9 @@
 
                 <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
-                <div class="header__center-container-icon">
-                    <a href="#" class="header__center-container-link">
-                        <img src="./Paginas/Inicio/Assets/search.svg" class="header__center-icon" alt="">
-                    </a>
-                </div>
+                <label class="header__center-label">
+                    <input type="checkbox" class="header__center-checkbox">
+                </label>
 
             </div>
 
@@ -38,50 +37,50 @@
             <ul class="nav__elements">
 
                 <li class="nav__element">
-                    <a class="nav__link" href="./index.html">Inicio</a>
+                    <a class="nav__link" href="../../index.html">Inicio</a>
                 </li>
 
                 <li class="nav__element">
-                    <a class="nav__link" href="./Paginas/Curso-empresa/curso-empresa.html">Empresa</a>
+                    <a class="nav__link" href="../Curso-empresa/curso-empresa.html">Empresa</a>
                 </li>
 
                 <li class="nav__element">
-                    <a class="nav__link" href="./Paginas/calendario/calendario.html">Calendario</a>
+                    <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
                 </li>
 
                 <li class="nav__element">
-                    <a class="nav__link" href="./Paginas/contacto/contacto.html">Contacto</a>
+                    <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
                 </li>
 
             </ul>
+
+            <div class="header__right-buttons">
+
+                <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
+                <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+
+            </div>
 
         </nav>
 
         <div class="header__right">
 
-            <div class="header__right-buttons">
-
-                <a class="header__right-button-login button" href="./Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
-                <a class="header__right-button-register button" href="">Registrarse</a>
-
-            </div>
-
             <div class="header__right-cart">
 
-                <a href="./Paginas/Cart-view/cart-view.html"><img src="./Paginas/Inicio/Assets/bx-cart-add.svg"
+                <a href="/Paginas/Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
                         class="header__right-icon-cart" alt="Carrito"></a>
 
                 <div class="header__right-cart-count-container">
-                    <span class="header__right-cart-count">0</span>
+                    <span class="header__right-cart-count"></span>
                 </div>
 
             </div>
 
-            <label class="header__right-label">
-                <input type="checkbox" class="header__right-checkbox">
-            </label>
-
         </div>
+
+        <label class="header__right-label">
+            <input type="checkbox" class="header__right-checkbox">
+        </label>
 
     </header>
 
@@ -135,7 +134,10 @@
 
                     </div>
 
-                    <button type="submit" class="form__container-button">Confirmar</button>
+                    <div class="button__container">
+                        <button type="submit" class="button__checkout">Confirmar</button>
+                        <a href="/Paginas/Detalle-curso/detalle-curso.html" class="button__checkout">Cancelar</a>
+                    </div>
 
                 </form>
 
@@ -151,7 +153,7 @@
                     <img src="../Cart-view/Assets/Search Engine 1.svg" alt="">
 
                     <p class="cart__container-no-elements-information">
-                        Tu cesta está vacía. ¡Sigue buscando para encontrar un curso!
+                        Tu carrito está vacío. ¡Sigue buscando para encontrar un curso!
                     </p>
 
                     <a href="/index.html" class="cart__container-no-elements-link">Buscar un curso</a>

@@ -1,146 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link rel="stylesheet" href="./Css/gift-card.css" />
-    <link rel="stylesheet" href="/css-reutilizado/header.css" />
-    <link rel="stylesheet" href="/css-reutilizado/footer.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift card</title>
 
-  <body>
-    <header class="header">
+  <link rel="stylesheet" href="./Css/gift-card.css" />
+  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
+  <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
+</head>
 
-      <div class="header__left">
+<body>
+  <header class="header">
 
-          <a href="/index.html" class="header__left-link">
-              LearnTree.
-          </a>
+    <div class="header__left">
 
-          <div class="header__center-container-input">
+      <a href="../../index.html" class="header__left-link">
+        LearnTree.
+      </a>
 
-              <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+      <div class="header__center-container-input">
 
-              <div class="header__center-container-icon">
-                  <a href="#" class="header__center-container-link">
-                      <img src="./Paginas/Inicio/Assets/search.svg" class="header__center-icon" alt="">
-                  </a>
-              </div>
+        <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
-          </div>
+        <label class="header__center-label">
+          <input type="checkbox" class="header__center-checkbox">
+        </label>
 
       </div>
 
-      <nav class="nav">
+    </div>
 
-          <ul class="nav__elements">
+    <nav class="nav">
 
-              <li class="nav__element">
-                  <a class="nav__link" href="./index.html">Inicio</a>
-              </li>
+      <ul class="nav__elements">
 
-              <li class="nav__element">
-                  <a class="nav__link" href="./Paginas/Curso-empresa/curso-empresa.html">Empresa</a>
-              </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../../index.html">Inicio</a>
+        </li>
 
-              <li class="nav__element">
-                  <a class="nav__link" href="./Paginas/calendario/calendario.html">Calendario</a>
-              </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../Gift-card/gift-card.html">Giftcard</a>
+        </li>
 
-              <li class="nav__element">
-                  <a class="nav__link" href="./Paginas/contacto/contacto.html">Contacto</a>
-              </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
+        </li>
 
-          </ul>
+        <li class="nav__element">
+          <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
+        </li>
 
-      </nav>
+      </ul>
 
-      <div class="header__right">
+      <div class="header__right-buttons">
 
-          <div class="header__right-buttons">
-
-              <a class="header__right-button-login button" href="./Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
-              <a class="header__right-button-register button" href="">Registrarse</a>
-
-          </div>
-
-          <div class="header__right-cart">
-
-              <a href="./Paginas/Cart-view/cart-view.html"><img src="./Paginas/Inicio/Assets/bx-cart-add.svg"
-                      class="header__right-icon-cart" alt="Carrito"></a>
-
-              <div class="header__right-cart-count-container">
-                  <span class="header__right-cart-count">0</span>
-              </div>
-
-          </div>
-
-          <label class="header__right-label">
-              <input type="checkbox" class="header__right-checkbox">
-          </label>
+        <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
+        <a class="header__right-button-register button" href="../Sign-up/sign-up.html">Registrarse</a>
 
       </div>
+
+    </nav>
+
+    <div class="header__right">
+
+      <div class="header__right-cart">
+
+        <a href="../Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
+            class="header__right-icon-cart" alt="Carrito"></a>
+
+        <div class="header__right-cart-count-container">
+          <span class="header__right-cart-count"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <label class="header__right-label">
+      <input type="checkbox" class="header__right-checkbox">
+    </label>
 
   </header>
 
-    <main class="main">
-      <section class="section__gifcard">
-        
-        <article class="article__gifcard_container">
-          <div class="giftcard__tarjeta">
-            <p>
-              GIFT CARD para<span class="tarjeta__destinatario"
-                ><br />DESTINATARIO</span
-              >
-            </p>
-            <div class="tarjeta__precio">
-              <span>$00000</span>
-            </div>
+
+  <main class="main">
+    <section class="section__gifcard">
+
+      <article class="article__gifcard_container">
+        <div class="giftcard__tarjeta">
+          <p>
+            GIFT CARD para<span class="tarjeta__destinatario"><br />DESTINATARIO</span>
+          </p>
+          <div class="tarjeta__precio">
+            <span>$00000</span>
           </div>
-        </article>
-        <article class="article__gifcard_container">
-          <div class="giftcard__personalizacion">
-            <h2 class="giftcard__personalizacion-titulo">
-              Personalizacion de Giftcard
-            </h2>
-            <input
-              type="text"
-              placeholder="Nombre Destinatario"
-              class="nombre__input"
-            />
+        </div>
+      </article>
+      <article class="article__gifcard_container">
+        <div class="giftcard__personalizacion">
+          <h2 class="giftcard__personalizacion-titulo">
+            Personalización de Giftcard
+          </h2>
+
+          <form action="../Checkout-view/checkout.html">
+            <input type="text" placeholder="Ingrese nombre" class="nombre__input" required />
             <h4 class="giftcard__personalizacion-subtitulo">Color</h4>
             <div class="color">
               <div class="color__container">
                 <div class="circulo circulo-rojo"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="color" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-azul"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="color" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-negro"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="color" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-amarillo"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="color" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-verde"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="color" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
               </div>
             </div>
             <h4 class="giftcard__personalizacion-subtitulo">
@@ -149,68 +135,52 @@
             <div class="tamanio">
               <div class="tamanio__container">
                 <p class="tamanio-20">20px</p>
-                <span class="circulo__input"
-                  ><input type="radio" name="tamanio" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-28">28px</p>
-                <span class="circulo__input"
-                  ><input type="radio" name="tamanio" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-32">32px</p>
-                <span class="circulo__input"
-                  ><input type="radio" name="tamanio" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-48">48px</p>
-                <span class="circulo__input"
-                  ><input type="radio" name="tamanio" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-60">60px</p>
-                <span class="circulo__input"
-                  ><input type="radio" name="tamanio" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
               </div>
             </div>
             <div class="monto">
               <h4 class="monto__titulo giftcard__personalizacion-subtitulo">
-                Monto $
+                Monto
               </h4>
-              <input type="text" class="monto__input" />
+              <input type="text" class="monto__input" placeholder="Ingrese monto" required />
             </div>
             <h4 class="ubicacion__titulo giftcard__personalizacion-subtitulo">
-              Ubicacion
+              Ubicación
             </h4>
             <div class="ubicacion">
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
                   <div class="ubicacion__cuadrado-abajoderecha"></div>
                 </div>
-                <span class="circulo__input"
-                  ><input type="radio" name="ubicacion" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
               </div>
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
                   <div class="ubicacion__cuadrado-arribaizquierda"></div>
                 </div>
-                <span class="circulo__input"
-                  ><input type="radio" name="ubicacion" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
               </div>
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
                   <div class="ubicacion__cuadrado-arribaderecha"></div>
                 </div>
-                <span class="circulo__input"
-                  ><input type="radio" name="ubicacion" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
               </div>
             </div>
 
@@ -220,96 +190,108 @@
             <div class="fondo">
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-celeste"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="fondo" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-lila"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="fondo" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-chocolate"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="fondo" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-cyan"></div>
-                <span class="circulo__input"
-                  ><input type="radio" name="fondo" id=""
-                /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
               </div>
             </div>
-            <button class="giftcard__button"><a href="../Checkout-view/checkout.html">Continuar</a></button>
-          </div>
-        </article>
-      </section>
-    </main>
+            <button type="submit" class="giftcard__button">Continuar</button>
+        </div>
+        </form>
 
-    <footer class="footer">
-      <h1>LOGO</h1>
-      <section class="section__principal">
-        <article class="footer__article">
-          <h4 class="footer__titulo__article">DATOS DEL GRUPO</h4>
-          <div class="section__principal__container">
-            <ul>
-              <li>Integrante_1</li>
-              <li>Integrante_2</li>
-              <li>Integrante_3</li>
-              <li>Integrante_4</li>
-            </ul>
-          </div>
-        </article>
-        <article class="footer__article">
-          <h4 class="footer__titulo__article">MENU INFERIOR</h4>
-          <div class="section__principal__container">
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Empresa</a></li>
-              <li><a href="#">Calendario</a></li>
-              <li><a href="#">Cursos</a></li>
-              <li><a href="./Paginas/contacto/contacto.html">Contacto</a></li>
-            </ul>
-          </div>
-        </article>
-        <article class="footer__article">
-          <h4 class="footer__titulo__article">REDES SOCIALES</h4>
-          <div class="section__principal__container">
-            <ul>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../../imagenes/communication_15047435.png"
-                    alt=""
-                  />
-                  Facebook</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../imagenes/instagram_4138124.png" alt="" />
-                  Instagram</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../../imagenes/twitter_3670151.png"
-                    alt="Twitter"
-                  />
-                  Twitter</a
-                >
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
-      <section class="section__secundaria">
-        <p>© Todos los derechos reservados 2024 - UNLAM</p>
-      </section>
-    </footer>
-  </body>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+
+    <span class="footer__title">
+      LearnTree.
+    </span>
+
+    <div class="footer__container">
+
+
+
+      <div class="footer__flex">
+
+        <h2>Datos del grupo</h2>
+
+        <ul class="footer__elements">
+          <li class="footer__element">
+            BROSSARD, LOUIS
+          </li>
+          <li class="footer__element">
+            CANTONI, MATIAS
+          </li>
+          <li class="footer__element">
+            CUCINELLI, EZEQUIEL
+          </li>
+          <li class="footer__element">
+            LUCI, EZEQUIEL
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer__flex">
+
+        <h2>Menu</h2>
+
+        <ul class="footer__elements">
+          <li class="footer__element">
+            <a href="../../index.html" class="footer__link">Inicio</a>
+          </li>
+          <li class="footer__element">
+            <a href="./gift-card.html" class="footer__link">Giftcard</a>
+          </li>
+          <li>
+            <a href="../calendario/calendario.html" class="footer__link">Calendario</a>
+          </li class="footer__element">
+          <li>
+            <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer__flex ">
+
+        <h2>Redes sociales</h2>
+
+        <ul class="footer__elements footer__elements-social">
+          <li class="footer__element">
+            <a href="https://www.facebook.com/" class="footer__link"><img src="../Inicio/Assets_footer/facebook.svg"
+                alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://www.instagram.com/" class="footer__link"><img src="../Inicio/Assets_footer/instagram.svg"
+                alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://x.com/" class="footer__link"><img src="../Inicio/Assets_footer/twitter-x.svg" alt=""></a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <p class="footer__paragraph">
+      © Todos los derechos reservados 2024 - UNLaM
+    </p>
+
+  </footer>
+</body>
+
 </html>
