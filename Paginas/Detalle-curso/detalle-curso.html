@@ -1,542 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <link rel="stylesheet" href="./Css/detalle-curso.css" />
+    <link rel="stylesheet" href="/css-reutilizado/header.css" />
+    <link rel="stylesheet" href="/css-reutilizado/footer.css" />
+  </head>
 
-  <link rel="stylesheet" href="./Css/detalle-curso.css" />
-  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
-  <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
-  <link rel="stylesheet" href="../Inicio/css/inicio.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="/index.html" class="header__left-link"> LearnTree. </a>
 
-<body>
+        <div class="header__center-container-input">
+          <input
+            class="header__center-input"
+            type="text"
+            name="buscador"
+            placeholder="Buscar"
+          />
 
-  <header class="header">
-
-    <div class="header__left">
-
-      <a href="/index.html" class="header__left-link">
-        LearnTree.
-      </a>
-
-      <div class="header__center-container-input">
-
-        <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
-
-        <label class="header__center-label">
-          <input type="checkbox" class="header__center-checkbox">
-        </label>
-
-      </div>
-
-    </div>
-
-    <nav class="nav">
-
-      <ul class="nav__elements">
-
-        <li class="nav__element">
-          <a class="nav__link" href="/index.html">Inicio</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="../Gift-card/gift-card.html">Giftcard</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
-        </li>
-
-        <li class="nav__element">
-          <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
-        </li>
-
-      </ul>
-
-      <div class="header__right-buttons">
-
-        <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
-        <a class="header__right-button-register button" href="../Sign-up/sign-up.html">Registrarse</a>
-
-      </div>
-
-    </nav>
-
-    <div class="header__right">
-
-      <div class="header__right-cart">
-
-        <a href="../Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
-            class="header__right-icon-cart" alt="Carrito"></a>
-
-        <div class="header__right-cart-count-container">
-          <span class="header__right-cart-count"></span>
-        </div>
-
-      </div>
-
-    </div>
-
-    <label class="header__right-label">
-      <input type="checkbox" class="header__right-checkbox">
-    </label>
-
-  </header>
-
-  <main class="main">
-
-    <section class="contenido__section">
-
-      <article class="contenido__container">
-
-        <div class="contenido__foto">
-          <img class="foto" src="../Inicio/Assets_cursos/html_css.jpg" alt="" />
-        </div>
-
-
-
-
-        <div class="contenido__container__titulo">
-          <h2 class="titulo-principal"> Curso de Diseño Web: HTML y CSS.
-          </h2>
-
-          <ul class="contenido__listas">
-
-            <li class="contenido__lista">
-              <span class="contenido__lista--bold">Valor :</span> $9.500
-            </li>
-
-            <li class="contenido__lista">
-              <span class="contenido__lista--bold">Tiempo de dedicación :</span> 127hs
-            </li>
-
-            <li class="contenido__lista">
-              <span class="contenido__lista--bold">Descripción del curso :</span> Aprende
-              paso a paso las técnicas para diseñar páginas web profesionales. Crea 3
-              proyectos del mundo real.
-            </li>
-
-            <li class="contenido__lista">
-              <span class="contenido__lista--bold">Requisitos previos :</span>
-              -
-            </li>
-
-          </ul>
-
-          <div class="buttons">
-            <a href="../Checkout-view/checkout.html" class="button__detalle">Inscribirse</a>
-            <a href="../Curso-empresa/curso-empresa.html" class="button__detalle button__detalle-empresa">Empresa</a>
+          <div class="header__center-container-icon">
+            <a href="#" class="header__center-container-link">
+              <img
+                src="./Paginas/Inicio/Assets/search.svg"
+                class="header__center-icon"
+                alt=""
+              />
+            </a>
           </div>
+        </div>
+      </div>
 
-      </article>
-
-      <section class="dropdown__container-global">
-
-        <h2 class="dropdown__container-global-title">
-          Contenido del curso
-        </h2>
-
-        <ul class="dropdown__container-global-list">
-
-          <li class="dropdown__container-global-element">
-            3 secciones
-          </li>
-          <li class="dropdown__container-global-element">
-            12 videos
-          </li>
-          <li class="dropdown__container-global-element">
-            5h totales de duración
+      <nav class="nav">
+        <ul class="nav__elements">
+          <li class="nav__element">
+            <a class="nav__link" href="./index.html">Inicio</a>
           </li>
 
+          <li class="nav__element">
+            <a
+              class="nav__link"
+              href="./Paginas/Curso-empresa/curso-empresa.html"
+              >Empresa</a
+            >
+          </li>
+
+          <li class="nav__element">
+            <a class="nav__link" href="./Paginas/calendario/calendario.html"
+              >Calendario</a
+            >
+          </li>
+
+          <li class="nav__element">
+            <a class="nav__link" href="./Paginas/contacto/contacto.html"
+              >Contacto</a
+            >
+          </li>
         </ul>
+      </nav>
 
-        <article class="dropdown__curso">
+      <div class="header__right">
+        <div class="header__right-buttons">
+          <a
+            class="header__right-button-login button"
+            href="./Paginas/Sign-in/sign-in.html"
+            >Iniciar Sesion</a
+          >
+          <a class="header__right-button-register button" href=""
+            >Registrarse</a
+          >
+        </div>
 
-          <details class="dropdown">
+        <div class="header__right-cart">
+          <a href="./Paginas/Cart-view/cart-view.html"
+            ><img
+              src="./Paginas/Inicio/Assets/bx-cart-add.svg"
+              class="header__right-icon-cart"
+              alt="Carrito"
+          /></a>
 
-            <summary class="dropdown__title">
-              Introducción a CSS3
-            </summary>
+          <div class="header__right-cart-count-container">
+            <span class="header__right-cart-count">0</span>
+          </div>
+        </div>
 
-            <div class="dropdown__container">
+        <label class="header__right-label">
+          <input type="checkbox" class="header__right-checkbox" />
+        </label>
+      </div>
+    </header>
 
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Introducción al curso CSS3
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">01:12</span>
+    <main class="main">
+      <section class="contenido__section">
+        <article class="contenido__container">
+          <div class="contenido__foto">
+            <img
+              class="foto"
+              src="../../imagenes/java-detalleCursoo.jpeg"
+              alt=""
+            />
+          </div>
+        </article>
+        <article class="contenido__container">
+          <div class="contenido__container__titulo">
+            <h2 class="titulo-principal">TITULO CURSO</h2>
+            <ul class="contenido__listas">
+              <li class="contenido__lista">Valor:</li>
+              <li class="contenido__lista">Tiempo de dedicacion necesario:</li>
+              <li class="contenido__lista">Descripicion del curso:</li>
+              <li class="contenido__lista">Requisitos previos:</li>
+            </ul>
+            <button class="contenido__button">Inscribirse</button>
+          </div>
+          <div class="contenido__container__detalle">
+            <h2 class="titulo-secundario">CONTENIDO DE CLASE</h2>
+            <div class="contenido__detalle">
+              <p>INTRODUCCION</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Empezando a utilizar CSS3
-                </span>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
               </div>
-
-              <span class="dropdown__duracion">05:58</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Creando archivos CSS3
-                </span>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
               </div>
-
-              <span class="dropdown__duracion">03:26</span>
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Descendencia en CSS3
-                </span>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
               </div>
-
-              <span class="dropdown__duracion">01:52</span>
-            </div>
-
-          </details>
-
-          <details class="dropdown">
-
-            <summary class="dropdown__title">Selectores en CSS3</summary>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Empezando nuestro primer proyecto con CSS3
-                </span>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
               </div>
-
-              <span class="dropdown__duracion">01:17</span>
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Conociendo a los selectores en CSS3
-                </span>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
               </div>
-
-              <span class="dropdown__duracion">09:02</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Selectores Básicos
-                </span>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
               </div>
-
-              <span class="dropdown__duracion">07:58</span>
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Selectores de atributo
-                </span>
+            <div class="contenido__detalle__descripcion">
+              <div class="descripcion-izquierda">
+                <img
+                  class="video"
+                  src="../../imagenes/Video_icon-icons.com_71844.png"
+                  alt="video"
+                />
+                <span class="detalle__descripcion__curso"
+                  >1283-1 Taller de Mecanica...</span
+                >
               </div>
-
-              <span class="dropdown__duracion">07:43</span>
-            </div>
-
-          </details>
-
-          <details class="dropdown">
-
-            <summary class="dropdown__title">Box model</summary>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Introducción al Box Model
-                </span>
+              <div class="descripcion-derecha">
+                <img
+                  class="tiempo"
+                  src="../../imagenes/4105961-clock-duration-hour-minutes-seconds-time_113914.png"
+                  alt="tiempo"
+                />
+                <span class="detalle__descripcion__curso">10min</span>
+                <img
+                  class="check"
+                  src="../../imagenes/Tick_Mark_Circle_icon-icons.com_69145.png"
+                  alt="check"
+                />
               </div>
-
-              <span class="dropdown__duracion">11:20</span>
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Propiedad margin en CSS3
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">09:16</span>
+            <div class="contenido__detalle">
+              <p>UNIDAD 2</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Colapso de Margenes en CSS
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">10:15</span>
+            <div class="contenido__detalle">
+              <p>UNIDAD 3</p>
+              <img
+                class="uparrow"
+                src="../../imagenes/uparrow_arriba_5809.png"
+                alt="icon"
+              />
             </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Padding en CSS
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">12:42</span>
-            </div>
-
-          </details>
-
-          <details class="dropdown">
-
-            <summary class="dropdown__title">Herencia y cascada</summary>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Tipo de elementos en CSS
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">08:59
-              </span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Cascada y especificidad
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">11:34
-              </span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Herencia </span>
-              </div>
-
-              <span class="dropdown__duracion">07:06
-              </span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Padding en CSS
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">12:42</span>
-            </div>
-
-          </details>
-
-          <details class="dropdown">
-
-            <summary class="dropdown__title">Bordes en CSS3</summary>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Bordes en CSS3
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">11:40</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Bordes Radius en CSS3
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">09:00</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Bordes Radius en CSS3 [#2]
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">07:24</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Box shadow [Sombras en CSS3]
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">10:09
-              </span>
-            </div>
-
-          </details>
-
-          <details class="dropdown">
-
-            <summary class="dropdown__title">Fondos y gradientes</summary>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Propiedad Background
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">11:40</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Background Position y Size
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">09:19</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Background Atachment
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">07:15</span>
-            </div>
-
-            <div class="dropdown__container">
-
-              <div class="dropdown__container-left">
-                <img src="./Assets/video-icon.svg" alt="">
-                <span class="dropdown__information">
-                  Gradientes en CSS3
-                </span>
-              </div>
-
-              <span class="dropdown__duracion">12:42</span>
-            </div>
-
-          </details>
-
+          </div>
         </article>
       </section>
-
       <section class="section__docente">
-
+        <h2 class="section__docente__titulo">DOCENTE</h2>
         <div class="docente__container">
-
-          <div class="docente__information">
-
+          <article class="article__docente__imagen">
             <div class="container__imagen">
-              <img src="./Assets/user-icon.svg" alt="profesor" class="profesor" />
+              <img
+                src="../../imagenes/profesoor-removebg-preview.png"
+                alt="profesor"
+                class="profesor"
+              />
             </div>
-
-            <div class="docente__information-name-stars">
-
-              <h2 class="docente__name">
-                Jordan Alexander
-              </h2>
-
-              <div class="stars">
-                <img src="./Assets/star-icon.svg" alt="">
-                <img src="./Assets/star-icon.svg" alt="">
-                <img src="./Assets/star-icon.svg" alt="">
-                <img src="./Assets/star-icon.svg" alt="">
-                <img src="./Assets/star-icon.svg" alt="">
+          </article>
+          <article class="article__docente__descripcion">
+            <div>
+              <h3 class="docente__descripcion__titulo">NOMBRE Y APELLIDO</h3>
+              <div>
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
+                <img
+                  src="../../imagenes/star_77949.png"
+                  alt="estrella"
+                  class="estrella"
+                />
               </div>
-
+              <p class="docente__descripcion__descripcion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                sequi quod consequatur quo omnis nisi iusto reiciendis,
+                inventore mollitia voluptate eveniet debitis illo, suscipit
+                nostrum tempora culpa, optio incidunt maiores! Repellat sit
+                praesentium reprehenderit cupiditate quas deleniti labore
+                dolorum est quia consectetur ab minima laborum optio aperiam,
+                placeat nostrum sint reiciendis dolor eveniet minus perspiciatis
+                quis. Praesentium maiores veniam odit.
+              </p>
             </div>
-
-          </div>
-
-          <p class="docente__biography">
-            Soy Jordan Alexander, con más de 5 años de experiencia en diseño web. Creé mi canal de YouTube, "AlexCG
-            Design", para enseñar desarrollo web de forma sencilla y rápida, compartiendo los métodos que me ayudaron a
-            aprender eficazmente.
-          </p>
-
+          </article>
         </div>
-
       </section>
-
       <section class="section__cursos">
         <div class="lesson__items">
           <div class="lesson__item">
             <div class="lesson__item-container-img">
-              <img src="../Inicio/Assets_cursos/java.jpg" alt="Ciberseguridad" />
+              <img
+                src="../Inicio/Assets_cursos/java.jpg"
+                alt="Ciberseguridad"
+              />
             </div>
 
             <div class="lesson__item-container-information">
               <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
+                <h2 class="lesson__item-title">
                   Máster Completo en Java de cero a experto.
-                </a>
+                </h2>
 
                 <p class="lesson__item-description">
                   Aprende con el mejor curso Java de cero con las mejores
@@ -549,8 +328,8 @@
                 <span class="lesson__item-hours"> 127hs </span>
 
                 <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $9.500 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
+                  <span class="lesson__item-price"> $9500 </span>
+                  <a href="#" class="lesson__item-button"> Comprar </a>
                 </div>
               </div>
             </div>
@@ -558,14 +337,17 @@
 
           <div class="lesson__item">
             <div class="lesson__item-container-img">
-              <img src="../Inicio/Assets_cursos/javascript.jpg" alt="Ciberseguridad" />
+              <img
+                src="../Inicio/Assets_cursos/javascript.jpg"
+                alt="Ciberseguridad"
+              />
             </div>
 
             <div class="lesson__item-container-information">
               <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
+                <h2 class="lesson__item-title">
                   JavaScript Moderno Guía Definitiva.
-                </a>
+                </h2>
                 <p class="lesson__item-description">
                   Aprende el Lenguaje de Programación Web más popular paso a
                   paso con +20 Proyectos - Incluye Proyecto MERN Full Stack.
@@ -577,7 +359,7 @@
 
                 <div class="lesson__item-information-bottom-button-price">
                   <span class="lesson__item-price"> $16.500 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
+                  <a href="#" class="lesson__item-button"> Comprar </a>
                 </div>
               </div>
             </div>
@@ -585,14 +367,17 @@
 
           <div class="lesson__item">
             <div class="lesson__item-container-img">
-              <img src="../../Paginas/Inicio/Assets_cursos/python.jpg" alt="Ciberseguridad" />
+              <img
+                src="../../Paginas/Inicio/Assets_cursos/python.jpg"
+                alt="Ciberseguridad"
+              />
             </div>
 
             <div class="lesson__item-container-information">
               <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
+                <h2 class="lesson__item-title">
                   Python para Data Science & Machine Learning.
-                </a>
+                </h2>
                 <p class="lesson__item-description">
                   Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn,
                   Scikit Learn, Tensorflow y Machine Learning.
@@ -604,97 +389,76 @@
 
                 <div class="lesson__item-information-bottom-button-price">
                   <span class="lesson__item-price"> $20.000 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
+                  <a href="#" class="lesson__item-button"> Comprar </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+    </main>
 
-  </main>
-
-  <footer>
-
-    <span class="footer__title">
-      LearnTree.
-    </span>
-
-    <div class="footer__container">
-
-
-
-      <div class="footer__flex">
-
-        <h2>Datos del grupo</h2>
-
-        <ul class="footer__elements">
-          <li class="footer__element">
-            BROSSARD, LOUIS
-          </li>
-          <li class="footer__element">
-            CANTONI, MATIAS
-          </li>
-          <li class="footer__element">
-            CUCINELLI, EZEQUIEL
-          </li>
-          <li class="footer__element">
-            LUCI, EZEQUIEL
-          </li>
-        </ul>
-
-      </div>
-
-      <div class="footer__flex">
-
-        <h2>Menu</h2>
-
-        <ul class="footer__elements">
-          <li class="footer__element">
-            <a href="../../index.html" class="footer__link">Inicio</a>
-          </li>
-          <li class="footer__element">
-            <a href="../Gift-card/gift-card.html" class="footer__link">Giftcard</a>
-          </li>
-          <li>
-            <a href="../calendario/calendario.html" class="footer__link">Calendario</a>
-          </li class="footer__element">
-          <li>
-            <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
-          </li>
-        </ul>
-
-      </div>
-
-      <div class="footer__flex ">
-
-        <h2>Redes sociales</h2>
-
-        <ul class="footer__elements footer__elements-social">
-          <li class="footer__element">
-            <a href="https://www.facebook.com/" class="footer__link"><img
-                src="/Paginas/Inicio/Assets_footer/facebook.svg" alt=""></a>
-          </li>
-          <li class="footer__element">
-            <a href="https://www.instagram.com/" class="footer__link"><img
-                src="/Paginas/Inicio/Assets_footer/instagram.svg" alt=""></a>
-          </li>
-          <li class="footer__element">
-            <a href="https://x.com/" class="footer__link"><img src="/Paginas/Inicio/Assets_footer/twitter-x.svg"
-                alt=""></a>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-
-    <p class="footer__paragraph">
-      © Todos los derechos reservados 2024 - UNLaM
-    </p>
-
-  </footer>
-
-</body>
-
+    <footer class="footer">
+      <h1>LOGO</h1>
+      <section class="section__principal">
+        <article class="footer__article">
+          <h4 class="footer__titulo__article">DATOS DEL GRUPO</h4>
+          <div class="section__principal__container">
+            <ul>
+              <li>Integrante_1</li>
+              <li>Integrante_2</li>
+              <li>Integrante_3</li>
+              <li>Integrante_4</li>
+            </ul>
+          </div>
+        </article>
+        <article class="footer__article">
+          <h4 class="footer__titulo__article">MENU INFERIOR</h4>
+          <div class="section__principal__container">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Empresa</a></li>
+              <li><a href="#">Calendario</a></li>
+              <li><a href="#">Cursos</a></li>
+              <li><a href="./Paginas/contacto/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="footer__article">
+          <h4 class="footer__titulo__article">REDES SOCIALES</h4>
+          <div class="section__principal__container">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../../imagenes/communication_15047435.png"
+                    alt=""
+                  />
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="../../imagenes/instagram_4138124.png" alt="" />
+                  Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../../imagenes/twitter_3670151.png"
+                    alt="Twitter"
+                  />
+                  Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+      <section class="section__secundaria">
+        <p>© Todos los derechos reservados 2024 - UNLAM</p>
+      </section>
+    </footer>
+  </body>
 </html>

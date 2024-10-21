@@ -11,14 +11,12 @@
 }
 
 :root {
+    --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
     --translate-nav: translate(-100%);
     --primary-color: #19A7CE;
     --secondary-color: #146c94;
     --black: #000000;
     --white: #ffffff;
-
-    --icon-night-mode: url(../Paginas/Inicio/Assets/moon.svg);
-    --cart-icon: url(../Paginas/Inicio/Assets/bx-cart-add.svg);
 }
 
 body {
@@ -37,7 +35,8 @@ body {
 .header {
     /*Styles*/
     background-color: #ffffff;
-    padding: 1rem;
+    padding: .8rem 1.2rem;
+    border-bottom: 1px solid #000000;
 
     /*Functions*/
     justify-content: space-between;
@@ -47,8 +46,6 @@ body {
     top: 0;
     z-index: 1;
     left: 0;
-    --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
-
 }
 
 .header__left {
@@ -103,8 +100,8 @@ body {
 
 .header__center-label {
     background-image: url(../Paginas/Inicio/Assets/search.svg);
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,9 +144,7 @@ body {
     background-color: #00000009;
 }
 
-.header__right-button-register:hover,
-.nav__link:hover,
-.lesson__item-button:hover {
+.header__right-button-register:hover {
     box-shadow: 0px 0px 0px 1px var(--black);
     background-color: var(--white);
     color: var(--black);
@@ -169,36 +164,13 @@ body {
 .header__right-cart {
     /*Functions*/
     display: flex;
-    align-items: center;
-}
-
-.header__right a {
-    display: flex;
-}
-
-.header__right-cart-count {
-    display: block;
-    text-align: center;
+    gap: .1rem;
 }
 
 .header__right-icon-cart {
+    /*Functions*/
     width: 30px;
-    height: 30px;
-}
-
-.header__right-icon-cart-label {
-    background-image: var(--cart-icon);
-    width: 25px;
-    height: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
     display: grid;
-}
-
-.header__right-icon-cart-checkbox {
-    display: none;
 }
 
 .header__right-cart-count {
@@ -207,7 +179,6 @@ body {
     border-radius: 50%;
     font-weight: 700;
     font-size: 1.1rem;
-    margin-left: 5px;
 }
 
 .nav {
@@ -247,9 +218,15 @@ body {
     display: inline-block;
 }
 
+.nav__link:hover {
+    /*Styles*/
+    background-color: black;
+    color: white;
+}
+
 .header__right-label {
     /*Functions*/
-    background-image: var(--hamburguer-icon);
+    background-image: url(../Paginas/Inicio/Assets/list.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,115 +240,17 @@ body {
     display: none;
 }
 
-.header__right-alternate-night-mode {
-    background-image: var(--icon-night-mode);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 25px;
-    height: 25px;
-    margin-left: .5rem;
-    cursor: pointer;
-}
-
-.header__right-alternate-night-mode-checkbox {
-    display: none;
-}
-
-.header:has(.header__right-alternate-night-mode-checkbox:checked) {
-
-    background-color: #000814;
-
-    .header__right-alternate-night-mode {
-        --icon-night-mode: url(../Paginas/Inicio/Assets/sun-white.svg);
-    }
-
-    .header__left-link {
-        background-color: #001F54;
-    }
-
-    .nav__link {
-        color: white;
-    }
-
-    .nav__link:hover {
-        box-shadow: 0px 0px 0px 1px white;
-        background-color: transparent;
-    }
-
-    .header__right-button-register {
-        background-color: #001F54;
-        color: var(--white);
-    }
-
-    .header__right-button-register:hover,
-    .lesson__item-button:hover {
-        box-shadow: 0px 0px 0px 1px var(--white);
-        background-color: transparent;
-        color: var(--white);
-    }
-
-    .header__right-button-login {
-        /*Styles*/
-        color: white;
-    }
-
-    .header__right-button-login:hover {
-        background-color: #001f5438;
-    }
-
-    .header__right-icon-cart-label {
-        --cart-icon: url(../Paginas/Inicio/Assets/bx-cart-add\ white.svg);
-    }
-
-    .header__center-input {
-        border-color: white;
-        color: white;
-    }
-
-    .header__right-label {
-        --hamburguer-icon: url(../Paginas/Inicio/Assets/list-white.svg);
-    }
-
-    .header__right-cart-count {
-        /*Styles*/
-        color: white;
-    }
-
-    .nav {
-        background-color: #000814;
-    }
-
-    .header__right-button-register {
-        border: none;
-    }
-
-    .header__center-input {
-        background-color: #000814;
-        border: 1px solid rgba(255, 255, 255, 0.342);
-    }
-
-    .header__center-input::placeholder {
-        color: white;
-    }
-
-    .header__center-label {
-        background-image: url(../Paginas/Inicio/Assets/search-white.svg);
-    }
-}
-
-
 @media screen and (width <=1170px) {
 
     .header {
+        padding: 1rem;
         justify-content: space-between;
         gap: 2rem;
-        padding: .7rem .5 .7rem .7rem;
     }
 
     .nav {
         position: fixed;
-        background-color: white;
+        background-color: #000000;
         flex-direction: column;
         align-items: flex-start;
         inset: 0;
@@ -395,24 +274,25 @@ body {
     }
 
     .nav__link {
-        color: var(--black);
+        color: var(--white);
         font-size: 2rem;
         padding: 0;
         border-radius: 0px;
         padding: 0 1rem;
     }
 
+    .nav__link:hover {
+        text-decoration: underline;
+    }
+
     .button {
-        color: var(--black);
+        color: var(--white);
         background-color: transparent;
         font-size: 1.5rem;
+        border: 1px solid var(--white);
         padding: 1rem;
         border-radius: 12px;
         font-weight: 200;
-    }
-
-    .header__right-button-register {
-        border: 1px solid var(--black);
     }
 
     .header__right-button-login {
@@ -420,27 +300,20 @@ body {
     }
 
     .header__right-button-register:hover {
-        background-color: transparent;
-    }
-
-    .header__right-button-login:hover {
-        background-color: transparent;
-    }
-
-    .nav__link:hover {
-        text-decoration: underline;
-        box-shadow: none;
+        background-color: black;
     }
 
     .header__right-label {
         display: block;
         order: 1;
+        transition: .2s ease;
         z-index: 2;
     }
 
     .header__left {
         order: 2;
         width: 100%;
+        justify-content: center;
     }
 
     .header__center-container-input {
@@ -461,11 +334,20 @@ body {
         .nav {
             width: 100%;
         }
+
+        .header__right-label {
+            background-image: url(../Paginas/Inicio/Assets/x-lg.svg);
+        }
     }
 
     .header__center-label {
         width: 25px;
         height: 25px;
+    }
+
+    .header__right-icon-cart {
+        width: 30px;
+        height: 30px;
     }
 
     .header__right-label {
@@ -477,11 +359,6 @@ body {
         font-size: 1rem;
     }
 
-    .header:has(.header__right-alternate-night-mode-checkbox:checked) {
-        .nav__link:hover {
-            box-shadow: none;
-        }
-    }
 }
 
 @media screen and (width <=460px) {
@@ -492,10 +369,6 @@ body {
 
     .header__right-label {
         z-index: 20;
-    }
-
-    .header__right-cart-count {
-        font-size: .9rem;
     }
 
     .header__center-input {
@@ -509,6 +382,7 @@ body {
     .header__left {
         display: flex;
         gap: 0rem;
+        flex-grow: 0;
         justify-content: space-between;
         padding-left: .5rem;
     }

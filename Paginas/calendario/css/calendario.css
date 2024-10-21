@@ -10,7 +10,6 @@
 
 body {
     padding-top: 3rem;
-    background-color: aliceblue;
 }
 
 main {
@@ -32,16 +31,16 @@ main {
     height: 100%;
     padding: 2rem 0;
     font-size: 14px;
-    background-color: rgba(250, 224, 224, 0.747);
+    background-color: rgba(255, 255, 255, 0.747);
     border: 1px solid rgba(0, 0, 0, 0.199);
     display: grid;
     align-items: center;
 }
 
 .calendario__item__nuevoCurso {
-    background-color: rgb(255, 190, 105);
+    background-color: lightyellow;
     text-decoration: none;
-    width: 100%;
+    width: fit-content;
     margin: 0 auto;
 }
 
