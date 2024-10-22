@@ -207,13 +207,12 @@ html {
     /*Styles*/
     border-radius: 20px;
     background-color: #ffffff;
-    cursor: default;
 
     /*Functions*/
     display: flex;
     flex-direction: column;
-}
 
+}
 
 .lesson__item:hover {
 
@@ -242,7 +241,7 @@ html {
     display: grid;
     justify-content: center;
     gap: 2rem;
-    height: min(340px, 100%);
+    min-height: 320px;
 }
 
 .lesson__item-information-top {
@@ -282,6 +281,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    min-height: 100px;
 }
 
 .lesson__item-hours {
@@ -293,8 +293,10 @@ html {
     /*Functions*/
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
     gap: .5rem;
+   
 }
 
 .lesson__item-price {
@@ -317,9 +319,11 @@ html {
     text-decoration: none;
     background-color: #000000;
     transition: .3s ease;
-    padding: .4rem .8rem;
     border-radius: 12px;
     cursor: pointer;
+    min-height: 40px;
+    padding: .4rem 1rem;
+    align-items: center;
 }
 
 
@@ -460,6 +464,22 @@ html {
 
 .description__link:hover {
     background-color: #2d2f31e5;
+}
+
+.lesson__item-buttons-contanier {
+    border: 1px solid black;
+    width: 130px;
+    padding: .4rem .8rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.button__price {
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 body:has(.header__right-alternate-night-mode-checkbox:checked) {
