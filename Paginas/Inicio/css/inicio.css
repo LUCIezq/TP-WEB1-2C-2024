@@ -241,7 +241,7 @@ html {
     display: grid;
     justify-content: center;
     gap: 2rem;
-    min-height: 320px;
+    min-height: 350px;
 }
 
 .lesson__item-information-top {

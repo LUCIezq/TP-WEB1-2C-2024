@@ -1,56 +1,107 @@
+let contadorGlobal = parseInt(sessionStorage.getItem('contadorGlobal')) || 0;
 const contador__carrito = document.getElementById('cart-count');
-const courses = document.querySelectorAll('.lesson__item');
-const lesson__item__buy = document.getElementById('lesson__button-buy');
-const container__button__buy = document.getElementById('container__button-buy');
+const container = document.querySelectorAll('.lesson__item-information-bottom-button-price');
 
-const button__buy__minus = document.getElementById('button_buy-minus');
-const button__buy__count = document.getElementById('button_buy-count');
-const button__buy__plus = document.getElementById('button_buy-plus');
+contador__carrito.textContent = contadorGlobal;
 
+container.forEach(element => {
 
-let contador = 0;
-
-button__buy__minus.addEventListener('click', e => {
-
-    if(contador>0){
-        contador--;
-        button__buy__count.textContent = contador;
-        actualizarTextContentContador(contador);
-
-    }
-
-})
-
-button__buy__plus.addEventListener('click', e => {
-    if(contador<10){
-        contador++;
-        button__buy__count.textContent = contador;
-        actualizarTextContentContador(contador);
-    }
-})
-
-lesson__item__buy.addEventListener('mouseover', e => {
-    lesson__item__buy.style.display = "none";
-    container__button__buy.style.display = "flex";
-})
-
-container__button__buy.addEventListener('mouseleave', e => {
-    lesson__item__buy.style.display = "block";
-    container__button__buy.style.display = "none";
-})
+    const button__buy = element.querySelector('.lesson__item-button');
+    const button__count_container = element.querySelector('.lesson__item-buttons-contanier');
+    const button__count__minus = element.querySelector('.button__price-minus');
+    const button__count = element.querySelector('.button__price-count');
+    const button__count__plus = element.querySelector('.button__price-plus');
+    let contadorPorCurso =  0;
 
 
+    mouseOverSobreELBotonComprar(button__buy, button__count_container);
+    actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
 
-function actualizarTextContentContador(contador) {
-    contador__carrito.textContent = contador;
-    sessionStorage.setItem('contadorCarrito', contador);
+    button__count_container.addEventListener('mouseleave', e => {
+        if (contadorPorCurso == 0) {
+            button__buy.style.display = 'block';
+            button__count_container.style.display = 'none';
+        }
+    });
+
+    button__count__minus.addEventListener('click', e => {
+        contadorPorCurso = decrementarContadorPorCurso(contadorPorCurso, button__count);
+        actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
+        actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
+        setearContadorGlobal();
+        setearContadorPorCurso(contadorPorCurso);
+    });
+
+    button__count__plus.addEventListener('click', e => {
+        contadorPorCurso = incrementarContadorPorCurso(contadorPorCurso, button__count);
+        actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
+        actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
+        setearContadorGlobal();
+        setearContadorPorCurso(contadorPorCurso);
+    });
+
+});
+
+function setearContadorPorCurso(contadorPorCurso) {
+    sessionStorage.setItem('contadorPorCurso', contadorPorCurso);
 }
 
-window.onload = function () {
-    contador= sessionStorage.getItem('contadorCarrito');
+function setearContadorGlobal() {
+    sessionStorage.setItem('contadorGlobal', contadorGlobal);
+}
 
-    if (contador) {
-        contador__carrito.textContent = contador;
-        button__buy__count.textContent = contador;
+function incrementarContadorPorCurso(contadorPorCurso, button__count) {
+    if (contadorPorCurso < 5) {
+        contadorGlobal++;
+        button__count.textContent = ++contadorPorCurso;
+        actualizarContadorCarrito(contadorGlobal);
+    }
+    return contadorPorCurso;
+}
+
+function decrementarContadorPorCurso(contadorPorCurso, button__count) {
+    if (contadorPorCurso > 0) {
+        contadorGlobal--;
+        button__count.textContent = --contadorPorCurso;
+        actualizarContadorCarrito(contadorGlobal);
+    }
+    return contadorPorCurso;
+}
+
+
+function mouseOverSobreELBotonComprar(button__buy, button__count_container) {
+    button__buy.addEventListener('mouseover', e => {
+        button__buy.style.display = 'none';
+        button__count_container.style.display = 'flex';
+    });
+}
+
+function actualizarContadorCarrito(contadorGlobal) {
+    contador__carrito.textContent = contadorGlobal;
+}
+
+function actualizarEstadoBotonMinus(buton, contadorPorCurso) {
+
+    if (buton.classList.contains('button__price-minus') && contadorPorCurso == 0) {
+        buton.style.color = '#00000070';
+        buton.style.cursor = 'default';
+    } else {
+        buton.style.color = '#000000';
+        buton.style.cursor = 'Pointer';
     }
 }
+
+function actualizarEstadoBotonPlus(buton, contadorPorCurso) {
+
+    if (buton.classList.contains('button__price-plus') && contadorPorCurso == 5) {
+        buton.style.color = '#00000070';
+        buton.style.cursor = 'default';
+    } else {
+        buton.style.color = '#000000';
+        buton.style.cursor = 'Pointer';
+    }
+}
+
+
+
+
