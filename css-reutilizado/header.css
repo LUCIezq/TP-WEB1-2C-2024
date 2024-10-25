@@ -21,10 +21,6 @@
     --cart-icon: url(../Paginas/Inicio/Assets/bx-cart-add.svg);
 }
 
-body {
-    padding-top: 2rem;
-}
-
 .header,
 .header__right,
 .header__right-buttons,
@@ -44,9 +40,10 @@ body {
     gap: 1rem;
     width: 100%;
     position: fixed;
+    z-index: 2;
     top: 0;
-    z-index: 1;
-    left: 0;
+    
+
     --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
 
 }
@@ -69,6 +66,10 @@ body {
 
     /*Functions*/
     cursor: pointer;
+}
+
+.container__icon-cart-container {
+    display: flex;
 }
 
 .header__center-container-input {
@@ -170,6 +171,7 @@ body {
     /*Functions*/
     display: flex;
     align-items: center;
+    gap: .6rem;
 }
 
 .header__right a {

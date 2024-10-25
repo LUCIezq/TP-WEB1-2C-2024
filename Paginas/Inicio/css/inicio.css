@@ -8,7 +8,7 @@ body {
 .main {
     display: grid;
     gap: 1rem;
-    margin-top: 42.18px;
+    margin-top: 4rem;
 }
 
 html {
@@ -296,7 +296,7 @@ html {
     justify-content: flex-end;
     align-items: flex-end;
     gap: .5rem;
-   
+
 }
 
 .lesson__item-price {
@@ -480,6 +480,92 @@ html {
 .button__price {
     cursor: pointer;
     font-size: 1rem;
+}
+
+.container__cart {
+    background-color: #0000003d;
+    position: fixed;
+    top: 0;
+    width: 0%;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.js-container__cart {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: min(100%, 430px);
+    overflow: hidden;
+}
+
+.container__cart-header {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__cart-header-close {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.container__cart-title {
+    font-size: 2.3rem;
+}
+
+.container__cart-description {
+    width: 100%;
+    padding-bottom: .5rem;
+}
+
+.container__cart-bottom {
+    border-top: 1px solid black;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.payment__detail-link {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding: .3rem 2rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+    transition: .3s ease;
+    margin-top: 1.2rem;
+}
+
+.payment__detail-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.container__cart-payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    width: 100%;
+    align-items: center;
 }
 
 body:has(.header__right-alternate-night-mode-checkbox:checked) {
@@ -750,6 +836,9 @@ body:has(.header__right-alternate-night-mode-checkbox:checked) {
     .carrousel__img-mobile {
         display: block;
     }
+    .js-container__cart {
+      
+        width: 100%;    }
 }
 
 @media screen and (width <=479px) {
@@ -800,12 +889,5 @@ body:has(.header__right-alternate-night-mode-checkbox:checked) {
 
     .lesson {
         border-radius: 30px;
-    }
-}
-
-@media screen and (width <=460px) {
-
-    .main {
-        margin-top: 2rem;
     }
 }

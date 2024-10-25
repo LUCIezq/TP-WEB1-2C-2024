@@ -1,8 +1,11 @@
 let contadorGlobal = parseInt(sessionStorage.getItem('contadorGlobal')) || 0;
 const contador__carrito = document.getElementById('cart-count');
 const container = document.querySelectorAll('.lesson__item-information-bottom-button-price');
+let contadorCarritoDesplegable = document.querySelector('.js-container__cart-count');
 
 contador__carrito.textContent = contadorGlobal;
+contadorCarritoDesplegable.textContent = contadorGlobal;
+
 
 container.forEach(element => {
 
@@ -11,8 +14,8 @@ container.forEach(element => {
     const button__count__minus = element.querySelector('.button__price-minus');
     const button__count = element.querySelector('.button__price-count');
     const button__count__plus = element.querySelector('.button__price-plus');
-    let contadorPorCurso =  0;
 
+    let contadorPorCurso = parseInt(sessionStorage.getItem('contadorPorCurso')) || 0;
 
     mouseOverSobreELBotonComprar(button__buy, button__count_container);
     actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
@@ -28,15 +31,14 @@ container.forEach(element => {
         contadorPorCurso = decrementarContadorPorCurso(contadorPorCurso, button__count);
         actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
         actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
-        setearContadorGlobal();
         setearContadorPorCurso(contadorPorCurso);
+
     });
 
     button__count__plus.addEventListener('click', e => {
         contadorPorCurso = incrementarContadorPorCurso(contadorPorCurso, button__count);
         actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
         actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
-        setearContadorGlobal();
         setearContadorPorCurso(contadorPorCurso);
     });
 
@@ -68,7 +70,6 @@ function decrementarContadorPorCurso(contadorPorCurso, button__count) {
     return contadorPorCurso;
 }
 
-
 function mouseOverSobreELBotonComprar(button__buy, button__count_container) {
     button__buy.addEventListener('mouseover', e => {
         button__buy.style.display = 'none';
@@ -78,6 +79,8 @@ function mouseOverSobreELBotonComprar(button__buy, button__count_container) {
 
 function actualizarContadorCarrito(contadorGlobal) {
     contador__carrito.textContent = contadorGlobal;
+    setearContadorGlobal();
+    contadorCarritoDesplegable.textContent = contadorGlobal;
 }
 
 function actualizarEstadoBotonMinus(buton, contadorPorCurso) {
@@ -103,5 +106,18 @@ function actualizarEstadoBotonPlus(buton, contadorPorCurso) {
 }
 
 
+const container_cart_background = document.getElementById('js-container__cart-background');
+const container_cart_hover = document.getElementById('js-container__cart');
+const carrito_icon = document.getElementById('header__right-icon-cart-label');
+const icon_close = document.getElementById('js-container__cart-header-close');
 
+carrito_icon.addEventListener('mouseover', e => {
+    container_cart_background.style.width = '100%';
+})
+container_cart_hover.addEventListener('mouseleave', e => {
+    container_cart_background.style.width = '0%';
+})
 
+icon_close.addEventListener('click', e => {
+    container_cart_background.style.width = '0%';
+})
