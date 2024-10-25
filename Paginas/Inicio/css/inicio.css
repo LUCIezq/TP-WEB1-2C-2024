@@ -517,8 +517,7 @@ html {
 }
 
 .container__cart-header-close {
-    height: 40px;
-    width: 40px;
+    width: 30px;
     cursor: pointer;
 }
 
