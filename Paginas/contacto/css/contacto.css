@@ -2,17 +2,17 @@
     margin: 0;
     padding: 0;
 }
-footer{
+
+footer {
     background-color: #ffff;
 }
-body{
+
+body {
     background-color: aliceblue;
 }
+
 main {
-    height: auto;
-    margin-top: 4rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 6rem;
 }
 
 h1 {
@@ -50,8 +50,6 @@ h1 {
     resize: none;
 }
 
-.contacto__parte-izquierda__mensaje {}
-
 .contacto__parte-izquierda input:last-child {
     background-color: white;
     border: 1px solid black;
@@ -88,8 +86,6 @@ h2 {
     text-align: center;
     margin: 2% 0;
 }
-
-.ubicacion__maps {}
 
 @media screen and (width <=735px) {
 

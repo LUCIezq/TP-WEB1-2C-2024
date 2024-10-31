@@ -145,6 +145,7 @@ footer {
 
 .footer__link {
   text-decoration: none;
+  display: grid;
 }
 
 .footer__link,
@@ -164,7 +165,6 @@ footer {
 
 .footer__link:hover {
   color: black;
-  font-weight: 600;
 }
 
 @media screen and (width <=1170px) {

@@ -5,6 +5,7 @@ body {
 main {
   margin: 0;
   padding: 0;
+  margin-top: 2rem;
 }
 
 .section__gifcard {
@@ -50,8 +51,9 @@ main {
 .giftcard__personalizacion {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   max-width: 700px;
+
 }
 
 .giftcard__personalizacion-titulo,
@@ -59,7 +61,6 @@ main {
   color: black;
   font-weight: bold;
   font-family: "Poppins";
-  text-align: center;
 }
 
 .nombre__input {
@@ -255,7 +256,7 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 1rem;
 }
 
 .nombre__input,
