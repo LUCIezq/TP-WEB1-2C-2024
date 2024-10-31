@@ -5,6 +5,7 @@ body {
 main {
   margin: 0;
   padding: 0;
+  margin-top: 3rem;
 }
 
 .section__gifcard {
@@ -50,7 +51,7 @@ main {
 .giftcard__personalizacion {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 2rem;
   max-width: 700px;
 }
 
