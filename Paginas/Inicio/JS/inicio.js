@@ -1,11 +1,7 @@
-let contadorGlobal = parseInt(sessionStorage.getItem('contadorGlobal')) || 0;
+let contadorGlobal = 0;
 const contador__carrito = document.getElementById('cart-count');
 const container = document.querySelectorAll('.lesson__item-information-bottom-button-price');
 let contadorCarritoDesplegable = document.querySelector('.js-container__cart-count');
-
-contador__carrito.textContent = contadorGlobal;
-contadorCarritoDesplegable.textContent = contadorGlobal;
-
 
 container.forEach(element => {
 
@@ -15,10 +11,9 @@ container.forEach(element => {
     const button__count = element.querySelector('.button__price-count');
     const button__count__plus = element.querySelector('.button__price-plus');
 
-    let contadorPorCurso = parseInt(sessionStorage.getItem('contadorPorCurso')) || 0;
+    let contadorPorCurso = 0;
 
     mouseOverSobreELBotonComprar(button__buy, button__count_container);
-    actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
 
     button__count_container.addEventListener('mouseleave', e => {
         if (contadorPorCurso == 0) {
@@ -28,29 +23,17 @@ container.forEach(element => {
     });
 
     button__count__minus.addEventListener('click', e => {
-        contadorPorCurso = decrementarContadorPorCurso(contadorPorCurso, button__count);
-        actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
-        actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
-        setearContadorPorCurso(contadorPorCurso);
-
+        actualizarEstadoBoton(button__count__minus, contadorPorCurso)
+        actualizarEstadoBoton(button__count__plus, contadorPorCurso)
+        decrementarContadorPorCurso(contadorPorCurso, button__count);
     });
 
     button__count__plus.addEventListener('click', e => {
-        contadorPorCurso = incrementarContadorPorCurso(contadorPorCurso, button__count);
-        actualizarEstadoBotonMinus(button__count__minus, contadorPorCurso);
-        actualizarEstadoBotonPlus(button__count__plus, contadorPorCurso);
-        setearContadorPorCurso(contadorPorCurso);
+        actualizarEstadoBoton(button__count__minus, contadorPorCurso);
+        actualizarEstadoBoton(button__count__plus, contadorPorCurso);
+        incrementarContadorPorCurso(contadorPorCurso, button__count);
     });
-
 });
-
-function setearContadorPorCurso(contadorPorCurso) {
-    sessionStorage.setItem('contadorPorCurso', contadorPorCurso);
-}
-
-function setearContadorGlobal() {
-    sessionStorage.setItem('contadorGlobal', contadorGlobal);
-}
 
 function incrementarContadorPorCurso(contadorPorCurso, button__count) {
     if (contadorPorCurso < 5) {
@@ -60,7 +43,6 @@ function incrementarContadorPorCurso(contadorPorCurso, button__count) {
     }
     return contadorPorCurso;
 }
-
 function decrementarContadorPorCurso(contadorPorCurso, button__count) {
     if (contadorPorCurso > 0) {
         contadorGlobal--;
@@ -69,55 +51,39 @@ function decrementarContadorPorCurso(contadorPorCurso, button__count) {
     }
     return contadorPorCurso;
 }
-
 function mouseOverSobreELBotonComprar(button__buy, button__count_container) {
     button__buy.addEventListener('mouseover', e => {
         button__buy.style.display = 'none';
         button__count_container.style.display = 'flex';
     });
 }
-
-function actualizarContadorCarrito(contadorGlobal) {
+function  actualizarContadorCarrito(contadorGlobal) {
     contador__carrito.textContent = contadorGlobal;
-    setearContadorGlobal();
     contadorCarritoDesplegable.textContent = contadorGlobal;
 }
+function actualizarEstadoBoton(buton, contadorPorCurso) {
 
-function actualizarEstadoBotonMinus(buton, contadorPorCurso) {
+    const menos = buton.classList.contains('button__price-minus');
+    const mas = buton.classList.contains('button__price-plus');
 
-    if (buton.classList.contains('button__price-minus') && contadorPorCurso == 0) {
-        buton.style.color = '#00000070';
-        buton.style.cursor = 'default';
-    } else {
-        buton.style.color = '#000000';
-        buton.style.cursor = 'Pointer';
+    if (menos) {
+        actualizarBotonMenos(buton, contadorPorCurso);
+    }
+    if (mas) {
+        actualizarBotonMas(buton, contadorPorCurso);
     }
 }
-
-function actualizarEstadoBotonPlus(buton, contadorPorCurso) {
-
-    if (buton.classList.contains('button__price-plus') && contadorPorCurso == 5) {
-        buton.style.color = '#00000070';
-        buton.style.cursor = 'default';
+function actualizarBotonMenos(buton, contadorPorCurso) {
+    if (contadorPorCurso > 0) {
+        buton.classList.add('button__price-minus-active');
     } else {
-        buton.style.color = '#000000';
-        buton.style.cursor = 'Pointer';
+        buton.classList.remove('button__price-minus-active');
     }
 }
-
-
-const container_cart_background = document.getElementById('js-container__cart-background');
-const container_cart_hover = document.getElementById('js-container__cart');
-const carrito_icon = document.getElementById('header__right-icon-cart-label');
-const icon_close = document.getElementById('js-container__cart-header-close');
-
-carrito_icon.addEventListener('mouseover', e => {
-    container_cart_background.style.width = '100%';
-})
-container_cart_hover.addEventListener('mouseleave', e => {
-    container_cart_background.style.width = '0%';
-})
-
-icon_close.addEventListener('click', e => {
-    container_cart_background.style.width = '0%';
-})
+function actualizarBotonMas(buton, contadorPorCurso) {
+    if (contadorPorCurso == 5) {
+        buton.classList.add('button__price-plus-desactive');
+    } else {
+        buton.classList.remove('button__price-plus-desactive');
+    }
+}

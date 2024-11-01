@@ -42,6 +42,7 @@
     position: fixed;
     z-index: 2;
     top: 0;
+    border-bottom: 1px solid #00000039;
     
 
     --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);

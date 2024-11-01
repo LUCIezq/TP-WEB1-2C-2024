@@ -88,14 +88,22 @@
 
                             <div class="container__cart-header-left">
                                 <h2 class="container__cart-title">Carrito</h2>
-                                <p class="container__cart-description"><span class="js-container__cart-count">0</span>
+                                <span class="container__cart-description"><span
+                                        class="js-container__cart-count">0</span>
                                     cursos
-                                    en el carrito.</p>
+                                    en el carrito.</span>
                             </div>
 
-                            <img src="./Paginas/Inicio/Assets/x-lg.svg" class="container__cart-header-close" id="js-container__cart-header-close" alt="">
+                            <img src="./Paginas/Inicio/Assets/x-lg.svg" class="container__cart-header-close"
+                                id="js-container__cart-header-close" alt="">
 
                         </header>
+
+                        <main class="container__cart-main">
+                            <ul class="container__cart-lesson-items" id="container__cart-lesson-items">
+
+                            </ul>
+                        </main>
 
                         <div class="container__cart-bottom">
                             <div class="container__cart-payment-details">
@@ -108,14 +116,12 @@
                     </div>
                 </div>
 
-                <label class="header__right-alternate-night-mode">
+                <!-- <label class="header__right-alternate-night-mode">
                     <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
-                </label>
+                </label> -->
 
                 <div class="container__icon-cart-container">
-                    <a href="./Paginas/Cart-view/cart-view.html" class="header__right-cart-link">
-                        <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
-                    </a>
+                    <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
                     <input type="checkbox" class="header__right-icon-cart-checkbox">
 
                     <div class="header__right-cart-count-container">
@@ -778,6 +784,7 @@
     </footer>
 
     <script src="./Paginas/Inicio/JS/inicio.js"></script>
+    <script src="./Paginas/Inicio/JS/FuncionalidadCarrito.js"></script>
 
 </body>
 

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css-reutilizado/header.css" />
     <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
     <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="../Inicio/css/inicio.css">
     <title>Contacto</title>
 </head>
 
@@ -66,13 +67,47 @@
 
             <div class="header__right-cart">
 
-                <a href="../Cart-view/cart-view.html"><img src="../Inicio/Assets/bx-cart-add.svg"
-                        class="header__right-icon-cart" alt="Carrito"></a>
+                <div class="container__cart" id="js-container__cart-background">
 
-                <div class="header__right-cart-count-container">
-                    <span class="header__right-cart-count"></span>
+                    <div class="js-container__cart" id="js-container__cart">
+
+                        <header class="container__cart-header">
+
+                            <div class="container__cart-header-left">
+                                <h2 class="container__cart-title">Carrito</h2>
+                                <p class="container__cart-description"><span class="js-container__cart-count">0</span>
+                                    cursos
+                                    en el carrito.</p>
+                            </div>
+
+                            <img src="../Inicio/Assets/x-lg.svg" class="container__cart-header-close"
+                                id="js-container__cart-header-close" alt="">
+
+                        </header>
+
+                        <div class="container__cart-bottom">
+                            <div class="container__cart-payment-details">
+                                <h2 class="payment__detail-title">Total:</h2>
+                                <span class="payment__detail-price">$0 ARS</span>
+                                <a href="../Checkout-view/checkout.html" class="payment__detail-link">Pagar</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
+                <!-- <label class="header__right-alternate-night-mode">
+                    <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
+                </label> -->
+
+                <div class="container__icon-cart-container">
+                    <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
+                    <input type="checkbox" class="header__right-icon-cart-checkbox">
+
+                    <div class="header__right-cart-count-container">
+                        <span class="header__right-cart-count" id="cart-count"></span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -116,15 +151,15 @@
         <span class="footer__title">
             LearnTree.
         </span>
-    
+
         <div class="footer__container">
-    
-    
-    
+
+
+
             <div class="footer__flex">
-    
+
                 <h2>Datos del grupo</h2>
-    
+
                 <ul class="footer__elements">
                     <li class="footer__element">
                         BROSSARD, LOUIS
@@ -139,13 +174,13 @@
                         LUCI, EZEQUIEL
                     </li>
                 </ul>
-    
+
             </div>
-    
+
             <div class="footer__flex">
-    
+
                 <h2>Menu</h2>
-    
+
                 <ul class="footer__elements">
                     <li class="footer__element">
                         <a href="../../index.html" class="footer__link">Inicio</a>
@@ -160,13 +195,13 @@
                         <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
                     </li>
                 </ul>
-    
+
             </div>
-    
+
             <div class="footer__flex ">
-    
+
                 <h2>Redes sociales</h2>
-    
+
                 <ul class="footer__elements footer__elements-social">
                     <li class="footer__element">
                         <a href="https://www.facebook.com/" class="footer__link"><img
@@ -177,20 +212,22 @@
                                 src="../Inicio/Assets_footer/instagram.svg" alt=""></a>
                     </li>
                     <li class="footer__element">
-                        <a href="https://x.com/" class="footer__link"><img
-                                src="../Inicio/Assets_footer/twitter-x.svg" alt=""></a>
+                        <a href="https://x.com/" class="footer__link"><img src="../Inicio/Assets_footer/twitter-x.svg"
+                                alt=""></a>
                     </li>
                 </ul>
-    
+
             </div>
-    
+
         </div>
-    
+
         <p class="footer__paragraph">
             © Todos los derechos reservados 2024 - UNLaM
         </p>
-    
-      </footer>
+
+    </footer>
+
+    <script src="../Inicio/JS/inicio.js"></script>
 
 </body>
 

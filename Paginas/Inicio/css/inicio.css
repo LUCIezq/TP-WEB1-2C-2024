@@ -2,7 +2,6 @@ body {
     background-color: aliceblue;
     width: 100%;
     margin: 0 auto;
-    transition: .3s ease;
 }
 
 .main {
@@ -482,15 +481,32 @@ html {
     font-size: 1rem;
 }
 
+.button__price-minus {
+    color: #00000070;
+    cursor: default;
+}
+
+.button__price-minus-active {
+    color: #000000;
+    cursor: pointer;
+}
+
+.button__price-plus-desactive {
+    color: #00000070;
+    cursor: default;
+}
+
+
 .container__cart {
     background-color: #0000003d;
     position: fixed;
     top: 0;
-    width: 0%;
+    width: 100%;
     right: 0;
     height: 100%;
     overflow: hidden;
     z-index: 100;
+    display: none;
 }
 
 .js-container__cart {
@@ -503,8 +519,8 @@ html {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: min(100%, 430px);
     overflow: hidden;
+    width: min(430px, 100%);
 }
 
 .container__cart-header {
@@ -537,7 +553,6 @@ html {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-radius: 20px 20px 0px 0px;
 }
 
 .payment__detail-link {
@@ -835,9 +850,11 @@ body:has(.header__right-alternate-night-mode-checkbox:checked) {
     .carrousel__img-mobile {
         display: block;
     }
+
     .js-container__cart {
-      
-        width: 100%;    }
+
+        width: 100%;
+    }
 }
 
 @media screen and (width <=479px) {
