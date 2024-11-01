@@ -25,41 +25,19 @@ container.forEach(element => {
     button__count__minus.addEventListener('click', e => {
         actualizarEstadoBoton(button__count__minus, contadorPorCurso)
         actualizarEstadoBoton(button__count__plus, contadorPorCurso)
-        decrementarContadorPorCurso(contadorPorCurso, button__count);
     });
 
     button__count__plus.addEventListener('click', e => {
         actualizarEstadoBoton(button__count__minus, contadorPorCurso);
         actualizarEstadoBoton(button__count__plus, contadorPorCurso);
-        incrementarContadorPorCurso(contadorPorCurso, button__count);
     });
 });
 
-function incrementarContadorPorCurso(contadorPorCurso, button__count) {
-    if (contadorPorCurso < 5) {
-        contadorGlobal++;
-        button__count.textContent = ++contadorPorCurso;
-        actualizarContadorCarrito(contadorGlobal);
-    }
-    return contadorPorCurso;
-}
-function decrementarContadorPorCurso(contadorPorCurso, button__count) {
-    if (contadorPorCurso > 0) {
-        contadorGlobal--;
-        button__count.textContent = --contadorPorCurso;
-        actualizarContadorCarrito(contadorGlobal);
-    }
-    return contadorPorCurso;
-}
 function mouseOverSobreELBotonComprar(button__buy, button__count_container) {
     button__buy.addEventListener('mouseover', e => {
         button__buy.style.display = 'none';
         button__count_container.style.display = 'flex';
     });
-}
-function  actualizarContadorCarrito(contadorGlobal) {
-    contador__carrito.textContent = contadorGlobal;
-    contadorCarritoDesplegable.textContent = contadorGlobal;
 }
 function actualizarEstadoBoton(buton, contadorPorCurso) {
 
