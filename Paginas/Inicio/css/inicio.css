@@ -543,6 +543,7 @@ html {
 .lesson__link-cart {
     text-decoration: none;
     color: #000000ab;
+    width: fit-content;
 }
 
 .lesson__title-cart {
@@ -599,6 +600,7 @@ html {
 .lesson__title:hover,
 .lesson__link-cart:hover {
     text-decoration: underline;
+    color: black;
 }
 
 .lesson__description {
