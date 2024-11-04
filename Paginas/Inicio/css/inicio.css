@@ -687,6 +687,8 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 55px;
+    gap: .3rem;
+    padding: .3rem 0;
 }
 
 .container__cart-bottom-input-element {
@@ -697,6 +699,10 @@ html {
     border-color: #0000002e;
     padding: .3rem;
     outline: none;
+}
+.container__cart-bottom-input-element-no-modify{
+    color: rgba(0, 0, 0, 0.251);
+    cursor: not-allowed;
 }
 
 .container__cart-bottom-input-element-error {
@@ -719,6 +725,34 @@ html {
     cursor: pointer;
 }
 
+.cupon__container {
+    display: flex;
+    border: 1px dashed #00000043;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem;
+    padding-left: .4rem;
+    padding-right: .5rem;
+    font-size: .7rem;
+    color: #00000087;
+    display: none;
+}
+
+#js-cupon__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.visible {
+    display: flex;
+}
+
+#js-cupon__description {
+    color: black;
+    font-weight: 600;
+    font-size: .8rem;
+}
 
 @media screen and (width <=1170px) {
 
