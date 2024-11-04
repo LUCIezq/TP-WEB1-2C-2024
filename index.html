@@ -109,7 +109,7 @@
 
                         <div class="js-container__cart-empty">
                             <img src="./Paginas/Inicio/Assets/empty-shopping-cart-v2.jpg" alt="">
-                            <p class="js-container__cart-empty-text">Tu carrito está vacío.¡Sigue comprando para
+                            <p class="js-container__cart-empty-text">Tu carrito está vacío. ¡Sigue comprando para
                                 encontrar un curso!
                             </p>
                             <a href="#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
@@ -118,28 +118,43 @@
                         <div class="container__cart-bottom-payment">
 
                             <div class="container__cart-bottom">
-                                <div class="container__cart-bottom-left">
 
+                                <div class="container__cart-bottom-cupon">
                                     <h2 class="container__cart-cupon">
-                                        ¿Tenés código de cupón?
+                                        ¿Tienes código de cupón?
                                     </h2>
+
+                                    <div class="container__cart-bottom-input-global">
+
+                                        <div class="container__cart-bottom-input">
+                                            <input type="text" class="container__cart-bottom-input-element"
+                                                placeholder="Ingresa el código" maxlength="10">
+                                            <button class="button__cuppon">Aplicar</button>
+                                        </div>
+
+                                        <p class="cart__error-description"></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="container__cart-bottom-cantidad">
                                     <h2 class="container__cart-bottom-cantidad-text">
                                         Cantidad de cursos
                                     </h2>
-
-                                    <h2 class="container__cart-total">
-                                        Total
-                                    </h2>
-                                </div>
-
-                                <div class="container__cart-right">
-                                    <input type="text" class="container__cart-bottom-input"
-                                        placeholder="Ingresá el código">
                                     <span class="container__cart-bottom-right">
                                         0
                                     </span>
-                                    <span class="container__cart-bottom-total">$0</span>
                                 </div>
+
+                                <div class="container__cart-total">
+
+                                    <h2 class="container__cart-total-text">
+                                        Total
+                                    </h2>
+                                    <span class="container__cart-bottom-total">$0</span>
+
+                                </div>
+
                             </div>
 
                             <a href="./Paginas/Checkout-view/checkout.html"

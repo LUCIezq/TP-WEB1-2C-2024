@@ -73,3 +73,22 @@ function revisarMensajeDeCarrito() {
 }
 
 revisarMensajeDeCarrito();
+
+const regex = /^[a-zA-Z0-9]+$/;
+const buttonCarritoAplicar = document.querySelector('.button__cuppon');
+const cartErrorParrafo = document.querySelector('.cart__error-description');
+buttonCarritoAplicar.addEventListener('click', validarCupon);
+
+
+function validarCupon() {
+    const inputText = document.querySelector('.container__cart-bottom-input-element');
+    if (inputText.value == "" || inputText.value.match(regex) === null) {
+        inputText.classList.add('container__cart-bottom-input-element-error');
+        cartErrorParrafo.innerText = 'Código de cupón invalido.';
+        cartErrorParrafo.style.color = 'red';
+    } else {
+        cartErrorParrafo.innerText = "Código de cupón valido.";
+        inputText.classList.remove('container__cart-bottom-input-element-error');
+        cartErrorParrafo.style.color = 'green';
+    }
+}

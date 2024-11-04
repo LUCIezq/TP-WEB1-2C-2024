@@ -18,3 +18,4 @@ const linkCarrito = document.querySelector('.js-container__cart-empty-link');
 linkCarrito.addEventListener('click', () => {
     container_cart_background.style.display = 'none';
 })
+
