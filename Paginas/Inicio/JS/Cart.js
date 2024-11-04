@@ -20,6 +20,7 @@ function crearCursos() {
                 actualizarNumeroCarrito();
                 crearCursos();
                 calcularTotalDelCarrito();
+                revisarMensajeDeCarrito();
             }
             );
         });

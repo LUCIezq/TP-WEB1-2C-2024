@@ -11,6 +11,7 @@ function crearCursos(cursos) {
             nuevoCurso.getElementsByTagName('button')[0].addEventListener('click', () => {agregarCursoACarrito(curso)
                 crearCursos();
                 calcularTotalDelCarrito();
+                revisarMensajeDeCarrito();
             });
         });
     }

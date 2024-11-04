@@ -51,11 +51,11 @@ const total = document.querySelector('.container__cart-bottom-total');
 function calcularTotalDelCarrito() {
     const carrito = JSON.parse(sessionStorage.getItem('cursos'));
     let cuenta = 0;
-    if(carrito){
+    if (carrito) {
         carrito.forEach(curso => {
             cuenta += curso.cantidad * curso.precio;
         });
-        total.innerText = '$'+cuenta;
+        total.innerText = '$' + cuenta;
     }
 
 }
@@ -63,4 +63,13 @@ calcularTotalDelCarrito();
 
 actualizarNumeroCarrito();
 
+const mensaje = document.querySelector(".js-container__cart-empty");
+const containerCursos = document.getElementById('JS-container__cart-lesson-items');
 
+function revisarMensajeDeCarrito() {
+    const cursos = JSON.parse(sessionStorage.getItem('cursos'));
+    mensaje.classList.toggle('oculto', cursos && cursos.length > 0);
+    containerCursos.classList.toggle('oculto', !(cursos && cursos.length > 0))
+}
+
+revisarMensajeDeCarrito();
