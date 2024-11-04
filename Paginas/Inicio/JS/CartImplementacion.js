@@ -96,6 +96,7 @@ function validarCupon() {
         cuponText.innerText = inputText.value;
         inputText.setAttribute('readonly', true);
         inputText.classList.add('container__cart-bottom-input-element-no-modify');
+        
     }
 }
 

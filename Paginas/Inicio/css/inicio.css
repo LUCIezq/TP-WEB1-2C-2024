@@ -380,6 +380,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.112);
 }
 
 .container__cart-header-close {
@@ -485,10 +486,9 @@ html {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     width: 100%;
     overflow-y: scroll;
-    background-color: #00000004;
+    background-color: #00000005;
     height: 100%;
 }
 
@@ -686,7 +686,7 @@ html {
 .container__cart-bottom-input-global {
     display: flex;
     flex-direction: column;
-    min-height: 55px;
+    min-height: 60px;
     gap: .3rem;
     padding: .3rem 0;
 }
@@ -713,6 +713,7 @@ html {
 .cart__error-description {
     font-size: .7rem;
     max-width: 250px;
+    min-height: 20px;
 }
 
 .button__cuppon {
@@ -753,6 +754,12 @@ html {
     font-weight: 600;
     font-size: .8rem;
 }
+
+.item__count{
+    min-width: 40px;
+    text-align: center;
+}
+
 
 @media screen and (width <=1170px) {
 

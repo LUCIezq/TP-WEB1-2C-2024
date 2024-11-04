@@ -181,7 +181,8 @@
 
 .header__right-cart-count {
     display: block;
-    text-align: center;
+    text-align: start;
+    min-width: 30px;
 }
 
 .header__right-icon-cart {
