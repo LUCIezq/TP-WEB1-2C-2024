@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./Paginas/Inicio/css/inicio.css" />
     <link rel="stylesheet" href="./css-reutilizado/header.css" />
 
-
+    <script src="./Paginas/Inicio/JS/Cursos.js"></script>
+    <script src="./Paginas/Inicio/JS/index.js" defer></script>
+    <script src="./Paginas/Inicio/JS/CartImplementacion.js" defer></script>
+    <script src="./Paginas/Inicio/JS/Cart.js" defer></script>
     <title>Home</title>
 
 </head>
@@ -99,26 +102,43 @@
 
                         </header>
 
-                        <main class="container__cart-main">
-                            <ul class="container__cart-lesson-items" id="container__cart-lesson-items">
+                        <ul class="container__cart-lesson-items" id="JS-container__cart-lesson-items">
 
-                            </ul>
-                        </main>
+                        </ul>
+                        <div class="container__cart-bottom-payment">
 
-                        <div class="container__cart-bottom">
-                            <div class="container__cart-payment-details">
-                                <h2 class="payment__detail-title">Total:</h2>
-                                <span class="payment__detail-price">$0 ARS</span>
-                                <a href="./Paginas/Checkout-view/checkout.html" class="payment__detail-link">Pagar</a>
+                            <div class="container__cart-bottom">
+                                <div class="container__cart-bottom-left">
+
+                                    <h2 class="container__cart-cupon">
+                                        ¿Tenés código de cupón?
+                                    </h2>
+                                    <h2 class="container__cart-bottom-cantidad-text">
+                                        Cantidad de cursos
+                                    </h2>
+
+                                    <h2 class="container__cart-total">
+                                        Total
+                                    </h2>
+                                </div>
+
+                                <div class="container__cart-right">
+                                    <input type="text" class="container__cart-bottom-input"
+                                        placeholder="Ingresá el código">
+                                    <span class="container__cart-bottom-right">
+                                        0
+                                    </span>
+                                    <span class="container__cart-bottom-total">$0</span>
+                                </div>
                             </div>
+
+                            <a href="#" class="container__cart-bottom-paymnent-link">Continuar compra</a>
+
                         </div>
+
 
                     </div>
                 </div>
-
-                <!-- <label class="header__right-alternate-night-mode">
-                    <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
-                </label> -->
 
                 <div class="container__icon-cart-container">
                     <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
@@ -318,7 +338,7 @@
 
             <div class="lesson__information">
                 <span class="lesson__question">
-                    ¿ Por qué elegir <span class="lesson__question-modify">LearnTree</span> ?
+                    ¿Por qué elegir <span class="lesson__question-modify">LearnTree</span>?
                 </span>
 
                 <p class="lesson__answer">
@@ -334,341 +354,6 @@
                 </h2>
 
                 <div class="lesson__items">
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/ciberseguridad.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-
-                            <div class="lesson__item-information-top">
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    Curso completo de Hacking Ético y Ciberseguridad.
-                                </a>
-
-                                <p class="lesson__item-description">
-                                    Aprende Hacking Ético y Ciberseguridad de manera práctica, ¡conviértete en un
-                                    experto en
-                                    Hacking Ético y Ciberseguridad!
-                                </p>
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    60hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-
-                                    <span class="lesson__item-price">
-                                        $11.500
-                                    </span>
-
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/html_css.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-                            <div class="lesson__item-information-top">
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    Curso de Diseño Web: HTML y CSS. </a>
-
-                                <p class="lesson__item-description">
-                                    Aprende paso a paso las técnicas para diseñar páginas web profesionales. Crea 3
-                                    proyectos del mundo real.
-                                </p>
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    120hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-                                    <span class="lesson__item-price">
-                                        $15.500
-                                    </span>
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/ia.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-                            <div class="lesson__item-information-top">
-
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    Inteligencia Artificial & ChatGPT.
-                                </a>
-                                <p class="lesson__item-description">
-                                    El curso completo de Inteligencia Artificial: Chat GPT, IA Generativa, LLMs, IA
-                                    Prompt Engineering, Midjourney y más!
-                                </p>
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    80hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-                                    <span class="lesson__item-price">
-                                        $17.000
-                                    </span>
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/java.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-                            <div class="lesson__item-information-top">
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    Máster Completo en Java de cero a experto.
-                                </a>
-
-                                <p class="lesson__item-description">
-                                    Aprende con el mejor curso Java de cero con las mejores prácticas POO, Java EE 9,
-                                    CDI, JPA, EJB, JSF, Web Services, JAAS.
-                                </p>
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    127hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-                                    <span class="lesson__item-price">
-                                        $9.500
-                                    </span>
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/javascript.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-                            <div class="lesson__item-information-top">
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    JavaScript Moderno Guía Definitiva.
-                                </a>
-
-                                <p class="lesson__item-description">
-                                    Aprende el Lenguaje de Programación Web más popular paso a paso con +20 Proyectos -
-                                    Incluye Proyecto MERN Full Stack.
-                                </p>
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    100hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-                                    <span class="lesson__item-price">
-                                        $16.500
-                                    </span>
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="lesson__item">
-
-                        <div class="lesson__item-container-img">
-                            <img src="./Paginas/Inicio/Assets_cursos/python.jpg" alt="Ciberseguridad">
-                        </div>
-
-                        <div class="lesson__item-container-information">
-                            <div class="lesson__item-information-top">
-
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                                    Python para Data Science & Machine Learning.
-                                </a>
-                                <p class="lesson__item-description">
-                                    Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn, Scikit Learn,
-                                    Tensorflow y Machine Learning.
-                                </p>
-                                <a href="./Paginas/Detalle-curso/detalle-curso.html" class="lesson__item-link">
-                                    Ver detalle
-                                </a>
-                            </div>
-
-                            <div class="lesson__item-information-bottom">
-
-                                <span class="lesson__item-hours">
-                                    150hs
-                                </span>
-
-                                <div class="lesson__item-information-bottom-button-price">
-                                    <span class="lesson__item-price">
-                                        $20.000
-                                    </span>
-                                    <div class="lesson__item-buttons-contanier" id="container__button-buy">
-                                        <span class="button__price button__price-minus" id="button_buy-minus">
-                                            -
-                                        </span>
-                                        <span class="button__price-count" id="button_buy-count">
-                                            0
-                                        </span>
-                                        <span class="button__price button__price-plus" id="button_buy-plus">
-                                            +
-                                        </span>
-                                    </div>
-
-                                    <span class="lesson__item-button" id="lesson__button-buy">
-                                        Comprar
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
 
                 </div>
 
@@ -783,7 +468,6 @@
 
     </footer>
 
-    <script src="./Paginas/Inicio/JS/inicio.js"></script>
     <script src="./Paginas/Inicio/JS/FuncionalidadCarrito.js"></script>
 </body>
 

@@ -190,155 +190,6 @@ html {
     margin: 0 auto;
 }
 
-.lesson__items {
-    /*Functions*/
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(265px, 100%), 1fr));
-    width: min(1200px, 100%);
-    margin: 0 auto;
-    gap: 2rem;
-
-    /*Styles*/
-    padding: 0 2rem;
-}
-
-.lesson__item {
-    /*Styles*/
-    border-radius: 20px;
-    background-color: #ffffff;
-
-    /*Functions*/
-    display: flex;
-    flex-direction: column;
-
-}
-
-.lesson__item:hover {
-
-    .lesson__item-container-information {
-        box-shadow: 0px 6px 0px 0px black;
-    }
-
-    .lesson__item-link {
-        color: black;
-        font-weight: 600;
-    }
-
-    .lesson__item-container-img img {
-        transform: scale(1.05);
-    }
-}
-
-.lesson__item-container-information {
-    /*Styles*/
-    border: 1px solid #0000002d;
-    padding: .8rem;
-    border-radius: 0px 0px 15px 15px;
-    transition: .2s ease;
-
-    /*Functions*/
-    display: grid;
-    justify-content: center;
-    gap: 2rem;
-    min-height: 350px;
-}
-
-.lesson__item-information-top {
-    /*Functions*/
-    display: grid;
-    gap: .5rem;
-}
-
-.lesson__item-title {
-    /*Styles*/
-    font-size: 1.3rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    line-height: 1.2;
-    text-decoration: none;
-    color: black;
-}
-
-.lesson__item-link:hover {
-    text-decoration: underline;
-}
-
-.lesson__item-title:hover {
-    text-decoration: underline;
-}
-
-.lesson__item-description {
-    /*Styles*/
-    font-size: .8rem;
-    color: #000000a9;
-    font-weight: 500;
-}
-
-.lesson__item-information-bottom {
-    /*Functions*/
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    min-height: 100px;
-}
-
-.lesson__item-hours {
-    /*Styles*/
-    font-weight: 700;
-}
-
-.lesson__item-information-bottom-button-price {
-    /*Functions*/
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: .5rem;
-
-}
-
-.lesson__item-price {
-    font-weight: 600;
-    margin-right: 8px;
-}
-
-.lesson__item-link {
-    text-decoration: none;
-    color: #000000a9;
-    font-size: .9rem;
-    font-weight: 500;
-    width: fit-content;
-}
-
-.lesson__item-button {
-    /*Styles*/
-    color: white;
-    font-weight: 400;
-    text-decoration: none;
-    background-color: #000000;
-    transition: .3s ease;
-    border-radius: 12px;
-    cursor: pointer;
-    min-height: 40px;
-    padding: .4rem 1rem;
-    align-items: center;
-}
-
-
-.lesson__item-container-img {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 15px 15px 0 0;
-}
-
-.lesson__item-container-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .3s ease;
-}
-
 .lesson__more {
     width: 100%;
     display: grid;
@@ -496,7 +347,6 @@ html {
     cursor: default;
 }
 
-
 .container__cart {
     background-color: #0000003d;
     position: fixed;
@@ -517,15 +367,15 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     overflow: hidden;
-    width: min(430px, 100%);
+    width: min(545px, 100%);
+
 }
 
 .container__cart-header {
     width: 100%;
-    border-bottom: 1px solid black;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -546,157 +396,244 @@ html {
     padding-bottom: .5rem;
 }
 
-.container__cart-bottom {
-    border-top: 1px solid black;
+.container__cart-bottom-payment {
     width: 100%;
-    padding: 2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.payment__detail-link {
-    text-decoration: none;
-    color: black;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    padding: .3rem 2rem;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 250px;
-    transition: .3s ease;
-    margin-top: 1.2rem;
-}
-
-.payment__detail-link:hover {
-    background-color: black;
-    color: white;
-}
-
-.container__cart-payment-details {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
-    width: 100%;
-    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin-top: auto;
 }
 
-body:has(.header__right-alternate-night-mode-checkbox:checked) {
-    background-color: #000814;
-    transition: .3s ease;
+.container__cart-bottom {
+    display: flex;
+    justify-content: space-between;
+}
 
-    .carrousel__element-description {
-        background-color: #000814;
-    }
+.container__cart-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 
-    .description__link {
-        background-color: #001D3D;
-    }
+.container__cart-right input {
+    padding: .3rem;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.774);
+}
 
-    .description__link:hover {
-        background-color: #003566;
-    }
+.container__cart-bottom-cantidad-text,
+.container__cart-cupon,
+.container__cart-right,
+.container__cart-bottom-paymnent-link {
+    font-weight: 200;
+    font-size: 1rem;
+}
 
-    .description__paragraph {
-        color: #ffffffcb;
-    }
+.container__cart-bottom-paymnent-link {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    place-self: center;
+    padding: .6rem;
+    border-radius: 12px;
+}
 
-    .steps__information {
-        background-color: #001D3D;
-    }
+.lesson__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 2rem;
+    gap: 1.5rem;
+    width: min(1200px, 100%);
+    place-self: center;
+}
 
-    .steps__question {
-        background-color: transparent;
-    }
+.lesson__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #0000002a;
+}
 
-    .step__item {
-        background-color: #001D3D;
-    }
+.container__information {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    height: 100%;
+    justify-content: space-between;
+    min-height: 300px;
+}
 
-    .step__title,
-    .step__text {
-        color: #001D3D;
-    }
+.container__img-link {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    height: 100%;
+}
 
-    .step__description {
-        background-color: white;
-    }
+.lesson__items img {
+    width: 100%;
+    transition: 300ms;
+}
 
-    .lesson {
-        background-color: #001D3D;
-    }
+.lesson__items img:hover {
+    transform: scale(1.05);
+}
 
-    .lesson__question-modify {
-        border-color: white;
-    }
 
-    .lesson__item:hover {
+.container__cart-lesson-items {
+    padding: .8rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #00000004;
+    height: 100%;
+}
 
-        .lesson__item-container-information {
-            box-shadow: none;
-        }
-    }
+.container__cart-item {
+    display: flex;
+    border: 1px solid #00000030;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.135);
+}
 
-    .lesson__answer,
-    .lesson__container-title,
-    .lesson__question-modify,
-    .lesson,
-    .steps__paragraph,
-    .steps__question,
-    .description__link,
-    .carrousel__element-description,
-    .lesson__item-title,
-    .lesson__item-description,
-    .lesson__item-link,
-    .logos__title,
-    .lesson__more-paragraph,
-    footer,
-    .footer__element,
-    .footer__link,
-    .footer__paragraph {
-        color: white;
-    }
+.container__cart-item img {
+    width: 200px;
+    height: 100%;
+}
 
-    .lesson__container-title {
-        border-color: white;
-    }
+.container__cart-information {
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
 
-    .lesson__item-container-information {
-        background-color: #000814;
-    }
+.lesson__title-cart {
+    color: black;
+    text-decoration: none;
+    font-size: .9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 270px;
+}
 
-    .lesson__item-button {
-        background-color: #001D3D;
-    }
+.lesson__link-cart {
+    text-decoration: none;
+    color: #000000ab;
+}
 
-    .lesson__item-button:hover {
-        color: white;
-        background-color: transparent;
-        box-shadow: 0px 0px 0px 1px white;
-    }
+.lesson__title-cart {
+    font-weight: 200;
+}
 
-    .lesson__more-paragraph {
-        border-color: white;
-    }
+.lesson__link-cart {
+    font-size: .7rem;
+    padding-top: .3rem;
+}
 
-    .logos__slide img {
-        background-color: white;
-    }
+.container__cart-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+}
 
-    footer {
-        background-color: #001D3D;
-        border: none;
-    }
+.item__price-cart {
+    padding: 0 .2rem;
+    font-weight: 600;
+}
 
-    .footer__title {
-        background-color: #000814;
-    }
+.container__cart-information-bottom {
+    text-align: end;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
 
-    .lesson__item-container-img {
-        background-color: black;
-    }
+.container__cart-button {
+    width: fit-content;
+    margin-left: auto;
+    padding: .2rem 1rem;
+    border-radius: 10px;
+}
 
+.container__cart-button button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.lesson__title {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+}
+
+.lesson__title:hover,
+.lesson__link-cart:hover {
+    text-decoration: underline;
+}
+
+.lesson__description {
+    font-size: .85rem;
+    color: #000000af;
+}
+
+.lesson__link {
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+    font-size: .9rem;
+}
+
+.lesson__link:hover {
+    text-decoration: underline;
+}
+
+.container__bottom-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lesson__hours {
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.container__price {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-end;
+}
+
+.lesson__button-buy {
+    background-color: white;
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.lesson__button-buy:hover {
+    background-color: black;
+    color: white;
 }
 
 @media screen and (width <=1170px) {
