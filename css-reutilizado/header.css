@@ -43,7 +43,7 @@
     z-index: 2;
     top: 0;
     border-bottom: 1px solid #00000039;
-    
+
 
     --hamburguer-icon: url(../Paginas/Inicio/Assets/list.svg);
 
@@ -508,6 +508,7 @@
 
     .header {
         gap: .3rem;
+        padding: 1rem 0rem 1rem 1rem;
     }
 
     .header__left {

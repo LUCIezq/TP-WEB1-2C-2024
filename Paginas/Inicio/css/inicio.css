@@ -434,7 +434,6 @@ html {
     background-color: black;
     place-self: center;
     padding: .6rem;
-    border-radius: 12px;
 }
 
 .lesson__items {
@@ -501,7 +500,6 @@ html {
     border: 1px solid #00000030;
     border-radius: 12px;
     overflow: hidden;
-
 }
 
 .container__cart-item img {
@@ -523,6 +521,7 @@ html {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: .5rem;
 }
 
 .container__cart-bottom-cantidad {
@@ -702,7 +701,8 @@ html {
     padding: .3rem;
     outline: none;
 }
-.container__cart-bottom-input-element-no-modify{
+
+.container__cart-bottom-input-element-no-modify {
     color: rgba(0, 0, 0, 0.251);
     cursor: not-allowed;
 }
@@ -757,7 +757,7 @@ html {
     font-size: .8rem;
 }
 
-.item__count{
+.item__count {
     min-width: 40px;
     text-align: center;
 }
@@ -919,6 +919,29 @@ html {
 
         width: 100%;
     }
+
+    .lesson__title-cart {
+        color: black;
+        text-decoration: none;
+        font-size: .9rem;
+        white-space: inherit;
+        overflow: auto;
+        text-overflow: inherit;
+        max-width: 100%;
+    }
+
+    .container__cart-item img {
+        display: none;
+    }
+
+    .container__cart-item {
+        height: 100%;
+        width: 100%;
+    }
+    .lesson__link-cart{
+        font-weight: 600;
+        font-size: .72rem;
+    }
 }
 
 @media screen and (width <=479px) {
@@ -970,4 +993,29 @@ html {
     .lesson {
         border-radius: 30px;
     }
+
+    .container__cart-cupon {
+        font-size: .9rem;
+    }
+
+}
+
+@media screen and (width <=415px) {
+    .container__cart-cupon {
+        display: none;
+    }
+
+    .container__cart-bottom-cupon {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cart__error-description {
+        text-align: center;
+    }
+
+    .container__cart-bottom-payment {
+        padding: .7rem 1rem;
+    }
+
 }
