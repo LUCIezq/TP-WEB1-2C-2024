@@ -8,7 +8,8 @@ function crearCursos(cursos) {
             nuevoCurso.classList = 'lesson__item';
             nuevoCurso.innerHTML = generarContenidoDeCurso(curso);
             cursosContainer.appendChild(nuevoCurso);
-            nuevoCurso.getElementsByTagName('button')[0].addEventListener('click', () => {agregarCursoACarrito(curso)
+            nuevoCurso.getElementsByTagName('button')[0].addEventListener('click', () => {
+                agregarCursoACarrito(curso)
                 crearCursos();
                 calcularTotalDelCarrito();
                 revisarMensajeDeCarrito();
@@ -18,6 +19,8 @@ function crearCursos(cursos) {
 }
 
 function generarContenidoDeCurso(curso) {
+
+    let precioConMiles = curso.precio.toLocaleString('es-ES');
 
     /* Mandamos un curso por parametro y dinamicamente
 crea el contenido con la informacion de este*/
@@ -36,7 +39,7 @@ crea el contenido con la informacion de este*/
     <span class="lesson__hours">${curso.horas}hs</span>
 
     <div class="container__price">
-        <span class="lesson__price">$ ${curso.precio}</span>
+        <span class="lesson__price">$${precioConMiles}</span>
 
         <button class="lesson__button-buy">Añadir al carrito</button>
     </div>

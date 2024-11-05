@@ -38,6 +38,8 @@ function getNuevoProductoParaMemoria(curso) {
 const cuentaCarrito = document.getElementById('cart-count');
 const numeroDentroDeCarrito = document.querySelector('.js-container__cart-count');
 const numeroDentroDeCarritoBottom = document.querySelector('.container__cart-bottom-right');
+const inputText = document.querySelector('.container__cart-bottom-input-element');
+const descuento = 0.30;
 function actualizarNumeroCarrito() {
     const memoria = JSON.parse(sessionStorage.getItem('cursos'));
     if (memoria) {
@@ -48,6 +50,7 @@ function actualizarNumeroCarrito() {
     }
 }
 const total = document.querySelector('.container__cart-bottom-total');
+let descuentoSinTotal = document.querySelector('.container__cart-descuentos-price');
 function calcularTotalDelCarrito() {
     const carrito = JSON.parse(sessionStorage.getItem('cursos'));
     let cuenta = 0;
@@ -55,9 +58,16 @@ function calcularTotalDelCarrito() {
         carrito.forEach(curso => {
             cuenta += curso.cantidad * curso.precio;
         });
-        total.innerText = '$' + cuenta;
     }
 
+
+    if (inputText.value != '' && carrito.length > 0) {
+        cuenta = cuenta * (1 - descuento);
+        descuentoSinTotal.innerText = '-$' + Math.round(cuenta * descuento).toLocaleString('es-ES');
+    } else {
+        descuentoSinTotal.innerText = '$0';
+    }
+    total.innerText = '$' + Math.round(cuenta).toLocaleString('es-ES');
 }
 calcularTotalDelCarrito();
 
@@ -77,12 +87,14 @@ revisarMensajeDeCarrito();
 const regex = /^[a-zA-Z0-9]+$/;
 const buttonCarritoAplicar = document.querySelector('.button__cuppon');
 const cartErrorParrafo = document.querySelector('.cart__error-description');
-buttonCarritoAplicar.addEventListener('click', validarCupon);
+buttonCarritoAplicar.addEventListener('click', () => {
+    validarCupon();
+});
 
 const cuponContainer = document.querySelector('.cupon__container');
 const cuponText = document.getElementById('js-cupon__description');
 const cuponClose = document.getElementById('js-cupon__close')
-const inputText = document.querySelector('.container__cart-bottom-input-element');
+const descuentoAAplicar = document.getElementById('descuento');
 
 function validarCupon() {
     if (inputText.value == "" || inputText.value.match(regex) === null) {
@@ -96,12 +108,16 @@ function validarCupon() {
         cuponText.innerText = inputText.value;
         inputText.setAttribute('readonly', true);
         inputText.classList.add('container__cart-bottom-input-element-no-modify');
-        
+        calcularTotalDelCarrito();
+        descuentoAAplicar.innerText = '[30%]'
     }
 }
 
 cuponClose.addEventListener('click', () => {
     cuponContainer.classList.remove('visible');
     inputText.classList.remove('container__cart-bottom-input-element-no-modify');
+    inputText.value = '';
     inputText.removeAttribute('readonly');
+    descuentoAAplicar.innerText = '[0%]'
+    calcularTotalDelCarrito();
 })

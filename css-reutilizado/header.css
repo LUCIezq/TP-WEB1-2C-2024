@@ -33,7 +33,7 @@
 .header {
     /*Styles*/
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 
     /*Functions*/
     justify-content: space-between;

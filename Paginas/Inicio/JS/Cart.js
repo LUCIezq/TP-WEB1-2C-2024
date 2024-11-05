@@ -31,6 +31,7 @@ function generarContenidoDeCurso(curso) {
 
     /* Mandamos un curso por parametro y dinamicamente
 crea el contenido con la informacion de este*/
+    let precioConMiles = curso.precio.toLocaleString('es-ES');
 
     return `<div class="container__cart-item">
 
@@ -44,7 +45,7 @@ crea el contenido con la informacion de este*/
         </div>
 
         <div class="container__cart-information-bottom">
-            <span class="item__price-cart">$${curso.precio}</span>
+            <span class="item__price-cart">$${precioConMiles}</span>
 
             <div class="container__cart-button">
                 <button class="button__minus">-</button>

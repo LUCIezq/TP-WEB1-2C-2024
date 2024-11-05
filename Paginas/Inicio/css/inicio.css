@@ -419,6 +419,17 @@ html {
     justify-content: space-between;
 }
 
+.container__cart-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__cart-total div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
 
 .container__cart-bottom-cantidad-text,
 .container__cart-cupon,
@@ -938,7 +949,8 @@ html {
         height: 100%;
         width: 100%;
     }
-    .lesson__link-cart{
+
+    .lesson__link-cart {
         font-weight: 600;
         font-size: .72rem;
     }
