@@ -5,7 +5,7 @@ const cursos = [
         precio: 150000,
         descripcion: "Aprende Hacking Ético y Ciberseguridad de manera práctica, ¡conviértete en un experto en Hacking Ético y Ciberseguridad!",
         horas: 140,
-        img: "/Paginas/Inicio/Assets_cursos/ciberseguridad.jpg"
+        img: "Paginas/Inicio/Assets_cursos/ciberseguridad.jpg"
     },
 
     {
@@ -14,7 +14,7 @@ const cursos = [
         precio: 90000,
         descripcion: "Aprende paso a paso las técnicas para diseñar páginas web profesionales. Crea 3 proyectos del mundo real.",
         horas: 100,
-        img: "/Paginas/Inicio/Assets_cursos/html_css.jpg"
+        img: "Paginas/Inicio/Assets_cursos/html_css.jpg"
     },
 
     {
@@ -23,7 +23,7 @@ const cursos = [
         precio: 120000,
         descripcion: "El curso completo de Inteligencia Artificial: Chat GPT, IA Generativa, LLMs, IA Prompt Engineering, Midjourney y más!",
         horas: 140,
-        img: "/Paginas/Inicio/Assets_cursos/ia.jpg"
+        img: "Paginas/Inicio/Assets_cursos/ia.jpg"
     },
 
     {
@@ -32,7 +32,7 @@ const cursos = [
         precio: 160000,
         descripcion: "Aprende con el mejor curso Java de cero con las mejores prácticas POO, Java EE 9, CDI, JPA, EJB, JSF, Web Services, JAAS.",
         horas: 115,
-        img: "/Paginas/Inicio/Assets_cursos/java.jpg"
+        img: "Paginas/Inicio/Assets_cursos/java.jpg"
     },
     {
         id: 5,
@@ -40,7 +40,7 @@ const cursos = [
         precio: 155000,
         descripcion: "Aprende el Lenguaje de Programación Web más popular paso a paso con +20 Proyectos - Incluye Proyecto MERN Full Stack.",
         horas: 100,
-        img: "/Paginas/Inicio/Assets_cursos/JavaScript.jpg"
+        img: "Paginas/Inicio/Assets_cursos/JavaScript.jpg"
     },
     {
         id: 6,
@@ -48,6 +48,6 @@ const cursos = [
         precio: 200000,
         descripcion: "Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn, Scikit Learn, Tensorflow y Machine Learning.",
         horas: 156,
-        img: "/Paginas/Inicio/Assets_cursos/python.jpg"
+        img: "Paginas/Inicio/Assets_cursos/python.jpg"
     }
 ]
