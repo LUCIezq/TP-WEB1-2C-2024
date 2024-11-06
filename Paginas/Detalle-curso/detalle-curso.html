@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
   <link rel="stylesheet" href="../Inicio/css/inicio.css">
 
+  <script src="/Paginas/Inicio/JS/Cursos.js"></script>
+  <script src="/Paginas/Inicio/JS/index.js" defer></script>
+  <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
+  <script src="/Paginas/Inicio/JS/CartImplementacion.js" defer></script>
+
 </head>
 
 <body>
@@ -78,40 +83,102 @@
 
               <div class="container__cart-header-left">
                 <h2 class="container__cart-title">Carrito</h2>
-                <p class="container__cart-description"><span class="js-container__cart-count">0</span>
+                <span class="container__cart-description"><span class="js-container__cart-count">0</span>
                   cursos
-                  en el carrito.</p>
+                  en el carrito.</span>
               </div>
 
-              <img src="../Inicio/Assets/x-lg.svg" class="container__cart-header-close"
+              <img src="/Paginas/Inicio/Assets/x-lg.svg" class="container__cart-header-close"
                 id="js-container__cart-header-close" alt="">
 
             </header>
 
-            <div class="container__cart-bottom">
-              <div class="container__cart-payment-details">
-                <h2 class="payment__detail-title">Total:</h2>
-                <span class="payment__detail-price">$0 ARS</span>
-                <a href="../Checkout-view/checkout.html" class="payment__detail-link">Pagar</a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- <label class="header__right-alternate-night-mode">
-                  <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
-                </label> -->
+            <ul class="container__cart-lesson-items" id="JS-container__cart-lesson-items">
+
+            </ul>
+
+            <div class="js-container__cart-empty">
+              <img src="/Paginas/Inicio/Assets/empty-shopping-cart-v2.jpg" alt="">
+              <p class="js-container__cart-empty-text">Tu carrito está vacío. ¡Sigue comprando para
+                encontrar un curso!
+              </p>
+              <a href="#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
+            </div>
+
+            <div class="container__cart-bottom-payment">
+
+              <div class="container__cart-bottom">
+
+                <div class="container__cart-bottom-cupon">
+                  <h2 class="container__cart-cupon">
+                    ¿Tienes código de cupón?
+                  </h2>
+
+                  <div class="container__cart-bottom-input-global">
+
+                    <div class="cupon__container">
+                      <p class="cupon__description">Se ha aplicado <span id="js-cupon__description"></span></p>
+                      <img src="/Paginas/Inicio/Assets/x-lg.svg" id="js-cupon__close" alt="">
+                    </div>
+
+
+                    <div class="container__cart-bottom-input">
+                      <input type="text" class="container__cart-bottom-input-element" placeholder="Ingresa el cupón"
+                        maxlength="10">
+                      <button class="button__cuppon">Aplicar</button>
+                    </div>
+
+                    <p class="cart__error-description"></p>
+                  </div>
+
+                </div>
+
+                <div class="container__cart-bottom-cantidad">
+                  <h2 class="container__cart-bottom-cantidad-text">
+                    Cantidad de cursos
+                  </h2>
+                  <span class="container__cart-bottom-right">
+                    0
+                  </span>
+                </div>
+
+                <div class="container__cart-total">
+
+                  <div class="container__cart-descuentos">
+                    <span class="container__cart-descuentos-text">Descuento <span id="descuento">
+                        [0%]</span></span>
+                    <span class="container__cart-descuentos-price">$0</span>
+                  </div>
+
+                  <div>
+                    <h2 class="container__cart-total-text">
+                      Total
+                    </h2>
+                    <span class="container__cart-bottom-total">$0</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <a href="/Paginas/Checkout-view/checkout.html" class="container__cart-bottom-paymnent-link">Continuar
+                compra</a>
+
+            </div>
+
+          </div>
+
+        </div>
 
         <div class="container__icon-cart-container">
           <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
           <input type="checkbox" class="header__right-icon-cart-checkbox">
 
           <div class="header__right-cart-count-container">
-            <span class="header__right-cart-count" id="cart-count"></span>
+            <span class="header__right-cart-count" id="cart-count">0</span>
           </div>
-
         </div>
-
       </div>
 
     </div>
@@ -559,92 +626,19 @@
 
       </section>
 
-      <section class="section__cursos">
+      <div class="lesson__container" id="lesson__container">
+
+        <h2 class="lesson__container-title">
+          Cursos relacionados
+        </h2>
+
         <div class="lesson__items">
-          <div class="lesson__item">
-            <div class="lesson__item-container-img">
-              <img src="../Inicio/Assets_cursos/java.jpg" alt="Ciberseguridad" />
-            </div>
 
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                  Máster Completo en Java de cero a experto.
-                </a>
-
-                <p class="lesson__item-description">
-                  Aprende con el mejor curso Java de cero con las mejores
-                  prácticas POO, Java EE 9, CDI, JPA, EJB, JSF, Web Services,
-                  JAAS.
-                </p>
-              </div>
-
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 127hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $9.500 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lesson__item">
-            <div class="lesson__item-container-img">
-              <img src="../Inicio/Assets_cursos/javascript.jpg" alt="Ciberseguridad" />
-            </div>
-
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                  JavaScript Moderno Guía Definitiva.
-                </a>
-                <p class="lesson__item-description">
-                  Aprende el Lenguaje de Programación Web más popular paso a
-                  paso con +20 Proyectos - Incluye Proyecto MERN Full Stack.
-                </p>
-              </div>
-
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 100hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $16.500 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lesson__item">
-            <div class="lesson__item-container-img">
-              <img src="../../Paginas/Inicio/Assets_cursos/python.jpg" alt="Ciberseguridad" />
-            </div>
-
-            <div class="lesson__item-container-information">
-              <div class="lesson__item-information-top">
-                <a href="../Detalle-curso/detalle-curso.html" class="lesson__item-title">
-                  Python para Data Science & Machine Learning.
-                </a>
-                <p class="lesson__item-description">
-                  Data Science extremo con Numpy, Pandas, Matplotlib, Seaborn,
-                  Scikit Learn, Tensorflow y Machine Learning.
-                </p>
-              </div>
-
-              <div class="lesson__item-information-bottom">
-                <span class="lesson__item-hours"> 150hs </span>
-
-                <div class="lesson__item-information-bottom-button-price">
-                  <span class="lesson__item-price"> $20.000 </span>
-                  <a href="./detalle-curso.html" class="lesson__item-button"> Comprar </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+
+      </div>
+
+    </section>
 
   </main>
 

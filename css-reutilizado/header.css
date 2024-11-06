@@ -71,6 +71,7 @@
 
 .container__icon-cart-container {
     display: flex;
+
 }
 
 .header__center-container-input {
@@ -173,6 +174,8 @@
     display: flex;
     align-items: center;
     gap: .6rem;
+    justify-content: center;
+
 }
 
 .header__right a {
