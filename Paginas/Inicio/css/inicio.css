@@ -4,6 +4,10 @@ body {
     margin: 0 auto;
 }
 
+.body__no-scroll {
+    position: fixed;
+}
+
 .main {
     display: grid;
     gap: 1rem;

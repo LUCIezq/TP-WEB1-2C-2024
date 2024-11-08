@@ -12,6 +12,9 @@ body {
     min-height: 100vh;
 }
 
+.header {
+    padding: 1rem;
+}
 
 
 .container {
