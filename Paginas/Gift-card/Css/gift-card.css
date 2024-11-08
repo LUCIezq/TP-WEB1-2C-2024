@@ -21,7 +21,7 @@ main {
 }
 
 .giftcard__tarjeta {
-  background-color: cadetblue;
+  background-color: cadetblue; 
   align-items: center;
   text-align: center;
   max-width: 600px;
@@ -31,6 +31,7 @@ main {
   color: white;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -44,8 +45,16 @@ main {
   padding: .5rem 2rem;
   top: 0;
   right: 0;
-  background-color: var(--secondary-color);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: fit-content;
   align-content: center;
+}
+
+.error__monto ,
+.error__nombre{
+  text-align: start;
+  font-size: x-small;
+  color: red;
 }
 
 .giftcard__personalizacion {
@@ -118,13 +127,13 @@ main {
   top: 0;
 }
 
-.ubicacion__cuadrado-arribaderecha {
+.ubicacion__cuadrado-abajoizquierda {
   position: absolute;
   width: 0.7em;
   height: 0.5em;
   background-color: #00000042;
-  right: 0;
-  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .fondo__cuadrado {
@@ -264,6 +273,12 @@ form {
   max-width: 330px;
 }
 
+@media screen and (width <=1000px) {
+  .giftcard__tarjeta {
+    font-size: 0.75em;
+  }
+}
+
 @media screen and (width <=770px) {
   .section__gifcard {
     flex-direction: column;
@@ -330,6 +345,10 @@ form {
 
   form {
     padding: 1rem;
+  }
+
+  .giftcard__tarjeta {
+    font-size: 0.6em;
   }
 
 }
