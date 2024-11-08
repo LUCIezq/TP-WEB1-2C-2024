@@ -16,9 +16,13 @@ function cerrarCarrito() {
 carrito_icon.addEventListener('click', mostrarCarrito);
 icon_close.addEventListener('click', cerrarCarrito);
 
+
+
 const linkCarrito = document.querySelector('.js-container__cart-empty-link');
 
 linkCarrito.addEventListener('click', () => {
     container_cart_background.style.display = 'none';
+    body.classList.remove('body__no-scroll');
+
 })
 

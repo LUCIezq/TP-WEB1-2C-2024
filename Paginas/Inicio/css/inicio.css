@@ -5,7 +5,7 @@ body {
 }
 
 .body__no-scroll {
-    position: fixed;
+    overflow-y: hidden;
 }
 
 .main {
@@ -744,7 +744,7 @@ html {
 }
 
 .cupon__container {
-    display: flex;
+    display: none;
     border: 1px dashed #00000043;
     align-items: center;
     justify-content: space-between;
@@ -753,7 +753,6 @@ html {
     padding-right: .5rem;
     font-size: .7rem;
     color: #00000087;
-    display: none;
 }
 
 #js-cupon__close {
@@ -762,9 +761,6 @@ html {
     cursor: pointer;
 }
 
-.visible {
-    display: flex;
-}
 
 #js-cupon__description {
     color: black;

@@ -1,7 +1,7 @@
 const cursos = [
     {
         id: 1,
-        nombre: "Curso completo de Hacking Ético y Ciberseguridad",
+        nombre: "Hacking Ético y Ciberseguridad",
         precio: 150000,
         descripcion: "Aprende Hacking Ético y Ciberseguridad de manera práctica, ¡conviértete en un experto en Hacking Ético y Ciberseguridad!",
         horas: 140,
@@ -10,7 +10,7 @@ const cursos = [
 
     {
         id: 2,
-        nombre: "Curso de Diseño Web: HTML y CSS",
+        nombre: "Diseño Web: HTML y CSS",
         precio: 90000,
         descripcion: "Aprende paso a paso las técnicas para diseñar páginas web profesionales. Crea 3 proyectos del mundo real.",
         horas: 100,
