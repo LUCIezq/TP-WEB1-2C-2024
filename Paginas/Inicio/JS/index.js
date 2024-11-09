@@ -25,14 +25,14 @@ function generarContenidoDeCurso(curso) {
     /* Mandamos un curso por parametro y dinamicamente
 crea el contenido con la informacion de este*/
 
-    return `<a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="container__img-link"><img src="${curso.img}" alt=""></a>
+    return `<a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}" class="container__img-link"><img src="${curso.img}" alt=""></a>
 <div class="container__information">
 <div class="container__mid-information">
-    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="lesson__title">${curso.nombre}</a>
+    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}" class="lesson__title">${curso.nombre}</a>
     
     <p class="lesson__description">${curso.descripcion}</p>
 
-    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="lesson__link">Ver detalle</a>
+    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}" class="lesson__link">Ver detalle</a>
 </div>
 
 <div class="container__bottom-information">

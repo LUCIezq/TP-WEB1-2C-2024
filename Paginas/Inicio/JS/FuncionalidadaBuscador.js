@@ -29,7 +29,7 @@ inputBuscador.addEventListener('keyup', (e) => {
             const sugerenciasActuales = Array.from(ul.children);
 
             actualizarSugerencias(sugerenciasActuales, inputValue);
-            crearSugerencias(nombreCurso, inputValue, sugerenciasActuales)
+            crearSugerencias(curso, nombreCurso, inputValue, sugerenciasActuales)
         })
 
         /*Si es vacio limpio mi ul borrando todos los elementos*/
@@ -54,11 +54,11 @@ document.addEventListener('click', e => {
 
 
 /*Pregunto si el nombre de mis cursos incluye lo que se ingresa */
-function crearSugerencias(nombreCurso, inputValue, sugerenciasActuales) {
+function crearSugerencias(curso, nombreCurso, inputValue, sugerenciasActuales) {
     if (nombreCurso.includes(inputValue)) {
         /*Creo un elemento */
         const nuevaSugerencia = document.createElement('li');
-        nuevaSugerencia.innerHTML = `<a href="/Paginas/Detalle-curso/detalle-curso.html">${nombreCurso}</a>`;
+        nuevaSugerencia.innerHTML = `<a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}">${nombreCurso}</a>`;
 
         /*Analizo si ya existe para no agregarlo mas de una vez */
         const yaExiste = sugerenciasActuales.some(item => item.textContent === nombreCurso)
