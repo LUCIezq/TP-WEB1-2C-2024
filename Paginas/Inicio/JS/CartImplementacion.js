@@ -60,8 +60,7 @@ function calcularTotalDelCarrito() {
         });
     }
 
-
-    if (inputText.value != '' && carrito.length > 0) {
+    if (inputText.value != '') {
         cuenta = cuenta * (1 - descuento);
         descuentoSinTotal.innerText = '-$' + Math.round(cuenta * descuento).toLocaleString('es-ES');
     } else {

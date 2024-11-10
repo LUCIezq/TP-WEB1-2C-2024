@@ -26,22 +26,18 @@
                 LearnTree.
             </a>
 
-            <div class="header__center-container-input">
+            <div id="JS-input__buscador" class="header__center-container-input">
 
-                <input class="header__center-input" list="cursos" type="text" name="buscador" placeholder="Buscar">
-
-                <datalist id="cursos">
-                    <option value="JavaScript"></option>
-                    <option value="Java"></option>
-                    <option value="Html"></option>
-                    <option value="Css"></option>
-                    <option value="Python"></option>
-                    <option value="Cyberseguridad"></option>
-                </datalist>
+                <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
                 <label class="header__center-label">
                     <input type="checkbox" class="header__center-checkbox">
                 </label>
+
+                <ul id="JS-input__resultados" class="header__center-input-resultados">
+                </ul>
+
+                <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
             </div>
 
@@ -215,7 +211,7 @@
                         </h2>
 
                         <p class="description__paragraph">
-                            Con el Plan Personal, podrás acceder a más de 11 000 de nuestros cursos con valoraciones
+                            Con el Plan Personal, podrás acceder a más de 11.000 de nuestros cursos con valoraciones
                             excelentes sobre tecnología, empresas y otros temas
                         </p>
 
@@ -509,7 +505,9 @@
 
     </footer>
 
+
     <script src="./Paginas/Inicio/JS/FuncionalidadCarrito.js"></script>
+    <script src="./Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
 </body>
 
 </html>

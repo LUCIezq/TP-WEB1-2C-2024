@@ -191,12 +191,11 @@
     <section class="section__gifcard">
 
       <article class="article__gifcard_container">
-        <div class="giftcard__tarjeta">
-          <p>
-            GIFT CARD para<span class="tarjeta__destinatario"><br />DESTINATARIO</span>
-          </p>
+        <div id="giftcard__tarjeta__color-js" class="giftcard__tarjeta">
+          <p class="tarjeta__destinatario__parrafo">GIFT CARD para</p>
+          <h4 class="tarjeta__destinatario">DESTINATARIO</h4>
           <div class="tarjeta__precio">
-            <span>$00000</span>
+            <span>$</span><span class="tarjeta__precio-js">00000</span><span>.00</span>
           </div>
         </div>
       </article>
@@ -207,28 +206,29 @@
           </h2>
 
           <form action="../Checkout-view/checkout.html">
-            <input type="text" placeholder="Ingrese nombre" class="nombre__input" required />
+            <input id="gift-card__nombre-js" type="text" placeholder="Ingrese nombre" class="nombre__input" required />
+            <p class="error__nombre" id="error__nombre-js"></p>
             <h4 class="giftcard__personalizacion-subtitulo">Color</h4>
             <div class="color">
               <div class="color__container">
                 <div class="circulo circulo-rojo"></div>
-                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="color" value="red"/></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-azul"></div>
-                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="color" value="blue"/></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-negro"></div>
-                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="color" value="black" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-amarillo"></div>
-                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="color" value="yellow" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-verde"></div>
-                <span class="circulo__input"><input type="radio" name="color" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="color" value="green" /></span>
               </div>
             </div>
             <h4 class="giftcard__personalizacion-subtitulo">
@@ -237,30 +237,31 @@
             <div class="tamanio">
               <div class="tamanio__container">
                 <p class="tamanio-20">20px</p>
-                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" value="1.5em" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-28">28px</p>
-                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" value="1.7em" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-32">32px</p>
-                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" value="1.9em" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-48">48px</p>
-                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" value="2.2em" /></span>
               </div>
               <div class="tamanio__container">
                 <p class="tamanio-60">60px</p>
-                <span class="circulo__input"><input type="radio" name="tamanio" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="tamanio" value="2.5em" /></span>
               </div>
             </div>
             <div class="monto">
               <h4 class="monto__titulo giftcard__personalizacion-subtitulo">
                 Monto
               </h4>
-              <input type="text" class="monto__input" placeholder="Ingrese monto" required />
+              <input id="monto-js" type="text" class="monto__input" placeholder="Ingrese monto" required />
+              <p class="error__monto" id="error__monto-js"></p>
             </div>
             <h4 class="ubicacion__titulo giftcard__personalizacion-subtitulo">
               Ubicación
@@ -268,21 +269,21 @@
             <div class="ubicacion">
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
-                  <div class="ubicacion__cuadrado-abajoderecha"></div>
+                  <div class="ubicacion__cuadrado-abajoizquierda"></div>
                 </div>
-                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" value="abajoizquierda" /></span>
               </div>
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
                   <div class="ubicacion__cuadrado-arribaizquierda"></div>
                 </div>
-                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" value="arribaizquierda" /></span>
               </div>
               <div class="ubicacion__container">
                 <div class="ubicacion__cuadrado">
-                  <div class="ubicacion__cuadrado-arribaderecha"></div>
+                  <div class="ubicacion__cuadrado-abajoderecha"></div>
                 </div>
-                <span class="circulo__input"><input type="radio" name="ubicacion" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="ubicacion" value="abajoderecha" /></span>
               </div>
             </div>
 
@@ -292,22 +293,22 @@
             <div class="fondo">
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-celeste"></div>
-                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" value="aqua"/></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-lila"></div>
-                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" value="blueviolet" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-chocolate"></div>
-                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" value="chocolate" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-cyan"></div>
-                <span class="circulo__input"><input type="radio" name="fondo" id="" /></span>
+                <span class="circulo__input"><input type="radio" name="fondo" value="darkcyan" /></span>
               </div>
             </div>
-            <button type="submit" class="giftcard__button">Continuar</button>
+            <button id="giftcard__button-js" type="submit" class="giftcard__button">Continuar</button>
         </div>
         </form>
 
@@ -396,6 +397,7 @@
   </footer>
 
   <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
+  <script src="../Gift-card/JS/Gift-card.js"></script>
 
 </body>
 

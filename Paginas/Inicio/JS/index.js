@@ -20,19 +20,19 @@ function crearCursos(cursos) {
 
 function generarContenidoDeCurso(curso) {
 
-    let precioConMiles = curso.precio.toLocaleString('es-ES');
+    let precioConMiles = curso.precio.toLocaleString('es-ES');//formate con miles 1000 = 1.000
 
     /* Mandamos un curso por parametro y dinamicamente
 crea el contenido con la informacion de este*/
 
-    return `<a href="#" class="container__img-link"><img src="${curso.img}" alt=""></a>
+    return `<a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="container__img-link"><img src="${curso.img}" alt=""></a>
 <div class="container__information">
 <div class="container__mid-information">
-    <a href="" class="lesson__title">${curso.nombre}</a>
+    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="lesson__title">${curso.nombre}</a>
     
     <p class="lesson__description">${curso.descripcion}</p>
 
-    <a href="#" class="lesson__link">Ver detalle</a>
+    <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso='${curso.id}'" class="lesson__link">Ver detalle</a>
 </div>
 
 <div class="container__bottom-information">

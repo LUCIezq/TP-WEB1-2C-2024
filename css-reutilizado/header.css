@@ -53,7 +53,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    flex-grow: 1;
+    width: min(750px, 100%);
 }
 
 .header__left-link {
@@ -71,13 +71,28 @@
 
 .container__icon-cart-container {
     display: flex;
-
 }
 
 .header__center-container-input {
     /*Functions*/
     position: relative;
     border-right: none;
+    width: 100%;
+}
+
+#JS-remove-input-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.visible {
+    display: flex;
 }
 
 .header__center-input {
@@ -91,6 +106,8 @@
 
     /*Functions*/
     outline: none;
+    width: 100%;
+
 }
 
 .header__center-icon {
@@ -279,6 +296,30 @@
     height: 25px;
     margin-left: .5rem;
     cursor: pointer;
+}
+
+.header__center-input-resultados {
+    background-color: white;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.header__center-input-resultados li {
+    padding: .7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.header__center-input-resultados a {
+    color: rgba(0, 0, 0, 0.514);
+    font-size: .95rem;
+    text-decoration: none;
+}
+
+.header__center-input-resultados a:hover {
+    color: rgb(0, 0, 0);
 }
 
 .header__right-alternate-night-mode-checkbox {
