@@ -484,6 +484,7 @@ html {
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #0000002a;
+    background-color: white;
 }
 
 .container__information {
