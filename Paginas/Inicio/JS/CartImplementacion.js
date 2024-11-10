@@ -120,3 +120,21 @@ cuponClose.addEventListener('click', () => {
     descuentoAAplicar.innerText = '[0%]'
     calcularTotalDelCarrito();
 })
+
+
+function sePuedeContinuarEnCarrito() {
+    const button__continuar = document.getElementById('JS-button__continuar');
+    const cursosEnCarrito = JSON.parse(sessionStorage.getItem('cursos'));
+    console.log(cursosEnCarrito.length)
+
+    if (!cursosEnCarrito || cursosEnCarrito.length == 0) {
+        button__continuar.style.cursor = 'not-allowed';
+        button__continuar.addEventListener('click', e => {
+            e.preventDefault();
+        })
+    } else {
+        button__continuar.style.cursor = 'pointer';
+    }
+}
+
+sePuedeContinuarEnCarrito();

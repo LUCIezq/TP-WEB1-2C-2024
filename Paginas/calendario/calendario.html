@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../Inicio/css/inicio.css">
 
   <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
+  <script src="/Paginas/Inicio/JS/Cursos.js"></script>
   <script src="/Paginas/Inicio/JS/CartImplementacion.js" defer></script>
   <title>Calendario</title>
 </head>
@@ -23,13 +24,18 @@
         LearnTree.
       </a>
 
-      <div class="header__center-container-input">
+      <div id="JS-input__buscador" class="header__center-container-input">
 
         <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
         <label class="header__center-label">
           <input type="checkbox" class="header__center-checkbox">
         </label>
+
+        <ul id="JS-input__resultados" class="header__center-input-resultados">
+        </ul>
+
+        <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
       </div>
 
@@ -336,6 +342,7 @@
 
   </footer>
   <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
+  <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
 </body>
 
 </html>

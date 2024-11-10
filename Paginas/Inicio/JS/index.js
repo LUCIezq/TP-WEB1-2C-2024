@@ -48,3 +48,4 @@ crea el contenido con la informacion de este*/
 `;
 }
 
+crearCursos(cursos);
