@@ -33,10 +33,6 @@ if (cursoBuscado) {
 
 
 }
-
-
-
-
 const cursosContainer = document.querySelector('.lesson__items');
 
 function crearCursos(cursos) {
@@ -52,6 +48,7 @@ function crearCursos(cursos) {
                 crearCursos();
                 calcularTotalDelCarrito();
                 revisarMensajeDeCarrito();
+                sePuedeContinuarEnCarrito();
             });
         });
     }

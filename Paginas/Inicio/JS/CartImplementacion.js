@@ -129,11 +129,10 @@ function sePuedeContinuarEnCarrito() {
 
     if (!cursosEnCarrito || cursosEnCarrito.length == 0) {
         button__continuar.style.cursor = 'not-allowed';
-        button__continuar.addEventListener('click', e => {
-            e.preventDefault();
-        })
+        button__continuar.onclick = (e) => e.preventDefault();
     } else {
         button__continuar.style.cursor = 'pointer';
+        button__continuar.onclick = null;
     }
 }
 
