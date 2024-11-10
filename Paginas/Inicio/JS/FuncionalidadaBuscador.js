@@ -78,3 +78,4 @@ function actualizarSugerencias(sugerenciasActuales, inputValue) {
         }
     })
 }
+

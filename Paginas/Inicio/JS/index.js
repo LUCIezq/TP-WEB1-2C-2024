@@ -1,4 +1,4 @@
-const cursosContainer = document.querySelector('.lesson__items');
+const cursosContainerIndex = document.querySelector('.lesson__items');
 
 function crearCursos(cursos) {
 
@@ -7,7 +7,7 @@ function crearCursos(cursos) {
             const nuevoCurso = document.createElement('div');
             nuevoCurso.classList = 'lesson__item';
             nuevoCurso.innerHTML = generarContenidoDeCurso(curso);
-            cursosContainer.appendChild(nuevoCurso);
+            cursosContainerIndex.appendChild(nuevoCurso);
             nuevoCurso.getElementsByTagName('button')[0].addEventListener('click', () => {
                 agregarCursoACarrito(curso)
                 crearCursos();
@@ -47,4 +47,4 @@ crea el contenido con la informacion de este*/
 </div>
 `;
 }
-crearCursos(cursos);
+
