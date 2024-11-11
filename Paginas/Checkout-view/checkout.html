@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css-reutilizado/header.css">
     <link rel="stylesheet" href="./Css/checkout.css">
+    <link rel="stylesheet" href="../Inicio/css/inicio.css">
     <title>Detalle de ordenes</title>
+    <script src="/Paginas/Inicio/JS/Cursos.js"></script>
 </head>
 
 <body>
@@ -20,13 +22,18 @@
                 LearnTree.
             </a>
 
-            <div class="header__center-container-input">
+            <div id="JS-input__buscador" class="header__center-container-input">
 
                 <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
                 <label class="header__center-label">
                     <input type="checkbox" class="header__center-checkbox">
                 </label>
+
+                <ul id="JS-input__resultados" class="header__center-input-resultados">
+                </ul>
+
+                <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
             </div>
 
@@ -110,7 +117,7 @@
                         <div class="checkout__container-total">
 
                             <span class="checkout__total">Monto total</span>
-                            <span class="checkout__total-amount">$0</span>
+                            <span class="checkout__total-price">$0</span>
 
                         </div>
 
@@ -141,24 +148,32 @@
                     <a href="/index.html" class="cart__container-no-elements-link">Buscar un curso</a>
                 </div>
 
+                <div class="checkout__list-visible">
+
+                </div>
+
             </div>
 
         </div>
 
     </main>
 
-    <button id="JS-open__modal"></button>
+    <!-- <button id="JS-open__modal"></button>
+    
+        <dialog id="modal" class="modal">
+            <header class="modal__header">
+                <img src="/Paginas/Inicio/Assets/x-lg.svg" class="modal__close" alt="">
+            </header>
+    
+            <main class="modal__main">
+    
+            </main>
+    
+        </dialog> -->
 
-    <dialog id="modal" class="modal">
-        <header class="modal__header">
-            <img src="/Paginas/Inicio/Assets/x-lg.svg" class="modal__close" alt="">
-        </header>
+    <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
 
-        <main class="modal__main">
-
-        </main>
-
-    </dialog>
+    <script src="./Js/Checkout.js"></script>
 
 </body>
 

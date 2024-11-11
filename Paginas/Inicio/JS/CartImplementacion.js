@@ -49,9 +49,10 @@ function actualizarNumeroCarrito() {
         numeroDentroDeCarritoBottom.innerText = cuenta;
     }
 }
-const total = document.querySelector('.container__cart-bottom-total');
-let descuentoSinTotal = document.querySelector('.container__cart-descuentos-price');
+
 function calcularTotalDelCarrito() {
+    const total = document.querySelector('.container__cart-bottom-total');
+    let descuentoSinTotal = document.querySelector('.container__cart-descuentos-price');
     const carrito = JSON.parse(sessionStorage.getItem('cursos'));
     let cuenta = 0;
     if (carrito) {
@@ -67,6 +68,7 @@ function calcularTotalDelCarrito() {
         descuentoSinTotal.innerText = '$0';
     }
     total.innerText = '$' + Math.round(cuenta).toLocaleString('es-ES');
+    sessionStorage.setItem('totalCarrito', JSON.stringify(cuenta));
 }
 calcularTotalDelCarrito();
 
@@ -125,15 +127,20 @@ cuponClose.addEventListener('click', () => {
 function sePuedeContinuarEnCarrito() {
     const button__continuar = document.getElementById('JS-button__continuar');
     const cursosEnCarrito = JSON.parse(sessionStorage.getItem('cursos'));
-    console.log(cursosEnCarrito.length)
 
     if (!cursosEnCarrito || cursosEnCarrito.length == 0) {
         button__continuar.style.cursor = 'not-allowed';
-        button__continuar.onclick = (e) => e.preventDefault();
+        button__continuar.addEventListener('click', preventContinuar);
+
     } else {
         button__continuar.style.cursor = 'pointer';
-        button__continuar.onclick = null;
+        button__continuar.removeEventListener('click', preventContinuar);
+
     }
+}
+
+function preventContinuar(e) {
+    e.preventDefault();
 }
 
 sePuedeContinuarEnCarrito();
