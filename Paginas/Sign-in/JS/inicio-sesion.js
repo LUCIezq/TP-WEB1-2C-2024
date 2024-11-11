@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const loginForm = document.querySelector(".form");
 
     loginForm.addEventListener("submit", function (event) {
@@ -6,9 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        const storedUser = JSON.parse(localStorage.getItem("user"));
+        
+        const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios"));
 
-        if (storedUser && storedUser.email === email && storedUser.password === password) {
+        const usuario = usuariosRegistrados.find(usuariosRegistrados => usuariosRegistrados.email === email && usuariosRegistrados.password === password);
+
+        if (usuario) {
             localStorage.setItem("isLoggedIn", "true");
             alert("Inicio de sesión exitoso.");
             window.location.href = "../../index.html";
