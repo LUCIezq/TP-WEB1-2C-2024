@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         
-        const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios"));
+        const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios"))|| [];
 
         const usuario = usuariosRegistrados.find(usuariosRegistrados => usuariosRegistrados.email === email && usuariosRegistrados.password === password);
 
