@@ -1,3 +1,7 @@
+.hiden{
+  display: none;
+}
+
 body {
   background-color: aliceblue;
 }

@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+        document.body.classList.remove("hidden");
+    } else{
+        alert("Debes iniciar sesión para acceder a esta página.");
+        window.location.href = "../Sign-in/sign-in.html";
+    }
+});
+
+// Form Gift-card
+let buttonInputSelector = document.querySelector("#giftcard__button-js");
+
 // Input nombre
 let nombreInputSelector = document.querySelector("#gift-card__nombre-js");
 let nombreCardSelector = document.querySelector(".tarjeta__destinatario");
@@ -5,7 +19,7 @@ let divErrorNombreSelector = document.querySelector("#error__nombre-js")
 
 nombreInputSelector.addEventListener("keyup", (event) => {
     let nombreCard = event.target.value;
-    let regExp = /[^A-z]/g;
+    let regExp = /[^a-zA-Z ]/g;
     
     if(regExp.test(nombreInputSelector.value)){
         divErrorNombreSelector.innerHTML = "Formato incorrecto, solo letras.";
@@ -58,8 +72,12 @@ montoInputSelector.addEventListener("keyup", (event) => {
     
     if(regExp.test(montoInputSelector.value)){
         divErrorMontoSelector.innerHTML = "Formato incorrecto, solo números.";
+        buttonInputSelector.style.opacity = "50%";
+        buttonInputSelector.disabled = true;
     } else{
         divErrorMontoSelector.innerHTML = "";
+        buttonInputSelector.style.opacity = "100%";
+        buttonInputSelector.disabled = false;
     if(montoInputSelector.value.length >= 1 && montoInputSelector.value.length <= 5) {
         montoCardSelector.innerHTML = montoCard;
     } else if(montoInputSelector.value.length > 5) {

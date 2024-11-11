@@ -12,10 +12,8 @@
   <link rel="stylesheet" href="../Inicio/css/inicio.css">
 
   <script src="/Paginas/Inicio/JS/Cursos.js"></script>
-  <script src="/Paginas/Inicio/JS/index.js" defer></script>
   <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
   <script src="/Paginas/Inicio/JS/CartImplementacion.js" defer></script>
-
 </head>
 
 <body>
@@ -28,13 +26,18 @@
         LearnTree.
       </a>
 
-      <div class="header__center-container-input">
+      <div id="JS-input__buscador" class="header__center-container-input">
 
         <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
         <label class="header__center-label">
           <input type="checkbox" class="header__center-checkbox">
         </label>
+
+        <ul id="JS-input__resultados" class="header__center-input-resultados">
+        </ul>
+
+        <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
       </div>
 
@@ -206,23 +209,20 @@
 
           <ul class="contenido__listas">
 
-            <li class="contenido__lista" id="JS-precio__curso">
-              <span class="contenido__lista--bold">Valor : $</span>
+            <li class="contenido__lista--bold">
+              Valor: $
+              <span class="contenido__lista" id="JS-precio__curso"></span>
             </li>
 
-            <li class="contenido__lista" id="JS-horas__curso">
-              <span class="contenido__lista--bold">Tiempo de dedicación :</span> 
+            <li class="contenido__lista--bold">
+              Tiempo de dedicación:
+              <span class="contenido__lista" id="JS-horas__curso"></span>
             </li>
 
-            <li class="contenido__lista" id="JS-descripcion__curso">
-              <span class="contenido__lista--bold">Descripción del curso :</span>
+            <li class="contenido__lista--bold">
+              Descripción del curso:
+              <span class="contenido__lista" id="JS-descripcion__curso"></span>
             </li>
-
-            <li class="contenido__lista">
-              <span class="contenido__lista--bold">Requisitos previos :</span>
-              -
-            </li>
-
           </ul>
 
           <div class="buttons">
@@ -598,8 +598,7 @@
 
             <div class="docente__information-name-stars">
 
-              <h2 class="docente__name">
-                Jordan Alexander
+              <h2 class="docente__name" id="JS-docente__name">
               </h2>
 
               <div class="stars">
@@ -614,10 +613,7 @@
 
           </div>
 
-          <p class="docente__biography">
-            Soy Jordan Alexander, con más de 5 años de experiencia en diseño web. Creé mi canal de YouTube, "AlexCG
-            Design", para enseñar desarrollo web de forma sencilla y rápida, compartiendo los métodos que me ayudaron a
-            aprender eficazmente.
+          <p class="docente__biography" id="JS-docente__biography">
           </p>
 
         </div>
@@ -627,7 +623,7 @@
       <div class="lesson__container" id="lesson__container">
 
         <h2 class="lesson__container-title">
-          Cursos relacionados
+          Cursos sugereidos
         </h2>
 
         <div class="lesson__items">
@@ -722,6 +718,8 @@
   </footer>
 
   <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
+  <script src="../Detalle-curso/JS/VistaDinamica.js"></script>
+  <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
 
 </body>
 

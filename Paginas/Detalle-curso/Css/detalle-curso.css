@@ -37,6 +37,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  gap: 1.5rem;
   padding: 0 2rem;
 }
 
@@ -159,17 +160,16 @@ main {
 }
 
 .contenido__lista {
-  font-size: medium;
-  font-family: "Poppins";
   margin: 0.7em 0;
+  font-size: 1.1rem;
   font-weight: 500;
-  list-style: none;
-  color: black;
+  color: rgba(0, 0, 0, 0.774);
 }
 
 .contenido__lista--bold {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  list-style: none;
 }
 
 .section__docente {

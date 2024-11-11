@@ -13,10 +13,11 @@
 
   <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
   <script src="/Paginas/Inicio/JS/CartImplementacion.js" defer></script>
+  <script src="/Paginas/Inicio/JS/Cursos.js"></script>
 
 </head>
 
-<body>
+<body class="hiden">
   <header class="header">
 
     <div class="header__left">
@@ -25,13 +26,18 @@
         LearnTree.
       </a>
 
-      <div class="header__center-container-input">
+      <div id="JS-input__buscador" class="header__center-container-input">
 
         <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
         <label class="header__center-label">
           <input type="checkbox" class="header__center-checkbox">
         </label>
+
+        <ul id="JS-input__resultados" class="header__center-input-resultados">
+        </ul>
+
+        <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
       </div>
 
@@ -212,11 +218,11 @@
             <div class="color">
               <div class="color__container">
                 <div class="circulo circulo-rojo"></div>
-                <span class="circulo__input"><input type="radio" name="color" value="red"/></span>
+                <span class="circulo__input"><input type="radio" name="color" value="red" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-azul"></div>
-                <span class="circulo__input"><input type="radio" name="color" value="blue"/></span>
+                <span class="circulo__input"><input type="radio" name="color" value="blue" /></span>
               </div>
               <div class="color__container">
                 <div class="circulo circulo-negro"></div>
@@ -293,7 +299,7 @@
             <div class="fondo">
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-celeste"></div>
-                <span class="circulo__input"><input type="radio" name="fondo" value="aqua"/></span>
+                <span class="circulo__input"><input type="radio" name="fondo" value="aqua" /></span>
               </div>
               <div class="fondo__container">
                 <div class="fondo__cuadrado fondo__cuadrado-lila"></div>
@@ -398,6 +404,8 @@
 
   <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
   <script src="../Gift-card/JS/Gift-card.js"></script>
+  <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
+
 
 </body>
 

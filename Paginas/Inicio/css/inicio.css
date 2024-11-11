@@ -281,7 +281,7 @@ html {
     transform: translateY(-50%);
     max-width: 450px;
     width: 100%;
-    right: 5%;
+    right: 15%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -289,8 +289,26 @@ html {
     color: #2d2f31;
 }
 
-.carrousel__img-mobile {
-    display: none;
+.carrousel-left {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 2.5%;
+    cursor: pointer;
+}
+
+.carrousel-right {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 2.5%;
+    cursor: pointer;
 }
 
 .description__title {
@@ -466,6 +484,7 @@ html {
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #0000002a;
+    background-color: white;
 }
 
 .container__information {
@@ -519,7 +538,6 @@ html {
 
 .container__cart-item img {
     width: 200px;
-    height: 100%;
 }
 
 .container__cart-information {
@@ -808,7 +826,7 @@ html {
     }
 
     .carrousel {
-        overflow: scroll;
+        overflow: hidden;
     }
 
     .carrousel__elements {
@@ -817,10 +835,6 @@ html {
         margin: 0;
         list-style: none;
         width: fit-content;
-    }
-
-    .carrousel__element-description {
-        display: none;
     }
 
     .lesson__more img {
@@ -918,16 +932,7 @@ html {
         font-size: 1rem;
     }
 
-    .carrousel__img-desktop {
-        display: none;
-    }
-
-    .carrousel__img-mobile {
-        display: block;
-    }
-
     .js-container__cart {
-
         width: 100%;
     }
 
@@ -953,6 +958,27 @@ html {
     .lesson__link-cart {
         font-weight: 600;
         font-size: .72rem;
+    }
+}
+
+@media screen and (width <=650px) {
+    .carrousel {
+        min-height: 425px;
+    }
+
+    .carrousel__element-description {
+        right: 18%;
+        width: 250px; 
+    }
+
+    .carrousel-left {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carrousel-right {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -1030,4 +1056,24 @@ html {
         padding: .7rem 1rem;
     }
 
+}
+
+@media screen and (width <=400px) {
+    .carrousel {
+        min-height: 180px;
+    }
+
+    .carrousel__element-description {
+    display: none;
+    }
+
+    .carrousel-left {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carrousel-right {
+        width: 20px;
+        height: 20px;
+    }
 }
