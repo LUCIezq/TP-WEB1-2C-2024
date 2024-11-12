@@ -14,7 +14,7 @@ function crearCursos() {
 }
 
 const montoAPagar = document.querySelector('.checkout__total-price');
-montoAPagar.innerText = '$'+Math.round(JSON.parse(sessionStorage.getItem('totalCarrito'))).toLocaleString();
+montoAPagar.innerText = '$' + Math.round(JSON.parse(sessionStorage.getItem('totalCarrito'))).toLocaleString();
 
 function generarContenidoDeCurso(curso) {
 
@@ -23,8 +23,6 @@ crea el contenido con la informacion de este*/
     let precioConMiles = curso.precio.toLocaleString('es-ES');
 
     return `<div class="container__cart-item">
-
-    <img src="${curso.img}" alt="">
 
     <div class="container__cart-information">
         <div class="container__cart-information-top">

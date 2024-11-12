@@ -70,6 +70,10 @@
 
         </nav>
 
+        <label class="header__right-label">
+            <input type="checkbox" class="header__right-checkbox">
+        </label>
+
 
     </header>
 
@@ -83,31 +87,38 @@
                     Detalles de pago
                 </h2>
 
-                <form class="form__container">
+                <form class="form__container" id="formulario" action="/index.html">
 
-                    <div class="checkout__container-input">
+                    <div class="checkout__container-input" id="checkout__container-email">
                         <label for="email" class="checkout__label">Email</label>
-                        <input type="email" id="email" name="email" class="checkout__input"
-                            placeholder="alguien@algo.com" required>
+                        <input type="text" id="email" name="email" class="checkout__input"
+                            placeholder="alguien@algo.com">
+                        <p class="input__error input__error-email"></p>
                     </div>
 
                     <div class="checkout__container-input">
                         <label for="credit-card" class="checkout__label">Numero de tarjeta</label>
                         <input type="text" id="credit-card" name="credit-card" class="checkout__input"
-                            placeholder="XXXX   XXXX    XXXX    XXXX" required>
+                            placeholder="1234 5678 9101 1121" maxlength="16">
+                        <p class="input__error input__error-credit-card"></p>
                     </div>
 
                     <div class="checkout__container-input checkout__container-input--column">
 
-                        <div class="checkout__container-input">
-                            <label for="fecha-expiracion" class="checkout__label">Fecha de expiracion</label>
-                            <input type="text" id="fecha-expiracion" name="fecha-expiracion" class="checkout__input"
-                                placeholder="mm / yy" required>
+                        <div class="checkout__container-input checkout__container-input--row">
+                            <label for="fecha-expiracion" class="checkout__label">Fecha de expiracion (MM/YYYY)</label>
+                            <div class="checkout__container-expiracion-date">
+                                <input type="text" id="fecha-expiracion-mes" name="fecha-expiracion-mes"
+                                    class="checkout__input" placeholder="MM" maxlength="2">
+                                <input type="text" id="fecha-expiracion-anio" name="fecha-expiracion-anio"
+                                    class="checkout__input" placeholder="YYYY" maxlength="4">
+                            </div>
                         </div>
 
-                        <div class="checkout__container-input">
+                        <div class="checkout__container-input checkout__container-input--cvv">
                             <label for="cvv" class="checkout__label">CVC/CVV</label>
-                            <input type="text" id="cvv" name="cvv" class="checkout__input" placeholder="xxx" required>
+                            <input type="text" id="cvv" name="cvv" class="checkout__input" placeholder="XXX"
+                                maxlength="3">
                         </div>
 
                     </div>
@@ -125,8 +136,10 @@
 
                     <div class="button__container">
                         <button type="submit" class="button__checkout">Confirmar</button>
-                        <a href="/index.html" class="button__checkout">Cancelar</a>
+                        <a href="/index.html" class="button__checkout">Regresar</a>
                     </div>
+
+                    <p class="form__status" id="form__status"></p>
 
                 </form>
 
@@ -137,16 +150,6 @@
                 <h2 class="checkout__list-title">
                     Detalle de ordenes
                 </h2>
-
-                <div class="checkout__list-hidden">
-                    <img src="../Cart-view/Assets/Search Engine 1.svg" alt="">
-
-                    <p class="cart__container-no-elements-information">
-                        Tu carrito está vacío. ¡Sigue buscando para encontrar un curso!
-                    </p>
-
-                    <a href="/index.html" class="cart__container-no-elements-link">Buscar un curso</a>
-                </div>
 
                 <div class="checkout__list-visible">
 
@@ -172,8 +175,8 @@
         </dialog> -->
 
     <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
-
     <script src="./Js/Checkout.js"></script>
+    <script src="./Js/ValidarFormulario.js"></script>
 
 </body>
 

@@ -287,16 +287,6 @@
     display: none;
 }
 
-.header__right-alternate-night-mode {
-    background-image: var(--icon-night-mode);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 25px;
-    height: 25px;
-    margin-left: .5rem;
-    cursor: pointer;
-}
 
 .header__center-input-resultados {
     background-color: white;
@@ -320,92 +310,6 @@
 
 .header__center-input-resultados a:hover {
     color: rgb(0, 0, 0);
-}
-
-.header__right-alternate-night-mode-checkbox {
-    display: none;
-}
-
-.header:has(.header__right-alternate-night-mode-checkbox:checked) {
-
-    background-color: #000814;
-
-    .header__right-alternate-night-mode {
-        --icon-night-mode: url(../Paginas/Inicio/Assets/sun-white.svg);
-    }
-
-    .header__left-link {
-        background-color: #001F54;
-    }
-
-    .nav__link {
-        color: white;
-    }
-
-    .nav__link:hover {
-        box-shadow: 0px 0px 0px 1px white;
-        background-color: transparent;
-    }
-
-    .header__right-button-register {
-        background-color: #001F54;
-        color: var(--white);
-    }
-
-    .header__right-button-register:hover,
-    .lesson__item-button:hover {
-        box-shadow: 0px 0px 0px 1px var(--white);
-        background-color: transparent;
-        color: var(--white);
-    }
-
-    .header__right-button-login {
-        /*Styles*/
-        color: white;
-    }
-
-    .header__right-button-login:hover {
-        background-color: #001f5438;
-    }
-
-    .header__right-icon-cart-label {
-        --cart-icon: url(../Paginas/Inicio/Assets/bx-cart-add\ white.svg);
-    }
-
-    .header__center-input {
-        border-color: white;
-        color: white;
-    }
-
-    .header__right-label {
-        --hamburguer-icon: url(../Paginas/Inicio/Assets/list-white.svg);
-    }
-
-    .header__right-cart-count {
-        /*Styles*/
-        color: white;
-    }
-
-    .nav {
-        background-color: #000814;
-    }
-
-    .header__right-button-register {
-        border: none;
-    }
-
-    .header__center-input {
-        background-color: #000814;
-        border: 1px solid rgba(255, 255, 255, 0.342);
-    }
-
-    .header__center-input::placeholder {
-        color: white;
-    }
-
-    .header__center-label {
-        background-image: url(../Paginas/Inicio/Assets/search-white.svg);
-    }
 }
 
 
@@ -525,14 +429,12 @@
         font-size: 1rem;
     }
 
-    .header:has(.header__right-alternate-night-mode-checkbox:checked) {
-        .nav__link:hover {
-            box-shadow: none;
-        }
-    }
+    
+
+
 }
 
-@media screen and (width <=460px) {
+@media screen and (width <=700px) {
 
     .nav {
         z-index: 10;
@@ -566,7 +468,6 @@
         width: fit-content;
     }
 
-
     .header__center-label {
         position: static;
         left: 0px;
@@ -591,8 +492,26 @@
             border: 1px solid #00000021;
             border-radius: 0rem;
             padding: .7rem .4rem;
+            z-index: 12;
         }
 
+        .header__center-input-resultados {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            top: 108px;
+        }
+
+    }
+
+    #JS-remove-input-text {
+        top: -1200px;
+    }
+
+    .header__center-input {
+        position: relative;
     }
 
 }

@@ -857,6 +857,11 @@ html {
     .main__a {
         right: 0px;
     }
+
+    .carrousel__element-description {
+        display: none;
+    }
+
 }
 
 @media screen and (width<=901px) {
@@ -968,7 +973,7 @@ html {
 
     .carrousel__element-description {
         right: 18%;
-        width: 250px; 
+        width: 250px;
     }
 
     .carrousel-left {
@@ -1063,10 +1068,6 @@ html {
         min-height: 180px;
     }
 
-    .carrousel__element-description {
-    display: none;
-    }
-
     .carrousel-left {
         width: 20px;
         height: 20px;
@@ -1076,4 +1077,27 @@ html {
         width: 20px;
         height: 20px;
     }
+
+    .lesson__title {
+        font-size: 1.1rem;
+    }
+
+    .lesson__description {
+        font-size: .8rem;
+    }
+
+    .container__mid-information {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    .container__information {
+        padding: 1rem .5rem;
+    }
+
+    .lesson__items {
+        padding: .3rem;
+    }
+
 }
