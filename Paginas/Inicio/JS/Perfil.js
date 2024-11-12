@@ -8,9 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     
             botonIniciarSesion.remove();
             botonRegistrarse.remove();
+            
+            let perfilRuta;
+            if (window.location.pathname.includes("/Paginas/")) {
+                
+                perfilRuta = "../Perfil/perfil.html";
+            } else {
+                
+                perfilRuta = "./Paginas/Perfil/perfil.html";
+            }
 
-            const perfilHTML = 
-            `<a class="header__right-button-register button" href="./Paginas/Perfil/perfil.html">Perfil</a>`;
+            const perfilHTML = `<a class="header__right-button-register button" href="${perfilRuta}">Perfil</a>`;
 
             const headerRightButtons = document.querySelector(".header__right-buttons");
             headerRightButtons.insertAdjacentHTML("beforeend", perfilHTML);
