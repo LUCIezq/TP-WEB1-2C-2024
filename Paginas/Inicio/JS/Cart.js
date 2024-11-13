@@ -4,7 +4,7 @@ function crearCursos() {
     cursosContainerCarrito.innerHTML = "";
     const cursos = JSON.parse(sessionStorage.getItem('cursos'));
     if (cursos) {
-        cursos.forEach(curso => {
+        cursos.forEach(curso => { 
             const nuevoCurso = document.createElement('li');
             nuevoCurso.classList = 'lesson__item-cart';
             nuevoCurso.innerHTML = generarContenidoDeCurso(curso);
@@ -42,7 +42,7 @@ crea el contenido con la informacion de este*/
         <div class="container__cart-information-top">
         <h2 class="lesson__title-cart">${curso.nombre}</h2>
 
-        <a href="#" class="lesson__link-cart">Ver detalle</a>
+        <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}" class="lesson__link-cart">Ver detalle</a>
         </div>
 
         <div class="container__cart-information-bottom">

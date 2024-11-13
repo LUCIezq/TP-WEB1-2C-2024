@@ -95,8 +95,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .checkout__total,
-.checkout__total-amount {
+.checkout__total-amount,
+.checkout__total-price {
     font-weight: 600;
+    font-size: .8rem;
 }
 
 .button__checkout {
@@ -189,11 +191,133 @@ input {
     color: green;
 }
 
+
+.modal {
+    border: none;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    transition: .3s ease;
+    margin: auto;
+}
+
+.modal__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__img {
+    background-color: #0d560d;
+    width: fit-content;
+    padding: .5rem;
+    display: grid;
+    border-radius: 9px;
+}
+
+.header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+}
+
+.header__bottom-title {
+    font-size: 1.15rem;
+    color: rgb(0, 0, 0);
+}
+
+.header__bottom {
+    display: grid;
+    gap: .3rem;
+}
+
+.header__bottom-orden-detail {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: .3rem;
+    font-size: .6rem;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.030);
+    border-radius: 3px;
+    padding: .1rem .2rem;
+    font-weight: 100;
+}
+
+.main__container-details {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.main__title,
+span {
+    font-size: .7rem;
+}
+
+.main__orden-details {
+    box-shadow: 0px 0px 0px 1px #00000010;
+}
+
+.main__orden-details {
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.main__orden-detail {
+    padding: .7rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000010;
+}
+
+.main__orden-detail:last-child {
+    border: none;
+}
+
+.modal__link {
+    text-decoration: none;
+    color: white;
+    background-color: #0d560d;
+    text-align: center;
+    padding: .35rem 0;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 250px;
+    transition: .3s ease;
+}
+
+.modal__link:hover {
+    background-color: #0d560de8;
+
+}
+
 @media screen and (width<=900px) {
     .container {
         max-width: 100%;
         margin-top: 4rem;
         margin-bottom: 0rem;
+    }
+
+}
+
+@media screen and (width<=500px) {
+    .modal {
+        height: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    dialog:-internal-dialog-in-top-layer::backdrop {
+        position: fixed;
+        inset: 0px;
+        background: rgb(255, 255, 255);
     }
 
 }

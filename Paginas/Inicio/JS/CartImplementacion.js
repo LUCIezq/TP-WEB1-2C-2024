@@ -26,6 +26,10 @@ function agregarCursoACarrito(producto) {
         sessionStorage.setItem('cursos', JSON.stringify(nuevaMemoria));
     }
     actualizarNumeroCarrito();
+    crearCursos();
+    calcularTotalDelCarrito();
+    revisarMensajeDeCarrito();
+    sePuedeContinuarEnCarrito();
 }
 
 /** Toma un producto, le agrega cantidad 1 y lo devuelve */

@@ -7,13 +7,11 @@
   <title>Detalle de curso</title>
 
   <link rel="stylesheet" href="./Css/detalle-curso.css" />
-  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
   <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
   <link rel="stylesheet" href="../Inicio/css/inicio.css">
+  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
 
   <script src="/Paginas/Inicio/JS/Cursos.js"></script>
-  <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
-  <script src="/Paginas/Inicio/JS/CartImplementacion.js" defer></script>
 </head>
 
 <body>
@@ -121,19 +119,20 @@
                   <div class="container__cart-bottom-input-global">
 
                     <div class="cupon__container">
-                      <p class="cupon__description">Se ha aplicado <span id="js-cupon__description"></span></p>
-                      <img src="/Paginas/Inicio/Assets/x-lg.svg" id="js-cupon__close" alt="">
+                        <p class="cupon__description">Se ha aplicado <span
+                                id="js-cupon__description"></span></p>
+                        <img src="/Paginas/Inicio/Assets/x-lg.svg" id="js-cupon__close" alt="">
                     </div>
 
 
                     <div class="container__cart-bottom-input">
-                      <input type="text" class="container__cart-bottom-input-element" placeholder="Ingresa el cupón"
-                        maxlength="10">
-                      <button class="button__cuppon">Aplicar</button>
+                        <input type="text" class="container__cart-bottom-input-element"
+                            placeholder="Ingresa el cupón" maxlength="10">
+                        <button class="button__cuppon">Aplicar</button>
                     </div>
 
                     <p class="cart__error-description"></p>
-                  </div>
+                </div>
 
                 </div>
 
@@ -165,7 +164,8 @@
 
               </div>
 
-              <a href="/Paginas/Checkout-view/checkout.html" class="container__cart-bottom-paymnent-link">Continuar
+              <a href="/Paginas/Checkout-view/checkout.html" class="container__cart-bottom-paymnent-link"
+                id="JS-button__continuar">Continuar
                 compra</a>
 
             </div>
@@ -226,7 +226,7 @@
           </ul>
 
           <div class="buttons">
-            <a href="../Checkout-view/checkout.html" class="button__detalle">Inscribirse</a>
+            <a href="#" class="button__detalle" id="JS-button-comprar">Comprar</a>
             <a href="../Curso-empresa/curso-empresa.html" class="button__detalle button__detalle-empresa">Empresa</a>
           </div>
 
@@ -721,6 +721,9 @@
   <script src="../Detalle-curso/JS/VistaDinamica.js"></script>
   <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
   <script src="../Inicio/JS/Perfil.js"></script>
+  <script src="/Paginas/Inicio/JS/Cart.js" ></script>
+  <script src="/Paginas/Inicio/JS/CartImplementacion.js"></script>
+  <script src="./JS/AgregarCurso.js"></script>
 </body>
 
 </html>

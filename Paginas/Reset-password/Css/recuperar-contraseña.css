@@ -241,3 +241,7 @@ body {
 form button {
     width: 100%;
 }
+.input__error{
+    font-size: .8rem;
+    color: red;
+}

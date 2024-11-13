@@ -41,8 +41,36 @@ updateButton.addEventListener("click", cambiarTexto);
 //     card.classList.add('container__left-element--active');
 
 //   })
-  
+
 //   index++;
 // });
+const firstPassword = document.getElementById('firstPassword');
+const secondePassword = document.getElementById('secondPassword');
+const pError = document.getElementById('passwordIncorrect');
+const form = document.getElementById('formPassword');
+
+function validarContrasenia() {
+  if (firstPassword.value != secondePassword.value) {
+    pError.classList.add('input__error');
+    pError.innerText = 'Las contraseñas deben coincidir.';
+    return false;
+  } else {
+    pError.innerText = '';
+    return true;
+  }
+}
+
+firstPassword.addEventListener('keyup', validarContrasenia);
+secondePassword.addEventListener('keyup', validarContrasenia);
+
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (validarContrasenia()) {
+    form.submit();
+  }
+})
+
+
 
 

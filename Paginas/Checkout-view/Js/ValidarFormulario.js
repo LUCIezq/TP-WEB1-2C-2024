@@ -1,12 +1,12 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-
+const modal = document.getElementById('modal');
 
 const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     tarjeta: /^\d{16}$/, // 16 caracteres
     mes: /^(1[0-2]|[1-9])$/,
-    anio: /^(?:[1-9][0-9]{0,3})$/,
+    anio: /^(?:[1-9][0-9]{3})$/,
     cvv: /^\d{3}$/
 }
 const campos = {
@@ -47,6 +47,7 @@ function validarFormulario(e) {
                 pErrorEmail.innerText = errores.email;
             } else {
                 pErrorEmail.innerText = '';
+                const email = document.getElementById('JS-main__orden-email').innerText = inputValue;
             }
             break;
         case 'credit-card':
@@ -81,17 +82,28 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario); //Si hago click fuera del input
 })
 
+function actualizarDatosModal() {
+    const fecha = document.getElementById('JS-main__orden-date');
+    fecha.innerText = new Date().getDate() + '/' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear();
+    const precio = document.getElementById('JS-main__orden-total').innerText = '$' + JSON.parse(sessionStorage.getItem('totalCarrito')).toLocaleString();
+}
+
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (campos.email && campos.numeroTarjeta && campos.mes && campos.anio && campos.cvv) {
-        formulario.submit();
+
+        actualizarDatosModal();
+
+        modal.showModal();
         const form__status = document.getElementById('form__status');
         sessionStorage.removeItem('cursos');
+        const closeModal = document.getElementById('modal__link').addEventListener('click', () => {
+            formulario.submit();
+        })
     } else {
         const form__status = document.getElementById('form__status');
         form__status.classList.add('error');
         form__status.innerText = 'Por favor asegurese de completar todos los campos.';
     }
 })
-

@@ -87,7 +87,7 @@
                     Detalles de pago
                 </h2>
 
-                <form class="form__container" id="formulario" action="/index.html">
+                <form class="form__container" id="formulario">
 
                     <div class="checkout__container-input" id="checkout__container-email">
                         <label for="email" class="checkout__label">Email</label>
@@ -161,18 +161,51 @@
 
     </main>
 
-    <!-- <button id="JS-open__modal"></button>
-    
-        <dialog id="modal" class="modal">
-            <header class="modal__header">
-                <img src="/Paginas/Inicio/Assets/x-lg.svg" class="modal__close" alt="">
+    <dialog id="modal" class="modal">
+        <div class="modal__container">
+            <header class="header__container">
+                <div class="header__img">
+                    <img src="./Assets/check_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </div>
+
+                <div class="header__bottom">
+                    <p class="header__bottom-title">Pago completado</p>
+                    <div class="header__bottom-orden-detail">
+                        <img src="./Assets/receipt_long_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        <p class="header__bottom-orden-title">Orden numero #<span
+                                id="JS-header__bottom-orden-number">234564</span></p>
+                    </div>
+                </div>
             </header>
-    
-            <main class="modal__main">
-    
+
+            <main class="main__container-details">
+                <p class="main__title">Detalles de transacción</p>
+
+                <div class="main__orden-details">
+                    <div class="main__orden-detail">
+                        <span class="main__orden-detail-title">Fecha</span>
+                        <span id="JS-main__orden-date"></span>
+                    </div>
+                    <div class="main__orden-detail">
+                        <span class="main__orden-detail-title">Metodo de pago</span>
+                        <span id="JS-main__orden-payment-method">Tarjeta de credito</span>
+                    </div>
+                    <div class="main__orden-detail">
+                        <span class="main__orden-detail-title">Total</span>
+                        <span id="JS-main__orden-total"></span>
+                    </div>
+                    <div class="main__orden-detail">
+                        <span class="main__orden-detail-title">Email</span>
+                        <span id="JS-main__orden-email"></span>
+                    </div>
+                </div>
+
             </main>
-    
-        </dialog> -->
+
+            <a id="modal__link" class="modal__link" href="/index.html">Continuar</a>
+        </div>
+
+    </dialog>
 
     <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
     <script src="./Js/Checkout.js"></script>

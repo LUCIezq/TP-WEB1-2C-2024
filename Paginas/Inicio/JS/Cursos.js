@@ -5,7 +5,13 @@ const cursos = [
                 precio: 150000,
                 descripcion: "Aprende Hacking Ético y Ciberseguridad de manera práctica, ¡conviértete en un experto en Hacking Ético y Ciberseguridad!",
                 horas: 140,
-                img: "/Paginas/Inicio/Assets_cursos/ciberseguridad.jpg"
+                img: "/Paginas/Inicio/Assets_cursos/ciberseguridad.jpg",
+                profesor: {
+                        nombre: "Ezequiel",
+                        apellido: "Cucinelli",
+                        informacion: "Soy Ezequiel Cucinelli, especialista en Hacking Ético y Ciberseguridad. Me dedico a proteger sistemas y datos sensibles, aplicando técnicas avanzadas para identificar vulnerabilidades y fortalecer la seguridad. Mi objetivo es ofrecer soluciones confiables y efectivas para garantizar una experiencia digital segura en entornos cada vez más complejos.",
+                },
+
         },
 
         {
