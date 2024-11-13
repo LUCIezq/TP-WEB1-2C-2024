@@ -36,6 +36,7 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.199);
     display: grid;
     align-items: center;
+    position: relative;
 }
 
 .calendario__item__nuevoCurso {
@@ -43,6 +44,51 @@ main {
     text-decoration: none;
     width: 100%;
     margin: 0 auto;
+}
+
+.lesson__name {
+    background-color: burlywood;
+    color: black;
+    cursor: pointer;
+}
+
+.pop__up {
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    background-color: white;
+    display: none;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px #00000057;
+    flex-direction: column;
+    border-radius: 7px;
+    gap: .5rem;
+    margin-left: 60px;
+    width: 100%;
+}
+
+.curso__nombre {
+    font-size: .9rem;
+}
+
+.curso__detalles {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: 7px;
+}
+.visible{
+    display: flex;
+}
+.curso__link {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: .3rem;
+    border-radius: 7px;
 }
 
 @media (max-width: 768px) {
