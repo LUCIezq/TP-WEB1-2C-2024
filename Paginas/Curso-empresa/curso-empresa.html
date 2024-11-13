@@ -1,67 +1,69 @@
+
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
-  <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
-  <link rel="stylesheet" href="./css/curso-empresa.css">
-  <link rel="stylesheet" href="../Inicio/css/inicio.css">
-  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
+    <link rel="stylesheet" href="./css/curso-empresa.css">
+    <link rel="stylesheet" href="../Inicio/css/inicio.css">
+    <link rel="stylesheet" href="../../css-reutilizado/header.css" />
+
   <title>Curso Empresas</title>
+
 </head>
 
 <body>
 
-
-  <header class="header">
+    <header class="header">
 
     <div class="header__left">
 
-        <a href="../../index.html" class="header__left-link">
-            LearnTree.
-        </a>
+      <a href="../../index.html" class="header__left-link">
+        LearnTree.
+      </a>
 
-        <div class="header__center-container-input">
+      <div class="header__center-container-input">
 
-            <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
+        <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
-            <label class="header__center-label">
-                <input type="checkbox" class="header__center-checkbox">
-            </label>
+        <label class="header__center-label">
+          <input type="checkbox" class="header__center-checkbox">
+        </label>
 
-        </div>
+      </div>
 
     </div>
 
     <nav class="nav">
 
-        <ul class="nav__elements">
+      <ul class="nav__elements">
 
-            <li class="nav__element">
-                <a class="nav__link" href="../../index.html">Inicio</a>
-            </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../../index.html">Inicio</a>
+        </li>
 
-            <li class="nav__element">
-                <a class="nav__link" href="../Gift-card/gift-card.html">Giftcard</a>
-            </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../Gift-card/gift-card.html">Giftcard</a>
+        </li>
 
-            <li class="nav__element">
-                <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
-            </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../calendario/calendario.html">Calendario</a>
+        </li>
 
-            <li class="nav__element">
-                <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
-            </li>
+        <li class="nav__element">
+          <a class="nav__link" href="../contacto/contacto.html">Contacto</a>
+        </li>
 
-        </ul>
+      </ul>
 
-        <div class="header__right-buttons">
+      <div class="header__right-buttons">
 
-            <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
-            <a class="header__right-button-register button" href="../Sign-up/sign-up.html">Registrarse</a>
+        <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
+        <a class="header__right-button-register button" href="../Sign-up/sign-up.html">Registrarse</a>
 
-        </div>
+      </div>
 
     </nav>
 
@@ -77,186 +79,248 @@
 
               <div class="container__cart-header-left">
                 <h2 class="container__cart-title">Carrito</h2>
-                <p class="container__cart-description"><span class="js-container__cart-count">0</span>
+                <span class="container__cart-description"><span class="js-container__cart-count">0</span>
                   cursos
-                  en el carrito.</p>
+                  en el carrito.</span>
               </div>
 
-              <img src="../Inicio/Assets/x-lg.svg" class="container__cart-header-close"
+              <img src="/Paginas/Inicio/Assets/x-lg.svg" class="container__cart-header-close"
                 id="js-container__cart-header-close" alt="">
 
             </header>
 
-            <div class="container__cart-bottom">
-              <div class="container__cart-payment-details">
-                <h2 class="payment__detail-title">Total:</h2>
-                <span class="payment__detail-price">$0 ARS</span>
-                <a href="../Checkout-view/checkout.html" class="payment__detail-link">Pagar</a>
-              </div>
+
+            <ul class="container__cart-lesson-items" id="JS-container__cart-lesson-items">
+
+            </ul>
+
+            <div class="js-container__cart-empty">
+              <img src="/Paginas/Inicio/Assets/empty-shopping-cart-v2.jpg" alt="">
+              <p class="js-container__cart-empty-text">Tu carrito está vacío. ¡Sigue comprando para
+                encontrar un curso!
+              </p>
+              <a href="#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
             </div>
 
+            <div class="container__cart-bottom-payment">
+
+              <div class="container__cart-bottom">
+
+                <div class="container__cart-bottom-cupon">
+                  <h2 class="container__cart-cupon">
+                    ¿Tienes código de cupón?
+                  </h2>
+
+                  <div class="container__cart-bottom-input-global">
+
+                    <div class="cupon__container">
+                      <p class="cupon__description">Se ha aplicado <span id="js-cupon__description"></span></p>
+                      <img src="/Paginas/Inicio/Assets/x-lg.svg" id="js-cupon__close" alt="">
+                    </div>
+
+
+                    <div class="container__cart-bottom-input">
+                      <input type="text" class="container__cart-bottom-input-element" placeholder="Ingresa el cupón"
+                        maxlength="10">
+                      <button class="button__cuppon">Aplicar</button>
+                    </div>
+
+                    <p class="cart__error-description"></p>
+                  </div>
+
+                </div>
+
+                <div class="container__cart-bottom-cantidad">
+                  <h2 class="container__cart-bottom-cantidad-text">
+                    Cantidad de cursos
+                  </h2>
+                  <span class="container__cart-bottom-right">
+                    0
+                  </span>
+                </div>
+
+                <div class="container__cart-total">
+
+                  <div class="container__cart-descuentos">
+                    <span class="container__cart-descuentos-text">Descuento <span id="descuento">
+                        [0%]</span></span>
+                    <span class="container__cart-descuentos-price">$0</span>
+                  </div>
+
+                  <div>
+                    <h2 class="container__cart-total-text">
+                      Total
+                    </h2>
+                    <span class="container__cart-bottom-total">$0</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <a href="/Paginas/Checkout-view/checkout.html" class="container__cart-bottom-paymnent-link"
+                id="JS-button__continuar">Continuar compra</a>
+
+            </div>
+
+
           </div>
+
         </div>
 
-        <label class="header__right-alternate-night-mode">
-          <input type="checkbox" class="header__right-alternate-night-mode-checkbox">
-        </label>
-
         <div class="container__icon-cart-container">
-          <a href="./Paginas/Cart-view/cart-view.html" class="header__right-cart-link">
-            <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
-          </a>
+          <label class="header__right-icon-cart-label" id="header__right-icon-cart-label"></label>
           <input type="checkbox" class="header__right-icon-cart-checkbox">
 
           <div class="header__right-cart-count-container">
-            <span class="header__right-cart-count" id="cart-count"></span>
+            <span class="header__right-cart-count" id="cart-count">0</span>
           </div>
         </div>
       </div>
-
 
     </div>
 
     <label class="header__right-label">
-        <input type="checkbox" class="header__right-checkbox">
+      <input type="checkbox" class="header__right-checkbox">
     </label>
 
-</header>
+    </header>
 
-
-  <main>
-    <div class="curso-empresa__titulo">
-      <h1>JavaScript - Nivel Basico</h1>
-      <p>INSCRIPCION</p>
-    </div>
-    <form action="#" method="get">
-      <div class="curso-empresa__inscripciones">
-        <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-        <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-          maxlenght="8"></input>
-        <input class="curso-empresa__inscripciones__input " type="number" name="dni" placeholder="DNI">
-        <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-        </svg>
+    <main>
+      <div class="curso-empresa__titulo">
+        <h1>JavaScript - Nivel Basico</h1>
+        <p>INSCRIPCION</p>
       </div>
-      <div class="curso-empresa__inscripciones">
-        <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-        <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-          maxlenght="8"></input>
-        <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
-        <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-        </svg>
-      </div>
-      <div class="curso-empresa__inscripciones">
-        <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-        <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-          maxlenght="8"></input>
-        <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
-        <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-        </svg>
-      </div>
-      <div class="curso-empresa__agregar-persona">
-        <svg class="icono__sumar-persona" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-          <path
-            d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM504 312l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
-        </svg>
-
-        <p>Agregar Persona</p>
-      </div>
-      <div class="curso-empresa__parte-inferior-final">
-        <p>$39.999</p>
-        <button type="submit">Inscribirse</button>
-      </div>
-    </form>
-  </main>
+      <form action="#" method="get">
+        <div class="curso-empresa__inscripciones">
+          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
+          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
+            maxlenght="8"></input>
+          <input class="curso-empresa__inscripciones__input " type="number" name="dni" placeholder="DNI">
+          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+          </svg>
+        </div>
+        <div class="curso-empresa__inscripciones">
+          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
+          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
+            maxlenght="8"></input>
+          <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
+          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+          </svg>
+        </div>
+        <div class="curso-empresa__inscripciones">
+          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
+          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
+            maxlenght="8"></input>
+          <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
+          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+          </svg>
+        </div>
+        <div class="curso-empresa__agregar-persona">
+          <svg class="icono__sumar-persona" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <path
+              d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM504 312l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+          </svg>
+  
+          <p>Agregar Persona</p>
+        </div>
+        <div class="curso-empresa__parte-inferior-final">
+          <p>$39.999</p>
+          <button type="submit">Inscribirse</button>
+        </div>
+      </form>
+    </main>
 
   <footer>
 
     <span class="footer__title">
-        LearnTree.
+      LearnTree.
     </span>
 
     <div class="footer__container">
 
 
 
-        <div class="footer__flex">
+      <div class="footer__flex">
 
-            <h2>Datos del grupo</h2>
+        <h2>Datos del grupo</h2>
 
-            <ul class="footer__elements">
-                <li class="footer__element">
-                    BROSSARD, LOUIS
-                </li>
-                <li class="footer__element">
-                    CANTONI, MATIAS
-                </li>
-                <li class="footer__element">
-                    CUCINELLI, EZEQUIEL
-                </li>
-                <li class="footer__element">
-                    LUCI, EZEQUIEL
-                </li>
-            </ul>
+        <ul class="footer__elements">
+          <li class="footer__element">
+            BROSSARD, LOUIS
+          </li>
+          <li class="footer__element">
+            CANTONI, MATIAS
+          </li>
+          <li class="footer__element">
+            CUCINELLI, EZEQUIEL
+          </li>
+          <li class="footer__element">
+            LUCI, EZEQUIEL
+          </li>
+        </ul>
 
-        </div>
+      </div>
 
-        <div class="footer__flex">
+      <div class="footer__flex">
 
-            <h2>Menu</h2>
+        <h2>Menu</h2>
 
-            <ul class="footer__elements">
-                <li class="footer__element">
-                    <a href="../../index.html" class="footer__link">Inicio</a>
-                </li>
-                <li class="footer__element">
-                    <a href="../Gift-card/gift-card.html" class="footer__link">Giftcard</a>
-                </li>
-                <li>
-                    <a href="../calendario/calendario.html" class="footer__link">Calendario</a>
-                </li class="footer__element">
-                <li>
-                    <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
-                </li>
-            </ul>
+        <ul class="footer__elements">
+          <li class="footer__element">
+            <a href="../../index.html" class="footer__link">Inicio</a>
+          </li>
+          <li class="footer__element">
+            <a href="../Gift-card/gift-card.html" class="footer__link">Giftcard</a>
+          </li>
+          <li>
+            <a href="../calendario/calendario.html" class="footer__link">Calendario</a>
+          </li class="footer__element">
+          <li>
+            <a href="../contacto/contacto.html" class="footer__link">Contacto</a>
+          </li>
+        </ul>
 
-        </div>
+      </div>
 
-        <div class="footer__flex ">
+      <div class="footer__flex ">
 
-            <h2>Redes sociales</h2>
+        <h2>Redes sociales</h2>
 
-            <ul class="footer__elements footer__elements-social">
-                <li class="footer__element">
-                    <a href="https://www.facebook.com/" class="footer__link"><img
-                            src="../Inicio/Assets_footer/facebook.svg" alt=""></a>
-                </li>
-                <li class="footer__element">
-                    <a href="https://www.instagram.com/" class="footer__link"><img
-                            src="../Inicio/Assets_footer/instagram.svg" alt=""></a>
-                </li>
-                <li class="footer__element">
-                    <a href="https://x.com/" class="footer__link"><img
-                            src="../Inicio/Assets_footer/twitter-x.svg" alt=""></a>
-                </li>
-            </ul>
+        <ul class="footer__elements footer__elements-social">
+          <li class="footer__element">
+            <a href="https://www.facebook.com/" class="footer__link"><img src="../Inicio/Assets_footer/facebook.svg"
+                alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://www.instagram.com/" class="footer__link"><img src="../Inicio/Assets_footer/instagram.svg"
+                alt=""></a>
+          </li>
+          <li class="footer__element">
+            <a href="https://x.com/" class="footer__link"><img src="../Inicio/Assets_footer/twitter-x.svg" alt=""></a>
+          </li>
+        </ul>
 
-        </div>
+      </div>
 
     </div>
 
     <p class="footer__paragraph">
-        © Todos los derechos reservados 2024 - UNLaM
+      © Todos los derechos reservados 2024 - UNLaM
     </p>
 
   </footer>
+
   <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
   <script src="../Inicio/JS/Perfil.js"></script>
+  <script src="/Paginas/Inicio/JS/CartImplementacion.js"></script>
+
 </body>
 
 </html>
