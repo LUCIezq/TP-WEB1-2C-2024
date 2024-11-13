@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isLoggedIn === "true") {
         document.body.classList.remove("hidden");
-    } else{
+    } else {
         alert("Debes iniciar sesión para acceder a esta página.");
         window.location.href = "../Sign-in/sign-in.html";
     }
@@ -20,14 +20,14 @@ let divErrorNombreSelector = document.querySelector("#error__nombre-js")
 nombreInputSelector.addEventListener("keyup", (event) => {
     let nombreCard = event.target.value;
     let regExp = /[^a-zA-Z ]/g;
-    
-    if(regExp.test(nombreInputSelector.value)){
+
+    if (regExp.test(nombreInputSelector.value)) {
         divErrorNombreSelector.innerHTML = "Formato incorrecto, solo letras.";
-    } else{
+    } else {
         divErrorNombreSelector.innerHTML = "";
-        if(nombreInputSelector.value.length >= 1 && nombreInputSelector.value.length <= 12) {
+        if (nombreInputSelector.value.length >= 1 && nombreInputSelector.value.length <= 12) {
             nombreCardSelector.innerHTML = nombreCard;
-        } else if(nombreInputSelector.value.length > 12) {
+        } else if (nombreInputSelector.value.length > 12) {
             divErrorNombreSelector.innerHTML = "Limite de caracteres excedido.";
         } else if (nombreInputSelector.value == "") {
             nombreCardSelector.innerHTML = "DESTINATARIO";
@@ -69,23 +69,23 @@ let divErrorMontoSelector = document.querySelector("#error__monto-js")
 montoInputSelector.addEventListener("keyup", (event) => {
     let montoCard = event.target.value;
     let regExp = /[^0-9]/g;
-    
-    if(regExp.test(montoInputSelector.value)){
+
+    if (regExp.test(montoInputSelector.value)) {
         divErrorMontoSelector.innerHTML = "Formato incorrecto, solo números.";
         buttonInputSelector.style.opacity = "50%";
         buttonInputSelector.disabled = true;
-    } else{
+    } else {
         divErrorMontoSelector.innerHTML = "";
         buttonInputSelector.style.opacity = "100%";
         buttonInputSelector.disabled = false;
-    if(montoInputSelector.value.length >= 1 && montoInputSelector.value.length <= 5) {
-        montoCardSelector.innerHTML = montoCard;
-    } else if(montoInputSelector.value.length > 5) {
-        divErrorMontoSelector.innerHTML = "Limite de caracteres excedido.";
-    } else if (montoInputSelector.value == "") {
-        montoCardSelector.innerHTML = "00000";
+        if (montoInputSelector.value.length >= 1 && montoInputSelector.value.length <= 5) {
+            montoCardSelector.innerHTML = montoCard;
+        } else if (montoInputSelector.value.length > 5) {
+            divErrorMontoSelector.innerHTML = "Limite de caracteres excedido.";
+        } else if (montoInputSelector.value == "") {
+            montoCardSelector.innerHTML = "00000";
+        }
     }
-    }  
 })
 
 // Input ubicacion
@@ -99,10 +99,10 @@ let ubicacionCard = () => {
     ubicacionClaseSelector.style.rigth = "revert";
     ubicacionClaseSelector.style.left = "revert";
 
-    if(ubicacion == "abajoizquierda") {
-        ubicacionClaseSelector.style.bottom= "0";
+    if (ubicacion == "abajoizquierda") {
+        ubicacionClaseSelector.style.bottom = "0";
         ubicacionClaseSelector.style.left = "0";
-    } else if(ubicacion == "arribaizquierda") {
+    } else if (ubicacion == "arribaizquierda") {
         ubicacionClaseSelector.style.top = "0";
         ubicacionClaseSelector.style.left = "0";
     } else {
@@ -126,3 +126,11 @@ let fondoCard = () => {
 fondoInputSelectores.forEach(fondoInputSelector => {
     fondoInputSelector.addEventListener("change", fondoCard);
 });
+
+buttonInputSelector.addEventListener('click', () => {
+    const gift = {
+        nombre: 'Gift card para ['+nombreInputSelector.value+']',
+        precio: montoInputSelector.value
+    }
+    agregarCursoACarrito(gift);
+})

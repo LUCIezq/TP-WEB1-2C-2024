@@ -54,8 +54,9 @@ main {
 
 .pop__up {
     position: absolute;
-    z-index: 2;
-    top: -100px;
+    width: 250px;
+    z-index: 1;
+    top: -120px;
     background-color: white;
     display: none;
     padding: 1rem;
@@ -63,8 +64,6 @@ main {
     flex-direction: column;
     border-radius: 7px;
     gap: .5rem;
-    margin-left: 60px;
-    width: 100%;
 }
 
 .curso__nombre {
@@ -80,9 +79,11 @@ main {
     padding: .5rem;
     border-radius: 7px;
 }
-.visible{
+
+.visible {
     display: flex;
 }
+
 .curso__link {
     text-decoration: none;
     color: white;
@@ -91,11 +92,26 @@ main {
     border-radius: 7px;
 }
 
-@media (max-width: 768px) {
+@media (width<=768px) {
     .calendario {
         grid-template-columns: repeat(4, 1fr);
         /* 4 columnas en pantallas pequeñas */
         grid-template-rows: repeat(7, 1fr);
         /* Más filas para días adicionales */
+    }
+}
+
+@media (width<=450px) {
+    .pop__up {
+        width: 170px;
+    }
+
+    .curso__nombre {
+        font-size: .8rem;
+    }
+
+    .curso__detalles {
+        flex-direction: column;
+        gap: 0;
     }
 }

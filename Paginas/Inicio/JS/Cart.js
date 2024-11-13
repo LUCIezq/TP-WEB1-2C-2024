@@ -4,7 +4,7 @@ function crearCursos() {
     cursosContainerCarrito.innerHTML = "";
     const cursos = JSON.parse(sessionStorage.getItem('cursos'));
     if (cursos) {
-        cursos.forEach(curso => { 
+        cursos.forEach(curso => {
             const nuevoCurso = document.createElement('li');
             nuevoCurso.classList = 'lesson__item-cart';
             nuevoCurso.innerHTML = generarContenidoDeCurso(curso);
