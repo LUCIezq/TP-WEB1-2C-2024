@@ -6,6 +6,7 @@ const docenteDinamico = document.getElementById('JS-docente__name');
 const docenteDescripcionDinamico = document.getElementById('JS-docente__biography');
 
 if (cursoBuscado) {
+    sessionStorage.setItem('idCurso', cursoBuscado.id)
     /*Asignamos la imagen al curso*/
     const fotoCurso = document.getElementById('JS-foto__curso');
     const urlImg = cursoBuscado.img;
