@@ -127,10 +127,15 @@ fondoInputSelectores.forEach(fondoInputSelector => {
     fondoInputSelector.addEventListener("change", fondoCard);
 });
 
+let id=1;
+
 buttonInputSelector.addEventListener('click', () => {
+    
     const gift = {
-        nombre: 'Gift card para ['+nombreInputSelector.value+']',
-        precio: montoInputSelector.value
+        id:id++,
+        nombre: 'Gift card para [' + nombreInputSelector.value + ']',
+        precio: montoInputSelector.value,
+        tipo: 'GiftCard'
     }
     agregarCursoACarrito(gift);
 })

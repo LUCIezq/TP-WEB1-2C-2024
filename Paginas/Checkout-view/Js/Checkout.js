@@ -28,9 +28,6 @@ crea el contenido con la informacion de este*/
         <div class="container__cart-information-top">
         <h2 class="lesson__title-cart">${curso.nombre}</h2>
 
-        <a href="/Paginas/Detalle-curso/detalle-curso.html?idCurso=${curso.id}" class="lesson__link-cart">Ver detalle</a>
-        </div>
-
         <div class="container__cart-information-bottom">
             <span class="item__price-cart">$${precioConMiles} x ${curso.cantidad}</span>
         </div>

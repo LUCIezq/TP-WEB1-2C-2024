@@ -49,6 +49,28 @@
 
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    /* Para barras de desplazamiento verticales */
+    height: 10px;
+    /* Para barras de desplazamiento horizontales */
+}
+
+/* Personalizar el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    /* Color de fondo */
+    border-radius: 10px;
+    /* Bordes redondeados */
+}
+
+/* Personalizar el pulgar (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color del pulgar */
+    border-radius: 10px;
+    /* Bordes redondeados */
+}
+
 .header__left {
     display: flex;
     gap: 1rem;
@@ -429,7 +451,7 @@
         font-size: 1rem;
     }
 
-    
+
 
 
 }

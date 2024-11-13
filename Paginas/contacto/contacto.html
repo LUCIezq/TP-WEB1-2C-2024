@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
-    <link rel="stylesheet" href="./css/contacto.css">
     <link rel="stylesheet" href="../Inicio/css/inicio.css">
     <link rel="stylesheet" href="../../css-reutilizado/header.css" />
+    <link rel="stylesheet" href="./css/contacto.css">
 
 
     <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
@@ -197,14 +197,29 @@
     <main>
         <h1>CONTACTO</h1>
         <div class="contacto">
-            <form class="contacto__parte-izquierda">
-                <input type="text" name="nombre" id="" placeholder="Nombre" required>
-                <input type="text" name="apellido" id="" placeholder="Apellido" required>
-                <input type="email" name="email" id="" placeholder="email" required>
-                <textarea rows="5" cols="30" name="mensaje" placeholder="Escriba su mensaje aqui..." id=""
-                    required></textarea>
+            <form class="contacto__parte-izquierda" action="/index.html" id="formulario">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <p class="error__name" id="error-name"></p>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <p class="error__name" id="error-apellido"></p>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <p class="error__name" id="error-mail"></p>
+                <input type="number" name="telefono" id="telefono" placeholder="Telefono">
+                <p class="error__name" id="error-telefono"></p>
+                <div class="text__container">
+                    <textarea rows="5" cols="30" name="mensaje" class="text__area"
+                        placeholder="Escriba su mensaje aqui..." id="textArea"></textarea>
+                    <div class="caracteres__container">
+                        <span class="span__count" id="caracteres-actuales">0</span>
+                        <span class="span__count">/</span>
+                        <span class="span__count" id="caracteres-maximos">100</span>
+                    </div>
+                </div>
+                <p class="error__name" id="error__text"></p>
+
                 <!-- <input class= "contacto__parte-izquierda__mensaje" type="text" name="mensaje" id="" placeholder="Mensaje"> -->
-                <input type="submit" value="ENVIAR">
+                <button type="submit" id="button">Enviar</button>
+                <p class="error__name" id="form__error"></p>
             </form>
             <div class="contacto__parte-derecha">
                 <p>LearntreeContacto@gmail.com</p>
@@ -306,6 +321,7 @@
     <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
     <script src="/Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
     <script src="../Inicio/JS/Perfil.js"></script>
+    <script src="./JS/Contacto.js"></script>
 
 </body>
 
