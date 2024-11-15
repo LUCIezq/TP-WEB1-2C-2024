@@ -55,7 +55,6 @@ body {
     position: relative;
 }
 
-
 .container__column-right::before {
     content: '';
     width: 100%;
@@ -68,7 +67,6 @@ body {
     background-color: rgb(226, 240, 253);
     border-radius: 20px;
 }
-
 
 .header,
 .header__back-to-home,
@@ -288,6 +286,18 @@ body {
     width: 100%;
 }
 
+.form__state {
+    font-size: .75rem;
+    color: red;
+    display: none;
+}
+
+.form__state--activo {
+    display: block;
+}
+
+
+
 @media screen and (width <=930px) {
     .column__image {
         display: none;
@@ -350,6 +360,7 @@ body {
     .form {
         margin-top: 1.5rem;
     }
+
 
     .main__paragraph {
         font-size: .9em;

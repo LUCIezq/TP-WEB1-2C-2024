@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Sign-in/Css/style.css">
-
-
+    <script src="/Paginas/Inicio/JS/Usuario.js"></script>
     <title>Registrarse</title>
 
 </head>
@@ -36,37 +35,37 @@
                         Registro
                     </h2>
 
-                    <form class="form" action="../Sign-in/sign-in.html">
+                    <form class="form" id="form" method="get" action="../Sign-in/sign-in.html">
 
-                        <div class="form__container-input">
+                        <div class="form__container-input" id="container-name">
                             <label for="name" class="form__label">Nombre</label>
-                            <input type="text" id="name" name="email" class="form__input"
-                                placeholder="Ingrese su nombre" required>
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Ingrese su nombre"
+                                >
+                            <p class="form__state">Nombre de usuario incorrecto.</p>
                         </div>
-                        <div class="form__container-input">
-
+                        <div class="form__container-input" id="container-email">
                             <label for="email" class="form__label">Email</label>
                             <input type="email" id="email" name="email" class="form__input"
-                                placeholder="Ingrese su direccion de correo" required>
+                                placeholder="Ingrese su direccion de correo" >
+                            <p class="form__state">El correo electrónico debe tener un formato válido (por ejemplo,
+                                usuario@dominio.com) y no puede contener espacios o caracteres no permitidos.</p>
                         </div>
-
-                        <div class="form__container-input">
-
+                        <div class="form__container-input" id="container-password">
                             <label for="password" class="form__label">Contraseña</label>
-
                             <div class="form__container-password">
                                 <input type="password" id="password" name="password" class="form__input"
-                                    placeholder="Ingrese su contraseña" required>
-
-                                <label class="form__container-password-label">
-                                    <input type="checkbox" class="form__container-password-checkbox" id="JS-password-eye">
-                                </label>
+                                    placeholder="Ingrese su contraseña" >
                             </div>
+                            <div class="form__container-password">
+                                <input type="password" id="passwordRepite" name="password" class="form__input"
+                                    placeholder="Repita su contraseña" >
 
+                            </div>
+                            <p class="form__state">Ambas contraseñas deben coincidir.</p>
                         </div>
 
-                        <button type="submit" class="form__button">Confirmar</button>
-
+                        <button type="submit" class="form__button" id="formButton">Confirmar</button>
+                        <p class="form__state" id="form__state-global" ></p>
                     </form>
 
                 </div>
@@ -97,7 +96,7 @@
 
         </div>
     </div>
-    <script src="/Paginas/Sign-in/JS/AlternarPassword.js"></script>
+    <script src="./JS/Sign-up.js"></script>
 </body>
 
 </html>
