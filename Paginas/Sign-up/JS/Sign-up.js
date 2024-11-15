@@ -86,13 +86,11 @@ function seEncuentranDatosRegistrado(user) {
 function cargarUsuario(user) {
     const usuarios = JSON.parse(sessionStorage.getItem('usuarios'));
 
-    if (!usuarios) {
-        sessionStorage.setItem('usuarios', JSON.stringify([user]));
+    if (usuarios && !seEncuentranDatosRegistrado(user)) {
+        usuarios.push(user);
+        sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
     } else {
-        if (!seEncuentranDatosRegistrado(user)) {
-            usuarios.push(user);
-            sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
-        }
+        sessionStorage.setItem('usuarios', JSON.stringify([user]));
     }
 }
 
@@ -104,12 +102,20 @@ formulario.addEventListener('submit', e => {
     stateForm.style.textAlign = 'center';
 
     if (validaciones.name && validaciones.email && validaciones.password) {
-        let user = new Usuario(nombre.value, email.value, password.value);
-        if (!seEncuentranDatosRegistrado(user)) {
-            cargarUsuario(user);
+
+        const usuario = {
+            nombre: nombre.value,
+            email: email.value,
+            contrasenia: contrasenia.value
+        }
+
+        if (!seEncuentranDatosRegistrado(usuario)) {
+            cargarUsuario(usuario);
             formulario.submit();
         } else {
-            stateForm.innerText = 'El email ya se encuentra en uso.'
+            const formState = document.querySelector(`#container-email p`);
+            formState.innerText='El email ingresado ya se encuentra en uso.';
+            formState.classList.add('form__state--activo')
         }
 
     } else {
