@@ -23,7 +23,8 @@ function sePuedeIniciarSesion() {
 
         if (usuarioBuscado) {
             if (contrasenia === usuarioBuscado.contrasenia) {
-                sessionStorage.setItem('estaLogueado', JSON.stringify(true));
+                usuarioBuscado.estaLogueado = true;
+                sessionStorage.setItem('usuarios',JSON.stringify(usuarios));
                 return true;
             } else {
                 mostrarEstado(usuarioBuscado);

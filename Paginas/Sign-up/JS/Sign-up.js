@@ -106,7 +106,8 @@ formulario.addEventListener('submit', e => {
         const usuario = {
             nombre: nombre.value,
             email: email.value,
-            contrasenia: contrasenia.value
+            contrasenia: contrasenia.value,
+            estaLogueado:false
         }
 
         if (!seEncuentranDatosRegistrado(usuario)) {
