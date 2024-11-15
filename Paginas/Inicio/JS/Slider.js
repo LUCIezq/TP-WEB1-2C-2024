@@ -18,11 +18,11 @@ function moverDerecha() {
     document.imagen__slider.src = imagenesSlider[contador];
 }
 let intervalo = setInterval(moverDerecha, 3000);
-sliderDerecho.addEventListener("click", function(){
-    clearInterval(intervalo);
-    moverDerecha();
-    intervalo = setInterval(moverDerecha, 3000);
-});
+// sliderDerecho.addEventListener("click", function(){
+//     clearInterval(intervalo);
+//     moverDerecha();
+//     intervalo = setInterval(moverDerecha, 3000);
+// });
 
 function moverIzquierda() {
     contador--;
@@ -32,8 +32,8 @@ function moverIzquierda() {
     document.imagen__slider.src = imagenesSlider[contador];
 
 }
-sliderIzquierdo.addEventListener("click", function(){
-    clearInterval(intervalo);
-    moverIzquierda();
-    intervalo = setInterval(moverDerecha, 3000);
-});
+// sliderIzquierdo.addEventListener("click", function(){
+//     clearInterval(intervalo);
+//     moverIzquierda();
+//     intervalo = setInterval(moverDerecha, 3000);
+// });
