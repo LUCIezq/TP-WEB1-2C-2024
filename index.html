@@ -65,8 +65,48 @@
 
             <div class="header__right-buttons">
 
-                <a class="header__right-button-login button" href="./Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
-                <a class="header__right-button-register button" href="./Paginas/Sign-up/sign-up.html">Registrarse</a>
+                <div class="buttons" id="buttons">
+                    <a class="header__right-button-login button" href="./Paginas/Sign-in/sign-in.html">Iniciar
+                        Sesion</a>
+                    <a class="header__right-button-register button"
+                        href="./Paginas/Sign-up/sign-up.html">Registrarse</a>
+                </div>
+
+                <div class="header__right-perfil" id="perfil__icon">
+                    <a href="./Paginas/Perfil/perfil.html" id="perfil" class="pefil">E</a>
+                    <section class="dropdown">
+
+                        <div class="dropdown__header" id="perfil__content">
+                            <div class="dropdown__header-container">
+                                <a href="./Paginas/Perfil/perfil.html" id="perfil" class="pefil">E</a>
+
+                                <div class="dropdown__header-names">
+                                    <span class="name" id="name">Ezequiel Luci</span>
+                                    <span class="surname" id="surname">e@gmail.com</span>
+                                </div>
+                            </div>
+
+
+                            <ul class="dropdown__perfil">
+                                <li class="dropdown__item">
+                                    <img src="./Paginas/Inicio/Asset__perfil/perfil.svg" alt="">
+                                    <a href="#" class="dropdown__link">Mi perfil</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="./Paginas/Inicio/Asset__perfil/book.svg" alt="">
+                                    <a href="#" class="dropdown__link">Mis cursos</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="./Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
+                                    <a href="#" class="dropdown__link">Cerrar sesión</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </section>
+
+                </div>
 
             </div>
 
@@ -501,6 +541,7 @@
     <script src="./Paginas/Inicio/JS/FuncionalidadCarrito.js"></script>
     <script src="./Paginas/Inicio/JS/FuncionalidadaBuscador.js"></script>
     <script src="./Paginas/Detalle-curso/JS/VistaDinamica.js"></script>
+    <script src="/Paginas/Inicio/JS/Perfil.js"></script>
 </body>
 
 </html>

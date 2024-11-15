@@ -114,7 +114,7 @@ formulario.addEventListener('submit', e => {
             formulario.submit();
         } else {
             const formState = document.querySelector(`#container-email p`);
-            formState.innerText='El email ingresado ya se encuentra en uso.';
+            formState.innerText = 'El email ingresado ya se encuentra en uso.';
             formState.classList.add('form__state--activo')
         }
 

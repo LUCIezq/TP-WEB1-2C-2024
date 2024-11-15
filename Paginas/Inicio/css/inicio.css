@@ -791,11 +791,103 @@ html {
     text-align: center;
 }
 
+.buttons--hidden {
+    display: none;
+}
+
+.header__right-perfil {
+    display: none;
+}
+
+.pefil {
+    color: white;
+    background-color: #000000;
+    text-decoration: none;
+    width: 35px;
+    display: grid;
+    height: 35px;
+    place-content: center;
+    border-radius: 50%;
+}
+
+.dropdown__header {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: 60px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.278);
+}
+
+.dropdown__header--visible {
+    display: block;
+}
+
+.dropdown__header-container {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding-bottom: .7rem;
+}
+
+.dropdown__header-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.dropdown__header-names .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.dropdown__header-names .surname {
+    font-size: .9rem;
+    color: #000000a9;
+}
+
+.dropdown__perfil {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    border-top: 1px solid #00000014;
+    padding-top: .8rem;
+}
+
+.dropdown__item {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.dropdown__item:nth-child(3) {
+    border-top: 1px solid #00000014;
+    padding-top: 1rem;
+}
+
+.dropdown__item .dropdown__link {
+    color: #000000a9;
+    text-decoration: none;
+}
+
+.dropdown__link:hover {
+    color: black;
+}
 
 @media screen and (width <=1170px) {
 
     .lesson__question {
         font-size: 2.5rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
     }
 
     .carrousel__element:after,

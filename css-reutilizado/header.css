@@ -30,6 +30,10 @@
     align-items: center;
 }
 
+.nav {
+    position: relative;
+}
+
 .header {
     /*Styles*/
     background-color: #ffffff;
@@ -37,7 +41,7 @@
 
     /*Functions*/
     justify-content: space-between;
-    gap: 1rem;
+    gap: .5rem;
     width: 100%;
     position: fixed;
     z-index: 2;
