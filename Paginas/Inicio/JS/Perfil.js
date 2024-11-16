@@ -25,7 +25,6 @@ function seLogueo() {
     }
 }
 
-
 function modificarDatos(user) {
 
     if (user) {
@@ -46,5 +45,13 @@ const cerrarSesion = document.getElementById('logOut').addEventListener('click',
     sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
     seLogueo();
 })
+
+perfil__content.addEventListener('click', () => {
+    const dropdown = document.querySelector('.dropdown__perfil');
+    dropdown.classList.toggle('dropdown__perfil--active');
+    const img = document.getElementById('arrowImgDown');
+    img.src = '/Paginas/Inicio/Assets/arrow-up.svg'
+})
+
 
 seLogueo();

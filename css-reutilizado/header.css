@@ -176,6 +176,7 @@
     gap: .5rem;
 }
 
+
 .button {
     /*Functions*/
     text-align: center;
@@ -218,6 +219,7 @@
     align-items: center;
     gap: .6rem;
     justify-content: center;
+
 
 }
 
@@ -338,8 +340,17 @@
     color: rgb(0, 0, 0);
 }
 
+.buttons {
+    display: flex;
+}
+
+.buttons--hidden {
+    display: none;
+}
+
 
 @media screen and (width <=1170px) {
+
 
     .header {
         justify-content: space-between;
@@ -364,12 +375,7 @@
         margin: 0;
         flex-direction: column;
         align-items: flex-start;
-    }
 
-    .header__right-buttons {
-        flex-direction: column;
-        place-self: center;
-        margin-top: 2rem;
     }
 
     .nav__link {
@@ -387,6 +393,7 @@
         padding: 1rem;
         border-radius: 12px;
         font-weight: 200;
+
     }
 
     .header__right-button-register {
@@ -455,9 +462,70 @@
         font-size: 1rem;
     }
 
+    .header__right-buttons {
+        flex-direction: column;
+        place-self: center;
+        margin-top: 2rem;
+    }
 
+    .buttons {
+        flex-direction: column;
+    }
 
+    .dropdown__header {
+        position: absolute;
+        padding: 0rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 1rem 0 1rem;
+        display: block;
+        top: auto;
+        bottom: 0;
+        box-shadow: 0px 1px 10px 9px rgba(0, 0, 0, 0.161);
+        border-radius: 12px 12px 0px 0px;
+        overflow-y: hidden;
+    }
 
+    .dropdown__header-container {
+        position: relative;
+    }
+
+    .dropdown__perfil {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+        border-top: 1px solid #00000014;
+        padding-top: 0rem;
+        height: 0;
+        transition: .3s;
+
+    }
+
+    .dropdown__perfil--active {
+        height: 150px;
+        padding-top: 1rem;
+    }
+
+    .dropdown__item {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .dropdown__item:nth-child(3) {
+        border-top: 1px solid #00000014;
+        padding-top: 1rem;
+    }
+
+    .dropdown__item .dropdown__link {
+        color: #000000a9;
+        text-decoration: none;
+    }
+
+    .dropdown__link:hover {
+        color: black;
+    }
 }
 
 @media screen and (width <=700px) {

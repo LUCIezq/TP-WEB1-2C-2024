@@ -3,15 +3,6 @@ const form__state = document.getElementById('form-state');
 form__state.style.textAlign = 'center';
 
 
-function mostrarEstado(usuario) {
-    form__state.classList.add('form__state--activo');
-
-    if (usuario) {
-        form__state.innerText = 'La contraseña ingresada es incorrecta. Por favor, intenta nuevamente.';
-    }
-    form__state.innerText = 'El correo electrónico ingresado no está registrado. Por favor, verifica los datos o crea una cuenta nueva.';
-}
-
 function sePuedeIniciarSesion() {
     const email = document.getElementById('email').value;
     const contrasenia = document.getElementById('password').value;
@@ -24,14 +15,20 @@ function sePuedeIniciarSesion() {
         if (usuarioBuscado) {
             if (contrasenia === usuarioBuscado.contrasenia) {
                 usuarioBuscado.estaLogueado = true;
-                sessionStorage.setItem('usuarios',JSON.stringify(usuarios));
+                sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
                 return true;
             } else {
-                mostrarEstado(usuarioBuscado);
+                form__state.classList.add('form__state--activo')
+                form__state.innerText = 'La contraseña ingresada es incorrecta. Por favor, intenta nuevamente.'
             }
+        } else {
+            form__state.classList.add('form__state--activo')
+            form__state.innerText = 'El correo electrónico ingresado no está registrado. Por favor, verifica los datos o crea una cuenta nueva.';
         }
+    }else{
+        form__state.classList.add('form__state--activo')
+        form__state.innerText = 'El correo electrónico ingresado no está registrado. Por favor, verifica los datos o crea una cuenta nueva.';
     }
-    mostrarEstado(usuarios);
     return false;
 }
 

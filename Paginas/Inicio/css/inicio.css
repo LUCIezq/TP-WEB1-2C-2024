@@ -338,6 +338,7 @@ html {
     background-color: #2d2f31e5;
 }
 
+
 .lesson__item-buttons-contanier {
     border: 1px solid black;
     width: 130px;
@@ -619,6 +620,7 @@ html {
     border: none;
     background-color: white;
     cursor: pointer;
+
 }
 
 .lesson__title {
@@ -791,10 +793,6 @@ html {
     text-align: center;
 }
 
-.buttons--hidden {
-    display: none;
-}
-
 .header__right-perfil {
     display: none;
 }
@@ -858,6 +856,7 @@ html {
     gap: .7rem;
     border-top: 1px solid #00000014;
     padding-top: .8rem;
+    height: 0;
 }
 
 .dropdown__item {
@@ -880,15 +879,17 @@ html {
     color: black;
 }
 
+#arrowImgDown {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+
 @media screen and (width <=1170px) {
 
     .lesson__question {
         font-size: 2.5rem;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
     }
 
     .carrousel__element:after,
@@ -952,6 +953,10 @@ html {
     }
 
     .carrousel__element-description {
+        display: none;
+    }
+
+    #perfil {
         display: none;
     }
 
