@@ -107,7 +107,8 @@ formulario.addEventListener('submit', e => {
             nombre: nombre.value,
             email: email.value,
             contrasenia: contrasenia.value,
-            estaLogueado:false
+            estaLogueado:false,
+            cursos:[]
         }
 
         if (!seEncuentranDatosRegistrado(usuario)) {

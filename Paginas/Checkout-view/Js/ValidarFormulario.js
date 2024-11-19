@@ -21,7 +21,6 @@ const errores = {
     numeroTarjeta: 'El número de tarjeta de crédito debe contener 16 dígitos, sin espacios ni guiones.'
 }
 
-
 function validarCampo(expresion, input, inputValue, campo) {
     if (expresion.test(inputValue)) {
         input.classList.add('formulario__correcto');
@@ -88,6 +87,8 @@ function actualizarDatosModal() {
     const precio = document.getElementById('JS-main__orden-total').innerText = '$' + JSON.parse(sessionStorage.getItem('totalCarrito')).toLocaleString();
 }
 
+
+
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -95,10 +96,30 @@ formulario.addEventListener('submit', (e) => {
 
         actualizarDatosModal();
 
+
+        const usuarioLogueado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+        const cursosUsuario = JSON.parse(sessionStorage.getItem('cursos'));
+
+        if (usuarioLogueado && cursosUsuario) {
+            usuarioLogueado.cursos.push(...cursosUsuario); //... descompone el array que se va a agregar
+
+
+            const usuarios = JSON.parse(sessionStorage.getItem('usuarios'));
+            const indice = usuarios.findIndex(usuario => usuario.email === usuarioLogueado.email);
+
+            if (indice != -1) {
+                usuarios[indice] = usuarioLogueado;
+                sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
+            }
+            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+
+        }
+
+
         modal.showModal();
-        const form__status = document.getElementById('form__status');
-        sessionStorage.removeItem('cursos');
+
         const closeModal = document.getElementById('modal__link').addEventListener('click', () => {
+            sessionStorage.removeItem('cursos');
             formulario.submit();
         })
     } else {

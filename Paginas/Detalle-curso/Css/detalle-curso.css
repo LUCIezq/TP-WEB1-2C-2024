@@ -211,6 +211,7 @@ main {
   border-radius: 50%;
 }
 
+
 .estrella {
   width: 16px;
   height: 16px;
@@ -334,6 +335,7 @@ summary::-webkit-details-marker {
 .dropdown__container-left img {
   height: 20px;
 }
+
 
 @media screen and (width <=1210px) {
 

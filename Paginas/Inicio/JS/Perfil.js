@@ -13,15 +13,17 @@ perfil__content.addEventListener('mouseleave', () => {
 })
 
 function seLogueo() {
-    const user = usuarios.find(usuario => usuario.estaLogueado == true);
+    if(usuarios){
+        const user = usuarios.find(usuario => usuario.estaLogueado == true);
 
-    if (user) {
-        buttons.classList.add('buttons--hidden');
-        perfil__container.classList.add('dropdown__header--visible');
-        modificarDatos(user);
-    } else {
-        buttons.classList.remove('buttons--hidden');
-        perfil__container.classList.remove('dropdown__header--visible');
+        if (user) {
+            buttons.classList.add('buttons--hidden');
+            perfil__container.classList.add('dropdown__header--visible');
+            modificarDatos(user);
+        } else {
+            buttons.classList.remove('buttons--hidden');
+            perfil__container.classList.remove('dropdown__header--visible');
+        }
     }
 }
 

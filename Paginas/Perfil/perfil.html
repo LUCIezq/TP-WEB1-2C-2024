@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
     <link rel="stylesheet" href="../../Paginas/Inicio/css/inicio.css" />
+    <link rel="stylesheet" href="./Css/Perfil.css">
     <link rel="stylesheet" href="../../css-reutilizado/header.css" />
 
-    
+
+
     <script src="../../Paginas/Inicio/JS/index.js" defer></script>
     <script src="../../Paginas/Inicio/JS/CartImplementacion.js" defer></script>
     <script src="../../Paginas/Inicio/JS/Cart.js" defer></script>
-    <script src="../Inicio/JS/Perfil.js"></script>
-    
+
 </head>
+
 <body>
     <header class="header">
         <div class="header__left">
@@ -64,8 +67,48 @@
 
             <div class="header__right-buttons">
 
-                <a class="header__right-button-login button" href="../../Paginas/Sign-in/sign-in.html">Iniciar Sesion</a>
-                <a class="header__right-button-register button" href="../../Paginas/Sign-up/sign-up.html">Registrarse</a>
+                <div class="buttons" id="buttons">
+                    <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar
+                        Sesion</a>
+                    <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+                </div>
+
+                <div class="header__right-perfil" id="perfil__container">
+                    <a href="/Paginas/Perfil/perfil.html" id="perfil" class="pefil"></a>
+                    <section class="dropdown">
+
+                        <div class="dropdown__header" id="perfil__content">
+                            <div class="dropdown__header-container">
+                                <a href="/Paginas/Perfil/perfil.html" id="perfil-dropdown" class="pefil"></a>
+
+                                <div class="dropdown__header-names">
+                                    <p class="name">Hola <span class="name" id="name"></span>!</p>
+                                    <span class="email" id="email"></span>
+                                </div>
+                                <img src="/Paginas/Inicio/Assets/plus.svg" id="arrowImgDown" alt="">
+                            </div>
+
+
+                            <ul class="dropdown__perfil">
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/perfil.svg" alt="">
+                                    <a href="/Paginas/Perfil/perfil.html" class="dropdown__link">Mi perfil</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/book.svg" alt="">
+                                    <a href="#" class="dropdown__link">Mis cursos</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
+                                    <a href="#" class="dropdown__link" id="logOut">Cerrar sesión</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </section>
+
+                </div>
 
             </div>
 
@@ -164,8 +207,9 @@
 
                             </div>
 
-                            <a href="../../Paginas/Checkout-view/checkout.html" class="container__cart-bottom-paymnent-link"
-                                id="JS-button__continuar">Continuar compra</a>
+                            <a href="../../Paginas/Checkout-view/checkout.html"
+                                class="container__cart-bottom-paymnent-link" id="JS-button__continuar">Continuar
+                                compra</a>
 
                         </div>
 
@@ -191,6 +235,89 @@
         </label>
 
     </header>
-    
+
+    <main>
+        <div class="perfil__container container">
+            <h2 class="container__title">Perfil</h2>
+
+            <div class="perfil__container-center">
+                <div class="perfil__container-left left">
+                    <ul class="left__elements">
+                        <li class="left__item-container">
+                            <img src="../Inicio/Asset__perfil/perfil.svg" alt="">
+                            <a href="#detalles" class="left__item left__item--active">Detalles</a>
+                        </li>
+                        <li class="left__item-container">
+                            <img src="../Inicio/Asset__perfil/book.svg" alt="">
+                            <a href="#cursos" class="left__item ">Cursos</a>
+                        </li>
+                        <li class="left__item-container">
+                            <img src="../Inicio/Asset__perfil/log_out.svg" alt="">
+                            <span class="left__item left__item-logout">Cerrar sesión</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <form action="" class="form__container-right right">
+
+                    <label class="form__label form__label--perfil">Foto de perfil
+                        <span class="form__foto-perfil">E</span>
+                        <div class="form__update-foto">
+                            <button class=" button button__update">Cambiar foto</button>
+                            <button class="button button__delete">Eliminar foto</button>
+                        </div>
+                    </label>
+
+                    <div class="label__container">
+                        <div class="label__information">
+                            <label class="form__label" for="usuario">Nombre de usuario</label>
+                            <p class="label__detail">El nombre de usuario solo puede contener letras y números, sin
+                                espacios ni caracteres especiales.</p>
+                        </div>
+                        <div class="container__input">
+                            <input type="text" class="form__input " id="usuario" placeholder="@alguien">
+                        </div>
+                    </div>
+
+                    <div class="label__container">
+                        <div class="label__information">
+                            <label class="form__label" for="email">Dirección de correo</label>
+                            <p class="label__detail">El email debe ser válido, con formato nombre@dominio.extensión, sin
+                                espacios ni caracteres especiales fuera de lo permitido.</p>
+                        </div>
+                        <input type="text" class="form__input " id="email" placeholder="alguien@alguien.com">
+                    </div>
+
+                    <div class="label__container">
+                        <div class="label__information">
+                            <label class="form__label" for="contrasenia">Contraseña</label>
+                            <p class="label__detail">La contraseña debe tener al menos 8 caracteres, incluir mayúsculas,
+                                minúsculas, números y no contener espacios.</p>
+                        </div>
+                        <input type="password" class="form__input " id="contrasenia" placeholder="********">
+                    </div>
+
+                    <button class="form__button">Guardar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="personal__cursos">
+            <h2 class="container__title" id="cursos">Cursos</h2>
+            <ul class="lesson__items" id="lessons__container"></ul>
+        </div>
+
+    </main>
+
+    <script src="../Inicio/JS/Cursos.js"></script>
+    <script src="../Inicio/JS/FuncionalidadCarrito.js"></script>
+    <script src="./Js/FuncionalidadPerfil.js"></script>
+    <script src="../Inicio/JS/Perfil.js"></script>
+    <script src="../Inicio/JS/FuncionalidadaBuscador.js"></script>
 </body>
+
 </html>

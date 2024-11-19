@@ -1,0 +1,178 @@
+main {
+    background-color: white;
+    padding: 4rem;
+    margin-top: 4rem;
+}
+
+.perfil__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.perfil__container-center {
+    display: flex;
+    gap: 3rem;
+    height: 100%;
+    width: 100%;
+
+}
+
+.perfil__container-left {
+    width: fit-content;
+    padding-right: 2rem;
+    border-right: 1px solid #0000001f;
+    min-width: 300px;
+}
+
+.container__title {
+    font-size: 3.5rem;
+
+}
+
+.left__elements {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    padding-left: 2rem;
+}
+
+.left__item-container {
+    width: fit-content;
+    cursor: pointer;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.left__item {
+    padding: .4rem 1rem;
+    border-radius: 5px;
+    transition: .2s ease;
+    color: black;
+    text-decoration: none;
+}
+
+.form__label--perfil {
+    margin-bottom: 2rem;
+}
+
+
+.left__item--active {
+    background-color: rgba(0, 0, 0, 0.035);
+}
+
+.left__item:hover {
+    background-color: rgba(0, 0, 0, 0.035);
+}
+
+.left__item-logout:hover {
+    background-color: red;
+    color: white;
+}
+
+.form__container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.779);
+    width: 100%;
+}
+
+.form__input {
+    border: 1px solid #0000001f;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    padding: .4rem;
+    max-width: 500px;
+    max-height: 40px;
+    width: 100%;
+    margin-left: auto;
+}
+
+.form__input::placeholder {
+    font-size: .8rem;
+}
+
+.form__button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.152);
+    color: rgba(255, 255, 255, 0.898);
+    place-self: start;
+    padding: .4rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.form__foto-perfil {
+    background-color: black;
+    width: fit-content;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    margin-top: .5rem;
+}
+
+.form__update-foto {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.button {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: .75rem;
+    cursor: pointer;
+}
+
+.button__update {
+    background-color: #2D95F0;
+    color: white;
+}
+
+
+.button__delete {
+    background-color: rgb(243, 243, 243);
+    color: red;
+}
+
+.label__container {
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+}
+
+.label__information {
+    max-width: 400px;
+    width: 100%;
+}
+
+.label__detail {
+    font-size: .72rem;
+    font-weight: 100;
+    color: rgba(67, 67, 67, 0.57);
+
+}
+
+.container__input {
+    display: flex;
+    margin-left: auto;
+    max-height: 40px;
+    width: 100%;
+}
