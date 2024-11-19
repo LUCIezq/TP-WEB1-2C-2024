@@ -75,4 +75,6 @@ if (usuarioLogueado) {
     usuarioText.value = usuarioLogueado.nombre;
     const emailText = document.getElementById('emailPerfil');
     emailText.value = usuarioLogueado.email;
+    const fotoDePerfil = document.getElementById('fotoDePerfil');
+    fotoDePerfil.innerText = usuarioLogueado.nombre.charAt(0);
 }
