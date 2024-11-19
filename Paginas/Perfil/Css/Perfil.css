@@ -176,3 +176,24 @@ main {
     max-height: 40px;
     width: 100%;
 }
+
+.empty__lesson {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.empty__title {
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgb(98, 97, 97);
+}
+
+.empty__link {
+    color: black;
+}
+
+.personal__cursos--hidden {
+    display: none;
+}

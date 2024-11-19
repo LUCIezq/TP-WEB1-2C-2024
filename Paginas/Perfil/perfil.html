@@ -100,7 +100,7 @@
                                 </li>
                                 <li class="dropdown__item">
                                     <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
-                                    <a href="#" class="dropdown__link" id="logOut">Cerrar sesión</a>
+                                    <a href="/index.html" class="dropdown__link log__out" >Cerrar sesión</a>
                                 </li>
                             </ul>
 
@@ -253,7 +253,7 @@
                         </li>
                         <li class="left__item-container">
                             <img src="../Inicio/Asset__perfil/log_out.svg" alt="">
-                            <span class="left__item left__item-logout">Cerrar sesión</span>
+                            <a href="/index.html" class="left__item log__out">Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -306,8 +306,14 @@
 
         </div>
 
-        <div class="personal__cursos">
+        <div class="personal__cursos" >
             <h2 class="container__title" id="cursos">Cursos</h2>
+            <div class="empty__lesson" id="personal-cursos">
+                <img src="../Inicio/Assets/empty-shopping-cart-v2.jpg" alt="">
+                <h3 class="empty__title">
+                    Actualmente no tienes cursos comprados. ¡<a class="empty__link" href="/index.html#lesson__container">Explora nuestro catálogo</a> y encuentra el curso perfecto para ti!
+                </h3>
+            </div>
             <ul class="lesson__items" id="lessons__container"></ul>
         </div>
 

@@ -13,7 +13,7 @@ perfil__content.addEventListener('mouseleave', () => {
 })
 
 function seLogueo() {
-    if(usuarios){
+    if (usuarios) {
         const user = usuarios.find(usuario => usuario.estaLogueado == true);
 
         if (user) {
@@ -41,11 +41,15 @@ function modificarDatos(user) {
 }
 
 
-const cerrarSesion = document.getElementById('logOut').addEventListener('click', () => {
-    const user = usuarios.find(usuario => usuario.estaLogueado == true);
-    user.estaLogueado = false;
-    sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
-    seLogueo();
+const cerrarSesion = document.querySelectorAll('.log__out')
+cerrarSesion.forEach(item => {
+    item.addEventListener('click', () => {
+        const user = usuarios.find(usuario => usuario.estaLogueado == true);
+        user.estaLogueado = false;
+        sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
+        sessionStorage.removeItem('usuarioLogueado');
+        seLogueo();
+    })
 })
 
 perfil__content.addEventListener('click', () => {
@@ -55,3 +59,14 @@ perfil__content.addEventListener('click', () => {
 
 
 seLogueo();
+
+const personalCursos = document.getElementById('personal-cursos');
+const usuarioLogueado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+
+if (usuarioLogueado && personalCursos) {
+    if (usuarioLogueado.cursos.length > 0) {
+        personalCursos.classList.add('personal__cursos--hidden');
+    } else {
+        personalCursos.classList.remove('personal__cursos--hidden');
+    }
+}
