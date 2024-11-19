@@ -101,6 +101,7 @@ main {
     max-height: 40px;
     width: 100%;
     margin-left: auto;
+    color:rgba(0, 0, 0, 0.412);
 }
 
 .form__input::placeholder {

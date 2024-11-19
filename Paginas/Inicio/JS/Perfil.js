@@ -70,3 +70,9 @@ if (usuarioLogueado && personalCursos) {
         personalCursos.classList.remove('personal__cursos--hidden');
     }
 }
+if (usuarioLogueado) {
+    const usuarioText = document.getElementById('usuario');
+    usuarioText.value = usuarioLogueado.nombre;
+    const emailText = document.getElementById('emailPerfil');
+    emailText.value = usuarioLogueado.email;
+}

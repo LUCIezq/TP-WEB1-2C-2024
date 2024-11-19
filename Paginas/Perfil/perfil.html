@@ -100,7 +100,7 @@
                                 </li>
                                 <li class="dropdown__item">
                                     <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
-                                    <a href="/index.html" class="dropdown__link log__out" >Cerrar sesión</a>
+                                    <a href="/index.html" class="dropdown__link log__out">Cerrar sesión</a>
                                 </li>
                             </ul>
 
@@ -276,17 +276,17 @@
                                 espacios ni caracteres especiales.</p>
                         </div>
                         <div class="container__input">
-                            <input type="text" class="form__input " id="usuario" placeholder="@alguien">
+                            <input type="text" class="form__input " id="usuario" placeholder="@alguien" readonly>
                         </div>
                     </div>
 
                     <div class="label__container">
                         <div class="label__information">
-                            <label class="form__label" for="email">Dirección de correo</label>
+                            <label class="form__label" for="emailPerfil">Dirección de correo</label>
                             <p class="label__detail">El email debe ser válido, con formato nombre@dominio.extensión, sin
                                 espacios ni caracteres especiales fuera de lo permitido.</p>
                         </div>
-                        <input type="text" class="form__input " id="email" placeholder="alguien@alguien.com">
+                        <input type="email" class="form__input" id="emailPerfil" placeholder="alguien@alguien.com" readonly>
                     </div>
 
                     <div class="label__container">
@@ -295,7 +295,7 @@
                             <p class="label__detail">La contraseña debe tener al menos 8 caracteres, incluir mayúsculas,
                                 minúsculas, números y no contener espacios.</p>
                         </div>
-                        <input type="password" class="form__input " id="contrasenia" placeholder="********">
+                        <input type="password" class="form__input " id="contrasenia" placeholder="********" readonly>
                     </div>
 
                     <button class="form__button">Guardar</button>
@@ -306,12 +306,14 @@
 
         </div>
 
-        <div class="personal__cursos" >
+        <div class="personal__cursos">
             <h2 class="container__title" id="cursos">Cursos</h2>
             <div class="empty__lesson" id="personal-cursos">
                 <img src="../Inicio/Assets/empty-shopping-cart-v2.jpg" alt="">
                 <h3 class="empty__title">
-                    Actualmente no tienes cursos comprados. ¡<a class="empty__link" href="/index.html#lesson__container">Explora nuestro catálogo</a> y encuentra el curso perfecto para ti!
+                    Actualmente no tienes cursos comprados. ¡<a class="empty__link"
+                        href="/index.html#lesson__container">Explora nuestro catálogo</a> y encuentra el curso perfecto
+                    para ti!
                 </h3>
             </div>
             <ul class="lesson__items" id="lessons__container"></ul>
