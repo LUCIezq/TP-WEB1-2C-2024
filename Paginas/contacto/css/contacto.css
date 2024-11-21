@@ -107,14 +107,19 @@ h1 {
     font-size: .7rem;
 }
 
+.input__telefono--error {
+    border: 1px solid red;
+}
+
 .input__check {
-    border: 2px solid green;
+    border: 1px solid green;
 }
 
 input,
 textarea {
     outline: none;
     width: 100%;
+    border: none;
 }
 
 .text__container {
@@ -139,6 +144,29 @@ textarea {
     margin-top: 2%;
     resize: none;
     padding: 1rem;
+}
+
+.number__container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#telefono {
+    padding-left: 3.2rem;
+}
+
+.number__prefix {
+    position: absolute;
+    display: grid;
+    left: 10px;
+    place-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    padding-right: 5px;
+    color: #0000004d;
+    font-size: .8rem;
 }
 
 

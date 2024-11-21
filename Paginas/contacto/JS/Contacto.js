@@ -63,6 +63,7 @@ function validarCampo(e) {
             break;
         case 'telefono':
             const regexTelefono = /^\d{4}-?\d{4}$/;
+            const numberContainer = document.getElementById('numberContainer');
             const errorTelefono = document.getElementById('error-telefono');
             errorTelefono.classList.add('input__error')
             if (regexTelefono.test(textContent)) {
@@ -72,10 +73,11 @@ function validarCampo(e) {
                     textContent.value = textContent.slice(0, 4) + '-' + textContent.slice(4);
                 }
                 campos.telefono = true;
+                numberContainer.classList.remove('input__telefono--error');
             } else {
-                errorTelefono.innerText = 'Número de teléfono inválido.'
                 input.classList.remove('input__check');
                 campos.telefono = false;
+                numberContainer.classList.add('input__telefono--error');
             }
             break;
         case 'mensaje':

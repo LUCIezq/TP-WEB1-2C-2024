@@ -35,7 +35,7 @@ function modificarDatos(user) {
         const perfil__iconContent = document.getElementById('perfil-dropdown').innerText = nombre.charAt(0);
         const name = document.getElementById('name');
         name.innerText = nombre;
-        const emailAdress = document.getElementById('email');
+        const emailAdress = document.getElementById('emailPerfil');
         emailAdress.innerText = user.email;
     }
 }
@@ -73,7 +73,7 @@ if (usuarioLogueado && personalCursos) {
 if (usuarioLogueado) {
     const usuarioText = document.getElementById('usuario');
     usuarioText.value = usuarioLogueado.nombre;
-    const emailText = document.getElementById('emailPerfil');
+    const emailText = document.getElementById('email');
     emailText.value = usuarioLogueado.email;
     const fotoDePerfil = document.getElementById('fotoDePerfil');
     fotoDePerfil.innerText = usuarioLogueado.nombre.charAt(0);

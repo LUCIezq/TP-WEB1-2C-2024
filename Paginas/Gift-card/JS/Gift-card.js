@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if (isLoggedIn === "true") {
-        document.body.classList.remove("hidden");
-    } else {
-        alert("Debes iniciar sesión para acceder a esta página.");
-        window.location.href = "../Sign-in/sign-in.html";
-    }
-});
-
 // Form Gift-card
 let buttonInputSelector = document.querySelector("#giftcard__button-js");
 

@@ -68,49 +68,49 @@
             <div class="header__right-buttons">
 
                 <div class="buttons" id="buttons">
-                  <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar
-                    Sesion</a>
-                  <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+                    <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar
+                        Sesion</a>
+                    <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
                 </div>
-        
+
                 <div class="header__right-perfil" id="perfil__container">
-                  <a href="/Paginas/Perfil/perfil.html" id="perfil" class="pefil"></a>
-                  <section class="dropdown">
-        
-                    <div class="dropdown__header" id="perfil__content">
-                      <div class="dropdown__header-container">
-                        <a href="/Paginas/Perfil/perfil.html" id="perfil-dropdown" class="pefil"></a>
-        
-                        <div class="dropdown__header-names">
-                          <p class="name">Hola <span class="name" id="name"></span>!</p>
-                          <span class="email" id="email"></span>
+                    <a href="/Paginas/Perfil/perfil.html" id="perfil" class="pefil"></a>
+                    <section class="dropdown">
+
+                        <div class="dropdown__header" id="perfil__content">
+                            <div class="dropdown__header-container">
+                                <a href="/Paginas/Perfil/perfil.html" id="perfil-dropdown" class="pefil"></a>
+
+                                <div class="dropdown__header-names">
+                                    <p class="name">Hola <span class="name" id="name"></span>!</p>
+                                    <span class="email" id="emailPerfil"></span>
+                                </div>
+                                <img src="/Paginas/Inicio/Assets/plus.svg" id="arrowImgDown" alt="">
+                            </div>
+
+
+                            <ul class="dropdown__perfil">
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/perfil.svg" alt="">
+                                    <a href="/Paginas/Perfil/perfil.html" class="dropdown__link">Mi perfil</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/book.svg" alt="">
+                                    <a href="/Paginas/Perfil/perfil.html#cursos" class="dropdown__link">Mis cursos</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
+                                    <a href="#" class="dropdown__link log__out">Cerrar sesión</a>
+                                </li>
+                            </ul>
+
                         </div>
-                        <img src="/Paginas/Inicio/Assets/plus.svg" id="arrowImgDown" alt="">
-                      </div>
-        
-        
-                      <ul class="dropdown__perfil">
-                        <li class="dropdown__item">
-                          <img src="/Paginas/Inicio/Asset__perfil/perfil.svg" alt="">
-                          <a href="/Paginas/Perfil/perfil.html" class="dropdown__link">Mi perfil</a>
-                        </li>
-                        <li class="dropdown__item">
-                          <img src="/Paginas/Inicio/Asset__perfil/book.svg" alt="">
-                          <a href="/Paginas/Perfil/perfil.html#cursos" class="dropdown__link">Mis cursos</a>
-                        </li>
-                        <li class="dropdown__item">
-                          <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
-                          <a href="#" class="dropdown__link log__out" >Cerrar sesión</a>
-                        </li>
-                      </ul>
-        
-                    </div>
-        
-                  </section>
-        
+
+                    </section>
+
                 </div>
-        
-              </div>
+
+            </div>
 
         </nav>
 
@@ -147,7 +147,7 @@
                             <p class="js-container__cart-empty-text">Tu carrito está vacío. ¡Sigue comprando para
                                 encontrar un curso!
                             </p>
-                            <a href="#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
+                            <a href="/index.html#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
                         </div>
 
                         <div class="container__cart-bottom-payment">
@@ -245,8 +245,11 @@
                 <p class="error__name" id="error-apellido"></p>
                 <input type="email" name="email" id="email" placeholder="Email">
                 <p class="error__name" id="error-mail"></p>
-                <input type="number" name="telefono" id="telefono" placeholder="Telefono">
-                <p class="error__name" id="error-telefono"></p>
+                <div class="number__container" id="numberContainer">
+                    <input type="number" name="telefono" id="telefono" placeholder="Telefono">
+                    <span class="number__prefix">011-15</span>
+                    <p class="error__name" id="error-telefono"></p>
+                </div>
                 <div class="text__container">
                     <textarea rows="5" cols="30" name="mensaje" class="text__area"
                         placeholder="Escriba su mensaje aqui..." id="textArea"></textarea>

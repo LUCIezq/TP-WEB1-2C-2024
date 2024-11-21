@@ -3,14 +3,14 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
-    <link rel="stylesheet" href="./css/curso-empresa.css">
-    <link rel="stylesheet" href="../Inicio/css/inicio.css">
-    <link rel="stylesheet" href="../../css-reutilizado/header.css" />
-    <script src="/Paginas/Inicio/JS/Cursos.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css-reutilizado/footer.css" />
+  <link rel="stylesheet" href="./css/curso-empresa.css">
+  <link rel="stylesheet" href="../Inicio/css/inicio.css">
+  <link rel="stylesheet" href="../../css-reutilizado/header.css" />
+  <script src="/Paginas/Inicio/JS/Cursos.js"></script>
+  <script src="/Paginas/Inicio/JS/Cart.js" defer></script>
 
   <title>Curso Empresas</title>
 
@@ -18,7 +18,7 @@
 
 <body>
 
-    <header class="header">
+  <header class="header">
 
     <div class="header__left">
 
@@ -26,13 +26,18 @@
         LearnTree.
       </a>
 
-      <div class="header__center-container-input">
+      <div id="JS-input__buscador" class="header__center-container-input">
 
         <input class="header__center-input" type="text" name="buscador" placeholder="Buscar">
 
         <label class="header__center-label">
           <input type="checkbox" class="header__center-checkbox">
         </label>
+
+        <ul id="JS-input__resultados" class="header__center-input-resultados">
+        </ul>
+
+        <img id="JS-remove-input-text" src="/Paginas/Inicio/Assets/x-lg.svg" alt="">
 
       </div>
 
@@ -62,8 +67,48 @@
 
       <div class="header__right-buttons">
 
-        <a class="header__right-button-login button" href="../Sign-in/sign-in.html">Iniciar Sesion</a>
-        <a class="header__right-button-register button" href="../Sign-up/sign-up.html">Registrarse</a>
+        <div class="buttons" id="buttons">
+          <a class="header__right-button-login button" href="/Paginas/Sign-in/sign-in.html">Iniciar
+            Sesion</a>
+          <a class="header__right-button-register button" href="/Paginas/Sign-up/sign-up.html">Registrarse</a>
+        </div>
+
+        <div class="header__right-perfil" id="perfil__container">
+          <a href="/Paginas/Perfil/perfil.html" id="perfil" class="pefil"></a>
+          <section class="dropdown">
+
+            <div class="dropdown__header" id="perfil__content">
+              <div class="dropdown__header-container">
+                <a href="/Paginas/Perfil/perfil.html" id="perfil-dropdown" class="pefil"></a>
+
+                <div class="dropdown__header-names">
+                  <p class="name">Hola <span class="name" id="name"></span>!</p>
+                  <span class="email" id="emailPerfil"></span>
+                </div>
+                <img src="/Paginas/Inicio/Assets/plus.svg" id="arrowImgDown" alt="">
+              </div>
+
+
+              <ul class="dropdown__perfil">
+                <li class="dropdown__item">
+                  <img src="/Paginas/Inicio/Asset__perfil/perfil.svg" alt="">
+                  <a href="/Paginas/Perfil/perfil.html" class="dropdown__link">Mi perfil</a>
+                </li>
+                <li class="dropdown__item">
+                  <img src="/Paginas/Inicio/Asset__perfil/book.svg" alt="">
+                  <a href="/Paginas/Perfil/perfil.html#cursos" class="dropdown__link">Mis cursos</a>
+                </li>
+                <li class="dropdown__item">
+                  <img src="/Paginas/Inicio/Asset__perfil/log_out.svg" alt="">
+                  <a href="/index.html" class="dropdown__link log__out">Cerrar sesión</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </section>
+
+        </div>
 
       </div>
 
@@ -101,7 +146,7 @@
               <p class="js-container__cart-empty-text">Tu carrito está vacío. ¡Sigue comprando para
                 encontrar un curso!
               </p>
-              <a href="#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
+              <a href="/index.html#lesson__container" class="js-container__cart-empty-link">Seguir comprando</a>
             </div>
 
             <div class="container__cart-bottom-payment">
@@ -186,58 +231,11 @@
       <input type="checkbox" class="header__right-checkbox">
     </label>
 
-    </header>
+  </header>
 
-    <main>
-      <div class="curso-empresa__titulo">
-        <h1 id="curso-nombre"></h1>
-        <p>INSCRIPCION</p>
-      </div>
-      <form action="#" method="get">
-        <div class="curso-empresa__inscripciones">
-          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-            maxlenght="8"></input>
-          <input class="curso-empresa__inscripciones__input " type="number" name="dni" placeholder="DNI">
-          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-          </svg>
-        </div>
-        <div class="curso-empresa__inscripciones">
-          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-            maxlenght="8"></input>
-          <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
-          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-          </svg>
-        </div>
-        <div class="curso-empresa__inscripciones">
-          <input class="curso-empresa__inscripciones__input" type="text" name="nombre" placeholder="Nombre"></input>
-          <input class="curso-empresa__inscripciones__input" type="text" name="apellido" placeholder="Apellido"
-            maxlenght="8"></input>
-          <input class="curso-empresa__inscripciones__input" type="number" name="dni" placeholder="DNI">
-          <svg class="icono__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-          </svg>
-        </div>
-        <div class="curso-empresa__agregar-persona">
-          <svg class="icono__sumar-persona" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path
-              d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM504 312l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
-          </svg>
-  
-          <p>Agregar Persona</p>
-        </div>
-        <div class="curso-empresa__parte-inferior-final">
-          <p>$39.999</p>
-          <button type="submit">Inscribirse</button>
-        </div>
-      </form>
-    </main>
+  <main>
+
+  </main>
 
   <footer>
 
@@ -323,6 +321,7 @@
   <script src="../Inicio/JS/Perfil.js"></script>
   <script src="/Paginas/Inicio/JS/CartImplementacion.js"></script>
   <script src="./JS/DetalleCurso.js"></script>
+  <script src="../Inicio/JS/FuncionalidadaBuscador.js"></script>
 </body>
 
 </html>

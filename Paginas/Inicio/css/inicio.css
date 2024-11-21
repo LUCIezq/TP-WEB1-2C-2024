@@ -844,7 +844,7 @@ html {
     font-size: 1.1rem;
 }
 
-.dropdown__header-names .email {
+.dropdown__header-names .user__email {
     font-size: .9rem;
     color: #000000a9;
 }
