@@ -58,10 +58,10 @@ main {
   text-decoration: none;
   padding: .5rem 1rem;
   font-weight: 600;
+  transition: .3s;
 }
 
 .button__detalle:hover {
-  border-bottom-width: 3px;
   border-color: black;
 }
 

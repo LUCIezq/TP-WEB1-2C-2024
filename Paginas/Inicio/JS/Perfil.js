@@ -60,21 +60,3 @@ perfil__content.addEventListener('click', () => {
 
 seLogueo();
 
-const personalCursos = document.getElementById('personal-cursos');
-const usuarioLogueado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
-
-if (usuarioLogueado && personalCursos) {
-    if (usuarioLogueado.cursos.length > 0) {
-        personalCursos.classList.add('personal__cursos--hidden');
-    } else {
-        personalCursos.classList.remove('personal__cursos--hidden');
-    }
-}
-if (usuarioLogueado) {
-    const usuarioText = document.getElementById('usuario');
-    usuarioText.value = usuarioLogueado.nombre;
-    const emailText = document.getElementById('email');
-    emailText.value = usuarioLogueado.email;
-    const fotoDePerfil = document.getElementById('fotoDePerfil');
-    fotoDePerfil.innerText = usuarioLogueado.nombre.charAt(0);
-}

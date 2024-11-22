@@ -1,9 +1,10 @@
 body {
-  background-color: aliceblue;
+  background-color: white;
 }
 
 main {
   margin: 0;
+  background-color: white;
   padding: 0;
   margin-top: 3rem;
 }
@@ -20,8 +21,9 @@ main {
   width: 100%;
 }
 
+
 .giftcard__tarjeta {
-  background-color: cadetblue; 
+  background-color: cadetblue;
   align-items: center;
   text-align: center;
   max-width: 600px;
@@ -29,10 +31,12 @@ main {
   height: 100%;
   position: relative;
   color: white;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: auto;
 }
 
 .tarjeta__destinatario {
@@ -50,8 +54,8 @@ main {
   align-content: center;
 }
 
-.error__monto ,
-.error__nombre{
+.error__monto,
+.error__nombre {
   text-align: start;
   font-size: x-small;
   color: red;
@@ -64,12 +68,20 @@ main {
   max-width: 700px;
 }
 
+.giftcard__personalizacion-titulo {
+font-size: 2rem;
+}
+
 .giftcard__personalizacion-titulo,
 .giftcard__personalizacion-subtitulo {
   color: black;
   font-weight: bold;
   font-family: "Poppins";
-  text-align: center;
+}
+
+
+.giftcard__personalizacion-subtitulo {
+  text-align: start;
 }
 
 .nombre__input {
@@ -265,13 +277,14 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: .5rem;
 }
 
 .nombre__input,
 .monto__input {
   max-width: 330px;
 }
+
 
 @media screen and (width <=1000px) {
   .giftcard__tarjeta {
