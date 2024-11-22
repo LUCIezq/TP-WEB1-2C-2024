@@ -22,7 +22,7 @@ main {
     width: fit-content;
     padding-right: 2rem;
     border-right: 1px solid #0000001f;
-    min-width: 300px;
+    min-width: 240px;
 }
 
 .container__title {
@@ -172,7 +172,6 @@ main {
 .label__information {
     max-width: 400px;
     width: 100%;
-
 }
 
 .label__detail {
@@ -233,4 +232,66 @@ button {
 .input__active {
     color: black;
     outline: auto;
+}
+
+@media screen and (width<=1170px) {
+
+    .button {
+        padding: .7rem;
+    }
+
+}
+
+@media screen and (width<=900px) {
+
+    .label__container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        width: min(800px, 100%);
+    }
+
+    .perfil__container-left {
+        display: none;
+    }
+
+
+    main {
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form__container-right {
+        align-items: start;
+        justify-content: start;
+    }
+
+    .label__information {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .label__detail {
+        width: 100%;
+    }
+
+    .form__input {
+        margin-left: 0;
+        max-width: 100%;
+
+
+    }
+}
+
+@media screen and (width<=500px) {
+
+    main,
+    .lesson__items {
+        padding: 1rem;
+
+    }
+
+
 }
