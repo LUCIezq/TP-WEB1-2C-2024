@@ -5,9 +5,9 @@
     background-color: white;
 }
 
+
 main {
     margin-top: 5rem;
-    padding: 3rem 3rem 7rem 3rem;
 }
 
 .section__container {
@@ -15,6 +15,7 @@ main {
     flex-direction: column;
     gap: 1rem;
     justify-content: space-between;
+    padding: 2rem;
 }
 
 .h2__title {
@@ -109,16 +110,37 @@ main {
     background-color: black;
     color: white;
 }
-.container__form{
+
+.container__form {
     display: flex;
 }
-.modal_empresa{
+
+.modal_empresa {
     text-align: center;
+    border-radius: 20px;
     padding: 1rem;
     margin: auto;
     border: none;
     box-shadow: 0px 1px 10px 9px rgba(0, 0, 0, 0.161);
-    animation: slide-in 1.5s ease;
+    /* animation: slide-in 1.5s ease; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__modal {
+    background-color: rgba(0, 0, 0, 0.281);
+    display: none;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+
+}
+
+.modal_empresa--visible {
+    display: block;
 }
 
 .modal_container-titulo {
@@ -138,10 +160,25 @@ td {
     font-size: small;
 }
 
-@keyframes slide-in{
+#close-modal {
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+}
+
+#close-modal:hover {
+    background-color: black;
+    color: white;
+}
+
+@keyframes slide-in {
     from {
-        transform: translateY(-500%);
+        transform: translateY(-400%);
     }
+
     to {
         transform: translateY(0%);
     }

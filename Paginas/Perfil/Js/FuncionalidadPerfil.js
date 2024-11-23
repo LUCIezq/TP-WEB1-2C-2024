@@ -1,5 +1,7 @@
 const cursosContainer = document.getElementById('lessons__container');
 const usuario = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+const usuarios = JSON.parse(sessionStorage.getItem('usuarios'));
+
 
 function generarContenidoDeCurso(curso) {
 
