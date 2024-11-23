@@ -4,6 +4,8 @@ const form = document.getElementById('form');
 let id = 0;
 let total = document.getElementById('lesson-price');
 
+const modal_empresa = document.querySelector("#modal_empresa-js");
+const tabla_empresa = document.querySelector("#modal_container-tabla");
 if (cursobuscado) {
     const h2title = document.getElementById('h2-title').innerText = cursobuscado.nombre;
 }
@@ -84,6 +86,23 @@ function deleteCampo() {
         })
     })
 }
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const element_tbody = document.createElement("tbody");
+    element_tbody.innerHTML = `
+    <tr>
+        <td>1</td>
+        <td>Louis</td>
+        <td>Brossard</td>
+        <td>2323323</td>
+        <td>lou@gmail.com</td>
+        <td>1130409345</td>
+    </tr>
+    `;
+    tabla_empresa.appendChild(element_tbody);
+    modal_empresa.showModal();
+})
 crearCampo();
 deleteCampo();
 calcularPrecioTotal();
